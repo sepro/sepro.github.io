@@ -5,6 +5,7 @@ import Profile from "./profile"
 import PageHeader from "./page-header"
 import Footer from "./footer"
 import { Helmet } from "react-helmet"
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Layout = props => {
   const data = useStaticQuery(graphql`
@@ -56,8 +57,10 @@ const Layout = props => {
               />
             </div>
             <div className="column" id="content-wrapper">
-              <PageHeader title={props.pageTitle} />
-              {props.children}
+              <PageTransition>
+                <PageHeader title={props.pageTitle} />
+                {props.children}
+              </PageTransition>
             </div>
           </div>
         </div>

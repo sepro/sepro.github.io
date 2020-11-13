@@ -82,7 +82,13 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-		`gatsby-plugin-less`,
+    `gatsby-plugin-less`,
+    {
+      resolve: `gatsby-plugin-page-transitions`,
+      options: {
+        transitionTime: 500
+      }
+    },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
