@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Publication from "../components/publication"
+import Citations from "../components/citations"
 import PublicationData from "../../content/publications.yaml"
 
 export default props => {
@@ -12,6 +13,7 @@ export default props => {
       authors={item.Authors}
       journal={item.Journal}
       year={item.Year}
+      pubmed={item.PMID}
     />
   ))
 
@@ -20,6 +22,7 @@ export default props => {
       pageTitle="Publications"
       pageDescription="an overview of my scientific publications"
     >
+      <Citations />
       {publications}
     </Layout>
   )
