@@ -21,6 +21,7 @@ const Profile = props => {
     "master-yoda": "#4baea0",
     "wonder-woman": "#dc4e48",
     "luke-lightsaber": "#5c94bd",
+    "sebastian-proost": "#e68a00",
   }
   const socialIcons = props.socialMedia.map((item, index) => (
     <SocialIcon

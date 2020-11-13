@@ -1,27 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 import Item from "../components/item"
-import { useStaticQuery, graphql } from "gatsby"
+import YAMLEductationData from "../../content/education.yaml"
 
 export default props => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          education {
-            degree
-            major
-            when
-            school
-            where
-            moreInfo
-          }
-        }
-      }
-    }
-  `)
 
-  const education = data.site.siteMetadata.education.map((item, index) => (
+  const education = YAMLEductationData.map((item, index) => (
     <Item
       key={index}
       name={(item.degree || "") + " " + (item.major ? "in " + item.major : "")}

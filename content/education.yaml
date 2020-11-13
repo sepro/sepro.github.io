@@ -1,25 +1,25 @@
-- name: "Doctor in Science : Biotechnology"
-  institute: Universiteit Gent (Doctoral Schools)
-  place: Gent, Belgium
-  start: 2007
-  stop: 2012
+- degree: "Doctor"
+  major: "Science : Biotechnology"
+  school: Universiteit Gent (Doctoral Schools)
+  where: Gent, Belgium
+  when: 2007 - 2012
+  moreInfo: ""
   
-- name: Master in Biotechnology
-  institute: Universiteit Gent
-  place: Gent, Belgium
-  start: 2005
-  stop: 2007
-  extra:
-  - Graduated Cum Laude
-  - "Option: Bioinformatics, Genetic Manipulation of Model Organisms and Genome Biology"
-  - "Master thesis: Genomewide prediction of protein-protein interactions in Arabidopsis thaliana"
-  - "Promoter: Prof. Dr. Yves Van de Peer, Supervisor: Dr. Stefanie De Bodt"
+- degree: Master
+  major: "Biotechnology"
+  school: Universiteit Gent
+  where: Gent, Belgium
+  when: 2005 - 2007
+  moreInfo: "Graduated Cum Laude"
+  # - "Option: Bioinformatics, Genetic Manipulation of Model Organisms and Genome Biology"
+  # - "Master thesis: Genomewide prediction of protein-protein interactions in Arabidopsis thaliana"
+  # - "Promoter: Prof. Dr. Yves Van de Peer, Supervisor: Dr. Stefanie De Bodt"
   
-- name: Bachelor in Biology
-  institute: Universiteit Hasselt
-  place: Hasselt, Belgium
-  start: 2003
-  stop: 2005
-  extra:
-  - Graduated Cum Laude
-  - "Option: Philosophy of Biology"
+- degree: Bachelor
+  major: Biology
+  school: Universiteit Hasselt
+  where: Hasselt, Belgium
+  when: 2003 - 2005
+  moreInfo: "Graduated Cum Laude"
+  # - Graduated Cum Laude
+  # - "Option: Philosophy of Biology"
