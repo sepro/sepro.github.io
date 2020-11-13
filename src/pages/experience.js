@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 import Item from "../components/item"
-import YAMLExperienceData from "../../content/experience.yaml"
+import ExperienceData from "../../content/experience.yaml"
 
 export default props => {
 
-  const experience = YAMLExperienceData.map((item, index) => (
+  const experience = ExperienceData.map((item, index) => (
     <Item
       key={index}
       name={item.role}

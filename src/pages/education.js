@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 import Item from "../components/item"
-import YAMLEductationData from "../../content/education.yaml"
+import EductationData from "../../content/education.yaml"
 
 export default props => {
 
-  const education = YAMLEductationData.map((item, index) => (
+  const education = EductationData.map((item, index) => (
     <Item
       key={index}
       name={(item.degree || "") + " " + (item.major ? "in " + item.major : "")}
@@ -19,7 +19,7 @@ export default props => {
   return (
     <Layout
       pageTitle="Education"
-      pageDescription="Learn more about my education background"
+      pageDescription="Overview of the places I studied"
     >
       {education}
     </Layout>

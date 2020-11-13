@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 const Menu = props => {
   const menuItems = [
     { name: "About", link: "/" },
+    { name: "Publications", link: "/publications" },
     { name: "Skills", link: "/skills" },
     { name: "Education", link: "/education" },
     { name: "Experience", link: "/experience" },
