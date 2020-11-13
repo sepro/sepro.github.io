@@ -66,13 +66,6 @@ module.exports = {
         experience: "1 years",
       },
     ],
-    interests: [
-      "Reading",
-      "Programming",
-      "Playing the violin",
-      "Running",
-      "Watching Monty Python and the Holy Grail",
-    ],
     //available_themes: ["great-gatsby", "master-yoda", "wonder-woman", "darth-vader", "luke-lightsaber", "sebastian-proost"],
     theme: "sebastian-proost",
     //fonts. Available: [default, programmer]
