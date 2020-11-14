@@ -24,7 +24,8 @@
     "less": "^3.12.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-toggle": "^4.1.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1",
