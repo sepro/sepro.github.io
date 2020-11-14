@@ -115,9 +115,6 @@ footer p {
 #cp {
   font-size: 1em;
 }
-#by-gatsby {
-  font-size: 0.9em;
-}
 #profile-wrapper {
   text-align: center;
   flex: 2 2 auto;
@@ -126,7 +123,7 @@ footer p {
   margin-bottom: 2px;
 }
 #profile-img {
-  max-width: 180px;
+  max-width: 200px;
 }
 .social-icon:not(:last-child) {
   margin-right: 4px;
@@ -189,6 +186,10 @@ ul {
 .publication-journal-year {
   font-weight: normal;
   font-style: italic;
+}
+
+.author-highlighted {
+  font-weight: bold;
 }
 
 .item-table {
@@ -306,6 +307,9 @@ a:focus,
 .site-header {
   border-top-color: #50a;
 }
+.author-highlighted, .date-highlighted {
+  color: #50a
+}
 /* darth-vader */
 .theme-darth-vader a {
   color: #777;
@@ -320,6 +324,9 @@ a:focus,
 }
 .theme-darth-vader .site-header {
   border-top-color: #000;
+}
+.theme-darth-vader .author-highlighted, .date-highlighted {
+  color: #777;
 }
 /* luke-lightsaber */
 .theme-luke-lightsaber a {
@@ -336,6 +343,9 @@ a:focus,
 .theme-luke-lightsaber .site-header {
   border-top-color: #416a88;
 }
+.theme-luke-lightsaber .author-highlighted, .date-highlighted {
+  color: #5c94bd;
+}
 /* wonder-woman */
 .theme-wonder-woman a {
   color: #dc4e48;
@@ -350,6 +360,9 @@ a:focus,
 }
 .theme-wonder-woman .site-header {
   border-top-color: #c81912;
+}
+.theme-wonder-woman .author-highlighted, .date-highlighted {
+  color: #dc4e48;
 }
 /* master-yoda */
 .theme-master-yoda a {
@@ -366,6 +379,9 @@ a:focus,
 .theme-master-yoda .site-header {
   border-top-color: #5f7f54;
 }
+.theme-master-yoda .author-highlighted, .date-highlighted {
+  color: #4baea0;
+}
 
 /* sebastian-proost */
 .theme-sebastian-proost a {
@@ -381,6 +397,9 @@ a:focus,
 }
 .theme-sebastian-proost .site-header {
   border-top-color: #e68a00;
+}
+.theme-sebastian-proost .author-highlighted, .date-highlighted {
+  color: #e68a00;
 }
 
 .font-programmer {

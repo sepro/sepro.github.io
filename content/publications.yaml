@@ -18,19 +18,19 @@
     PMID: 31250033
 -   Authors: "L. Rosado-Souza, S. Proost, M. Moulin, S. Bergmann, S. Bocobza, A. Aharoni, T. B. Fitzpatrick, M. Mutwil, A. R. Fernie, T. Obata"
     Title:  "Appropriate thiamin pyrophosphate levels are required for acclimation to changes in photoperiod"
-    Journal:  Plant physiology
+    Journal:  Plant Physiology
     Year: 2019
-    Selected: 1
+    Selected: 0
     PMID: 30837347
 -   Authors: "C. Ferrari, S. Proost, M. Janowski, J. Becker, Z. Nikoloski, D. Bhattacharya, D. Price, T. Tohge, A. Bar-Even, A. Fernie, M. Stitt, M. Mutwil"
     Title:  "Kingdom-wide comparison reveals the evolution of diurnal gene expression in Archaeplastida"
-    Journal: Nature communications
+    Journal: Nature Communications
     Year: 2019
     Selected: 0
     PMID: 30760717
 -   Authors: "M. Flores-Tornero, S. Proost, M. Mutwil, C. P. Scutt, T. Dresselhaus, S. Sprunck"
     Title:  "Transcriptomics of manually isolated Amborella trichopoda egg apparatus cells"
-    Journal:  Plant reproduction
+    Journal:  Plant Reproduction
     Year: 2019
     Selected: 0
     PMID: 30707279
@@ -42,45 +42,45 @@
     PMID: 30480348
 -   Authors: "S. Proost, M. Mutwil"
     Title:  "CoNekT: an open-source framework for comparative genomic and transcriptomic network analyses"
-    Journal:  Nucleic acids research
+    Journal:  Nucleic Acids Research
     Year: 2018
     Selected: 1
     PMID: 29718322
 -   Authors: "C. Ferrari, S. Proost, C. Ruprecht, M. Mutwil"
     Title:  "PhytoNet: Comparative co-expression network analyses across phytoplankton and land plants"
-    Journal:  Nucleic acids research
+    Journal:  Nucleic Acids Research
     Year: 2018
-    Selected: 1
+    Selected: 0
     PMID: 29718316
 -   Authors: "M. Janowski, R. Zoschke, L Scharff, S. Martinez Jaime, C. Ferrari, S. Proost, N. Omranian, M. Musialak-Lange, Z. Nikoloski, A. Graf, M. A. Schottler, A. Sampathkumar, N. Vaid, M. Mutwil"
     Title: "AtRsgA from Arabidopsis thaliana controls maturation of the small subunit of the chloroplast ribosome"
     Journal: The Plant Journal
     Year: 2018
-    Selected: 1
+    Selected: 0
     PMID: 30044525
 -   Authors: "S. Proost, A. Krawczyk, M. Mutwil"
     Title: "LSTrAP: efficiently combining RNA sequencing data into co-expression networks"
     Journal: BMC Bioinformatics
     Year: 2017
-    Selected: 1
+    Selected: 0
     PMID: 29017446
 -   Authors: "R. Sibout, S. Proost, B. Hansen, N. Vaid, F. Giorgi, S. Ho-Yue-Kuang, F. Legée, L. Cezart, O. Bouchabké-Coussa, C. Soulhat, N. Provart, A. Pasha, P. Le Bris, E. Jamet, D. Roujol, H. Hoefte, C. Lapierre, S. Persson, M. Mutwil"
     Title: "Expression atlas and comparative co-expression network analyses reveal important genes involved in the formation of lignified cell wall in Brachypodium distachyon"
     Journal:  New Phytologist
     Year: 2017
-    Selected: 1
+    Selected: 0
     PMID: 28617955
 -   Authors: "C. Ruprecht, S. Proost, M. Hernandez-Coronado, C. Ortiz-Ramirez, D. Lang, S. A. Rensing, J. D. Becker, K. Vandepoele, M. Mutwil"
     Title: "Phylogenomic analysis of gene co-expression networks reveals evolution of functional modules"
     Journal: The Plant Journal
     Year: 2017
-    Selected: 1
+    Selected: 0
     PMID: 28161902
 -   Authors: "C. Ruprecht, N. Vaid, S. Proost, S. Persson, M. Mutwil"
     Title: "Beyond genomics: studying evolution with gene networks"
     Journal: Trends in Plant Science
     Year: 2017
-    Selected: 1
+    Selected: 0
     PMID: 28126286
 -   Authors: "S. Proost, M.Mutwil"
     Title: "PlaNet: Comparative Co-Expression Network Analyses for Plants"
@@ -92,41 +92,41 @@
     Title: "Novel allelic variants in ACD6 cause hybrid necrosis in local collection of Arabidopsis thaliana"
     Journal: New Phytologist
     Year: 2017
-    Selected: 1
+    Selected: 0
     PMID: 27588563
 -   Authors: "S. Proost, M.Mutwil"
     Title: "Tools of the trade: studying molecular networks in plants"
     Journal: Current Opinion in Plant Biology
     Year: 2016
-    Selected: 1
+    Selected: 0
     PMID: 26990519
 -   Authors: "M. A. Omidbakhshfard, S. Proost, U. Fujikura, B. Mueller-Roeber"
     Title: "Growth-regulating factors (GRFs): a small transcription factor family with important functions in plant biology"
-    Journal: Molecular plant
+    Journal: Molecular Plant
     Year: 2015
     Selected: 0
     PMID: 25620770
 -   Authors: "J. Cai*, X. Liu*, K. Vanneste*, S. Proost*, W.-C. Tsai*, K.-W. Liu*, ..., Y. Van de Peer, and Z.-J. Liu"
     Title: "The genome sequence of the orchid Phalaenopsis equestris"
-    Journal: Nature genetics
+    Journal: Nature Genetics
     Year: 2015
     Selected: 1
     PMID: 25420146
 -   Authors: "S. Proost*, M. Van Bel*, D. Vaneechoutte, Y. Van de Peer, D. Inzé, B. Mueller-Roeber, and K. Vandepoele"
     Title: "PLAZA 3.0: an access point for plant comparative genomics"
-    Journal: Nucleic acids research
+    Journal: Nucleic Acids Research
     Year: 2014
-    Selected: 1
+    Selected: 0
     PMID: 25324309
 -   Authors: "S. Balazadeh, J. Schildhauer, W. L. Araújo, S. Munné-Bosch, A. R Fernie, S. Proost, K. Humbeck, and B. Mueller-Roeber"
     Title: "Reversal of senescence by N resupply to N-starved Arabidopsis thaliana: transcriptomic and metabolomic consequences"
-    Journal: Journal of experimental botany
+    Journal: Journal of Experimental Botany
     Year: 2014
     Selected: 0
     PMID: 24692653
 -   Authors: "M. Van Bel, S. Proost, C. Van Neste, D. Deforce, Y. Van de Peer, and K. Vandepoele"
     Title: "TRAPID: an efficient online tool for the functional and comparative analysis of de novo RNA-Seq transcriptomes"
-    Journal: Genome biology
+    Journal: Genome Biology
     Year: 2013
     Selected: 0
     PMID: 24330842
@@ -138,9 +138,9 @@
     PMID: 23955420
 -   Authors: "D. Vekemans*, S. Proost*, K. Vanneste, H. Coenen, T. Viaene, P. Ruelens, S. Maere, Y. Van de Peer, and K. Geuten"
     Title: "Gamma paleohexaploidy in the stem lineage of core eudicots: significance for MADS-Box gene and species diversification"
-    Journal: Molecular biology and evolution
+    Journal: Molecular Biology and Evolution
     Year: 2012
-    Selected: 1
+    Selected: 0
     PMID: 22821009
 -   Authors: "M. Van Bel*, S. Proost*, E. Wischnitzki, S. Mohavedi, C. Scheerlinck, Y. Van de Peer, and K. Vandepoele"
     Title: "Dissecting plant genomes with the PLAZA comparative genomics platform"
@@ -158,7 +158,7 @@
     Title: "The Medicago genome provides insight into the evolution of rhizobial symbioses"
     Journal: Nature
     Year: 2011
-    Selected: 1
+    Selected: 0
     PMID: 22089132
 -   Authors: "S. Proost, P. Pattyn, T. Gerats, and Y. Van de Peer"
     Title: "Journey through the past: 150 million years of plant genome evolution"
@@ -180,7 +180,7 @@
     PMID: 20802477
 -   Authors: "Y. Van de Peer, J. A. Fawcett, S. Proost, L. Sterck, and K. Vandepoele"
     Title: "The flowering world: a tale of duplications"
-    Journal: Trends in plant science
+    Journal: Trends in Plant Science
     Year: 2009
     Selected: 0
     PMID: 19818673
@@ -192,7 +192,7 @@
     PMID: 20040540
 -   Authors: "S. De Bodt, S. Proost, K. Vandepoele, P. Rouze, and Y. Van de Peer"
     Title: "Predicting protein-protein interactions in Arabidopsis thaliana through integration of orthology, gene ontology and co-expression"
-    Journal: BMC genomics
+    Journal: BMC Genomics
     Year: 2009
     Selected: 0
     PMID: 19563678

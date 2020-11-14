@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
-import { useStaticQuery, graphql } from "gatsby"
+import Publication from "../components/publication"
+import PublicationData from "../../content/publications.yaml"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 export default props => {
   const data = useStaticQuery(graphql`
@@ -12,9 +14,23 @@ export default props => {
       }
     }
   `)
+
+  const selected_publications = PublicationData.filter(publication => publication.Selected === 1).map((item, index) => (
+    <Publication
+      key={index}
+      title={item.Title}
+      authors={item.Authors}
+      journal={item.Journal}
+      year={item.Year}
+      pubmed={item.PMID}
+    />
+  ))
+
   return (
     <Layout pageTitle="About" pageDescription="Learn more about me">
       <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.about }} />
+      <h3>Selected Publications <small>(view <Link to="/publications">all</Link>)</small></h3>
+      {selected_publications}
     </Layout>
   )
 }
