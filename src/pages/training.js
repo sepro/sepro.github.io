@@ -34,9 +34,10 @@ export default props => {
       <div className="show-all-toggle">
         <div className='show-all-label'>show all:</div>
         <div className='show-all-switch'>
-        <Toggle
-          defaultChecked={showAll} 
-          onChange={toggleShowAll} /></div>
+          <Toggle
+            defaultChecked={showAll} 
+            onChange={toggleShowAll} />
+        </div>
       </div>
       { training }
     </Layout>

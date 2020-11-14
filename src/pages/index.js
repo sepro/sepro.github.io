@@ -30,7 +30,7 @@ export default props => {
   return (
     <Layout pageTitle="About" pageDescription="Learn more about me">
       <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.about }} />
-      <h3>Selected Publications <small>(view <Link to="/publications">all</Link>)</small></h3>
+      <h3>Selected Publications <small>(<Link to="/publications">full list</Link>)</small></h3>
       <Citations />
       {selected_publications}
     </Layout>

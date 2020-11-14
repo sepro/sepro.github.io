@@ -328,6 +328,16 @@ a:focus,
 .theme-darth-vader .author-highlighted, .date-highlighted {
   color: #777;
 }
+.theme-darth-vader .react-toggle--checked .react-toggle-track {
+  background-color: #000;
+}
+.theme-darth-vader .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #000;
+}
+.theme-darth-vader .react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+  border-color: #777;
+}
 /* luke-lightsaber */
 .theme-luke-lightsaber a {
   color: #5c94bd;
@@ -345,6 +355,16 @@ a:focus,
 }
 .theme-luke-lightsaber .author-highlighted, .date-highlighted {
   color: #5c94bd;
+}
+.theme-luke-lightsaber .react-toggle--checked .react-toggle-track {
+  background-color: #416a88;
+}
+.theme-luke-lightsaber .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #416a88;
+}
+.theme-luke-lightsaber .react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+  border-color: #5c94bd;
 }
 /* wonder-woman */
 .theme-wonder-woman a {
@@ -364,6 +384,16 @@ a:focus,
 .theme-wonder-woman .author-highlighted, .date-highlighted {
   color: #dc4e48;
 }
+.theme-wonder-woman .react-toggle--checked .react-toggle-track {
+  background-color: #c81912;
+}
+.theme-wonder-woman .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #c81912;
+}
+.theme-wonder-woman .react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+  border-color: #dc4e48;
+}
 /* master-yoda */
 .theme-master-yoda a {
   color: #4baea0;
@@ -382,7 +412,16 @@ a:focus,
 .theme-master-yoda .author-highlighted, .date-highlighted {
   color: #4baea0;
 }
-
+.theme-master-yoda .react-toggle--checked .react-toggle-track {
+  background-color: #4baea0;
+}
+.theme-master-yoda .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #4baea0;
+}
+.theme-master-yoda .react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+  border-color: #5f7f54;
+}
 /* sebastian-proost */
 .theme-sebastian-proost a {
   color: #e68a00;
@@ -400,6 +439,17 @@ a:focus,
 }
 .theme-sebastian-proost .author-highlighted, .date-highlighted {
   color: #e68a00;
+}
+
+.theme-sebastian-proost .react-toggle--checked .react-toggle-track {
+  background-color: #e68a00;
+}
+.theme-sebastian-proost .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #e68a00;
+}
+.theme-sebastian-proost .react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+  border-color: #b36b01;
 }
 
 .font-programmer {
@@ -422,7 +472,7 @@ a:focus,
   border-radius: 10px;
 }
 
-//toggle
+// React-toggle
 
 .show-all-toggle {
   text-align: right;
@@ -451,13 +501,22 @@ a:focus,
 	box-shadow: none !important;
 }
 
-.theme-sebastian-proost .react-toggle--checked .react-toggle-track {
-  background-color: #e68a00;
+// Transitions
+
+.example-enter {
+  opacity: 0.01;
 }
-.theme-sebastian-proost .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-  background-color: #e68a00;
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
 }
-.theme-sebastian-proost .react-toggle--checked .react-toggle-thumb {
-  left: 27px;
-  border-color: #b36b01;
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

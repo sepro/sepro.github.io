@@ -20,6 +20,7 @@
     "gatsby-plugin-less": "^3.2.9",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.4.0",
+    "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sitemap": "^2.6.0",
     "less": "^3.12.2",
     "react": "^16.14.0",

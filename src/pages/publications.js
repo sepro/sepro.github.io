@@ -18,12 +18,9 @@ export default props => {
   ))
 
   return (
-    <Layout
-      pageTitle="Publications"
-      pageDescription="an overview of my scientific publications"
-    >
+    <Layout pageTitle="Publications" pageDescription="an overview of my scientific publications">
       <Citations />
-      {publications}
+      { publications }
     </Layout>
   )
 }

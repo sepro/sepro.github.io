@@ -17,7 +17,7 @@ const Publication = props => {
   let authors = props.authors.replace(publication_highlight, highlighted_author) 
 
   return (
-    <div className="publication-item">
+    <div className="publication-item"data-sal="fade">
       <p className="publication-title">{props.title }. <span className="publication-journal-year">{props.journal || ""} ({props.year || ""})</span></p>
       <p className="publication-authors" dangerouslySetInnerHTML={{__html: authors}}></p>
     </div>
