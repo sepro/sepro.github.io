@@ -21,8 +21,27 @@ module.exports = {
     // Name to highlight in publications
     publication_highlight: `S. Proost`,
     about: `
-      <p></p>
-      <p>See the PDF version of my resume <a href="#">here</a>.</p></p>
+      <h3>Bio</h3>
+      <p>Currently working as a Senior PostDoc at the <a href="https://cfm.vib.be/">VIB-KULeuven Center for Microbiology</a> (Leuven, Belgium) studying the human 
+      gut microbiome and how it connects with the host's health.</p>
+
+      <p>After getting a Masters degree in Biotechnology (UGent, Belgium) obtaining a PhD in Bioinformatics 
+      (<a href="https://vib.be/vib-ugent-center-plant-systems-biology">VIB-UGent Center for Plant Systems Biology</a>) made it possible to unify an 
+      interest in life sciences with computer engineering. Over the course of several PostDocs (<em>e.g.</em> at the <a href="https://www.mpimp-golm.mpg.de/2168/en">Max 
+      Planck Institute of Molecular Plant Physiology</a>) I have ventured more and more towards software development, setting up web platforms to explore large datasets while
+      leveraging data science and machine learning methods to pick them apart further.</p>
+      
+      <p>Full bio available under <a href="./experience">experience & education</a>.</p>
+
+      <h3>Research</h3>
+      <p>The common theme throughout my research is leveraging large datasets to tackle biological questions. This goes hand in hand with using modern
+      (web) technology to create intuitive tools which allows domain experts to explore these data. Over the years I've been involved in the development 
+      of various platforms to study genome evolution, gene function, and microbial ecosystems. These have been used in a number of projects <em>e.g.</em> the 
+      Apple genome project, the Flemish Gut Flora Project, ... A full list of tools is avialable under <a href="#">software</a>.</p>
+
+      <p>More details what I've been working on recently? Check out the <a href="./media">media</a> and <a href="./publications">publications</a> pages!</p>
+
+      <p>Less serious topics I work on, outside of work (for fun or to hone my programmings skills), can be found on my blog <a href="https://blog.4dcu.be/">4DCu.be</a>.</p>
       `,
     skills: [
       {
@@ -73,6 +92,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-less`,
+    `gatsby-plugin-catch-links`,  // This pluging will replace links in the about section with gatsby links
     {
       resolve: `gatsby-plugin-build-date`,
       options: {
