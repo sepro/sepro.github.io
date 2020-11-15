@@ -4,6 +4,7 @@
   where: Gent, Belgium
   when: 2007 - 2012
   moreInfo: ""
+  highlight: 1
   
 - degree: Master
   major: "Biotechnology"
@@ -14,6 +15,7 @@
   # - "Option: Bioinformatics, Genetic Manipulation of Model Organisms and Genome Biology"
   # - "Master thesis: Genomewide prediction of protein-protein interactions in Arabidopsis thaliana"
   # - "Promoter: Prof. Dr. Yves Van de Peer, Supervisor: Dr. Stefanie De Bodt"
+  highlight: 0
   
 - degree: Bachelor
   major: Biology
@@ -23,3 +25,4 @@
   moreInfo: "Graduated Cum Laude"
   # - Graduated Cum Laude
   # - "Option: Philosophy of Biology"
+  highlight: 0
