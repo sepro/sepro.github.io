@@ -147,6 +147,7 @@ ul {
     padding-top: 72px;
   }
   #profile-img {
+    width: 200px;
   }
   #profile-wrapper {
     border-bottom: 1px solid #f8f8f8;
@@ -452,6 +453,10 @@ a:focus,
   border-color: #b36b01;
 }
 
+.theme-sebastian-proost h3{
+  border-bottom: 3px solid #e68a00;;
+}
+
 .font-programmer {
   font-family: "IBM Plex Mono";
   font-size: 0.9em;
@@ -519,4 +524,24 @@ a:focus,
 .example-leave.example-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
+}
+
+// Timeline
+
+@keyframes cd-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.vertical-timeline::before {
+  background: #ddd !important;
+}
+
+.vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+  visibility: visible;
+  animation: cd-fade .6s !important;
 }
