@@ -1,7 +1,9 @@
 module.exports = {
   /* Your site config here */
+  // In case the website is hosted in a subdir, include that path here
+  pathPrefix: "/GatsbyResume",
   siteMetadata: {
-    siteUrl: `https://sebastian.proost.science/`,
+    siteUrl: `https://sebastian.proost.science/GatsbyResume`,
     name: `Sebastian Proost, PhD`,
     role: `Bioinformatics | Data Science`,
     email: `sebastian.proost@gmail.com`,
@@ -10,7 +12,10 @@ module.exports = {
         name: "github",
         link: "https://github.com/sepro",
       },
-      { name: "linkedin", link: "https://www.linkedin.com/in/sebastian-proost-581a6a88/" },
+      {
+        name: "linkedin",
+        link: "https://www.linkedin.com/in/sebastian-proost-581a6a88/",
+      },
       { name: "twitter", link: "https://twitter.com/ProostSebastian" },
     ],
     // Name to highlight in publications
@@ -73,26 +78,26 @@ module.exports = {
       options: {
         formatAsDateString: true, // boolean, defaults to true - if false API will return unformatted string from new Date()
         formatting: {
-          format: 'DD/MM/YYYY', // string, defaults to "MM/DD/YYYY" - pass in any acceptable date-and-time format
+          format: "DD/MM/YYYY", // string, defaults to "MM/DD/YYYY" - pass in any acceptable date-and-time format
           utc: false, // boolean, defaults to false - output time as UTC or not, following date-and-time API
-        }
+        },
       },
     },
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-          threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
-          once: true, // Defines if animation needs to be launched once
-          disable: false, // Flag for disabling animations
-          
-          // Advanced Options
-          selector: '[data-sal]', // Selector of the elements to be animated
-          animateClassName: 'sal-animate', // Class name which triggers animation
-          disabledClassName: 'sal-disabled', // Class name which defines the disabled state
-          rootMargin: '0% 50%', // Corresponds to root's bounding box margin
-          enterEventName: 'sal:in', // Enter event name
-          exitEventName: 'sal:out', // Exit event name
-      }
+        threshold: 0.5, // Percentage of an element's area that needs to be visible to launch animation
+        once: true, // Defines if animation needs to be launched once
+        disable: false, // Flag for disabling animations
+
+        // Advanced Options
+        selector: "[data-sal]", // Selector of the elements to be animated
+        animateClassName: "sal-animate", // Class name which triggers animation
+        disabledClassName: "sal-disabled", // Class name which defines the disabled state
+        rootMargin: "0% 50%", // Corresponds to root's bounding box margin
+        enterEventName: "sal:in", // Enter event name
+        exitEventName: "sal:out", // Exit event name
+      },
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,

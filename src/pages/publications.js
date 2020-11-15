@@ -5,7 +5,6 @@ import Citations from "../components/citations"
 import PublicationData from "../../content/publications.yaml"
 
 export default props => {
-
   const publications = PublicationData.map((item, index) => (
     <Publication
       key={index}
@@ -18,9 +17,12 @@ export default props => {
   ))
 
   return (
-    <Layout pageTitle="Publications" pageDescription="an overview of my scientific publications">
+    <Layout
+      pageTitle="Publications"
+      pageDescription="an overview of my scientific publications"
+    >
       <Citations />
-      { publications }
+      {publications}
     </Layout>
   )
 }

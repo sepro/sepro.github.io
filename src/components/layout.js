@@ -56,8 +56,8 @@ const Layout = props => {
               />
             </div>
             <div className="column" id="content-wrapper">
-                <PageHeader title={props.pageTitle} />
-                {props.children}
+              <PageHeader title={props.pageTitle} />
+              {props.children}
             </div>
           </div>
         </div>

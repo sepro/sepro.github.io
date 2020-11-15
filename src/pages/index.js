@@ -16,7 +16,9 @@ export default props => {
     }
   `)
 
-  const selected_publications = PublicationData.filter(publication => publication.Selected === 1).map((item, index) => (
+  const selected_publications = PublicationData.filter(
+    publication => publication.Selected === 1
+  ).map((item, index) => (
     <Publication
       key={index}
       title={item.Title}
@@ -30,7 +32,12 @@ export default props => {
   return (
     <Layout pageTitle="About" pageDescription="Learn more about me">
       <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.about }} />
-      <h3>Selected Publications <small>(<Link to="/publications">full list</Link>)</small></h3>
+      <h3>
+        Selected Publications{" "}
+        <small>
+          (<Link to="/publications">full list</Link>)
+        </small>
+      </h3>
       <Citations />
       {selected_publications}
     </Layout>
