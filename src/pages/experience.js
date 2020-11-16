@@ -68,7 +68,7 @@ export default props => {
 
   return (
     <Layout
-      pageTitle="Experience and Education"
+      pageTitle="Experience & Education"
       pageDescription="Learn more about my experience"
     >
       <VerticalTimeline layout="1-column-left">

@@ -54,14 +54,14 @@
     Country: Belgium
     Role: No active contribution
     Selected: 0
--   Name: AllBio Tutorial: New methods in genome annotation
+-   Name: "AllBio Tutorial: New methods in genome annotation"
     Date: July 10-11
     Year: 2014
     Location: Berlin
     Country: Germany
     Role: Trainer
     Selected: 0
--   Name: AllBio Tutorial: Comparative genome annotation methods
+-   Name: "AllBio Tutorial: Comparative genome annotation methods"
     Date: April 29-30
     Year: 2014
     Location: Potsdam
@@ -81,7 +81,7 @@
     Location: Herzogenhorn
     Country: Germany
     Role: Trainer
-    Selected: 1
+    Selected: 0
 -   Name: Plants & People
     Date: June 18-19
     Year: 2013
@@ -145,7 +145,7 @@
     Country: The Netherlands
     Role: Poster presentation and software demonstration
     Selected: 1
--   Name: GMPF Summer School 2011: Introduction to Bioinformatics
+-   Name: "GMPF Summer School 2011: Introduction to Bioinformatics"
     Date: June 28 - July 1
     Year: 2011
     Location: 'IASMA, San Michele all''Adige'

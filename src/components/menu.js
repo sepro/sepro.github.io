@@ -9,7 +9,7 @@ const Menu = props => {
     //{ name: "Skills", link: "/skills" },
     { name: "Media", link: "/media" },
     { name: "Experience & Education", link: "/experience" },
-    { name: "Training", link: "/training" },
+    { name: "Other", link: "/other" },
   ].map((item, index) => (
     <MenuItem
       to={item.link}
