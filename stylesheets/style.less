@@ -479,21 +479,37 @@ a:focus,
 
 // React-toggle
 
+.header-toggle {
+  position: relative;
+}
+
+.header-toggle span.show-all-toggle {
+  position: absolute;
+  right: 6px;   /* must be equal to parent's right padding */
+}
+
 .show-all-toggle {
+  padding-top: 9px;
   text-align: right;
-  padding-bottom: 20px;
+  font-size: 75%;
 }
 .show-all-label {
-  vertical-align: middle;
-  display: inline-block;
   padding-right: 1rem;
 }
 
-.show-all-switch {
-  vertical-align: middle;
-  display: inline-block;
+.react-toggle-track {
+  width: 44px !important;
+  height: 18px !important;
 }
 
+.react-toggle-thumb {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  left: 27px !important;
+}
 .react-toggle--focus .react-toggle-thumb {
 	-webkit-box-shadow: none !important;
 	-moz-box-shadow: none !important;
