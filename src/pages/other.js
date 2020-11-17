@@ -49,6 +49,7 @@ export default props => {
     <Layout
       pageTitle="Other"
       pageDescription="Training, conferences, ..."
+      showTitle={false}
     >
       <h3 className="header-toggle">Training
         <span className="show-all-toggle">

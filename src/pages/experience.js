@@ -70,7 +70,8 @@ export default props => {
     <Layout
       pageTitle="Experience & Education"
       pageDescription="Learn more about my experience"
-    >
+      showTitle={true}
+      >
       <VerticalTimeline layout="1-column-left">
         {experience}
         {education}

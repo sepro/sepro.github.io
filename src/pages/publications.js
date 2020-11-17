@@ -20,6 +20,7 @@ export default props => {
     <Layout
       pageTitle="Publications"
       pageDescription="an overview of my scientific publications"
+      showTitle={true}
     >
       <Citations />
       {publications}

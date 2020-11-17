@@ -16,7 +16,10 @@ export default props => {
   ))
 
   return (
-    <Layout pageTitle="Media" pageDescription="my apprearances in the media">
+    <Layout pageTitle="Media" 
+      pageDescription="my apprearances in the media"
+      showTitle={true}
+    >
       {media_items}
     </Layout>
   )
