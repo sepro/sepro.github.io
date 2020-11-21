@@ -37,7 +37,7 @@ module.exports = {
       <p>The common theme throughout my research is leveraging large datasets to tackle biological questions. This goes hand in hand with using modern
       (web) technology to create intuitive tools which allows domain experts to explore these data. Over the years I've been involved in the development 
       of various platforms to study genome evolution, gene function, and microbial ecosystems. These have been used in a number of projects <em>e.g.</em> the 
-      Apple genome project, the Flemish Gut Flora Project, ... A full list of tools is avialable under <a href="#">software</a>.</p>
+      Apple genome project, the Flemish Gut Flora Project, ... A full list of tools is avialable under <a href="./software">software</a>.</p>
 
       <p>More details what I've been working on recently? Check out the <a href="./media">media</a> and <a href="./publications">publications</a> pages!</p>
 

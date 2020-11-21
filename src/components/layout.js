@@ -66,7 +66,9 @@ const Layout = props => {
                 <h4>Skills</h4>
                 <Skills />
               </div>
-              
+              <div className="xs-visible">
+                <a href="/skills">View skills and languages</a>
+              </div>
             </div>
             <div className="column" id="content-wrapper">
               <PageHeader title={props.pageTitle} showTitle={props.showTitle}/>

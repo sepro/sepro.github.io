@@ -6,7 +6,7 @@ const Menu = props => {
   const menuItems = [
     { name: "About", link: "/" },
     { name: "Publications", link: "/publications" },
-    //{ name: "Skills", link: "/skills" },
+    { name: "Software", link: "/software" },
     { name: "Media", link: "/media" },
     { name: "Experience & Education", link: "/experience" },
     { name: "Other", link: "/other" },
