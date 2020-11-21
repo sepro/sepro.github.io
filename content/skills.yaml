@@ -1,6 +1,27 @@
 - name: "Python"
-  level: "85"
+  level: 90
   experience: "8 years"
-- name: "Linux"
-  level: "85"
+
+- name: "Data Science"
+  level: 85
+  experience: "5 years"
+
+- name: "Flask"
+  level: 85
+  experience: "6 years"
+
+- name: "HTML & CSS"
+  level: 80
   experience: "12 years"
+
+- name: "Linux"
+  level: 75
+  experience: "12 years"
+
+- name: "JavaScript"
+  level: 60
+  experience: "5 years"
+
+- name: "R"
+  level: 55
+  experience: "3 years"

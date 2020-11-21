@@ -13,12 +13,11 @@ const Software = props => {
     <table className="item-table">
       <tbody>
         <tr>
-          <td className="item-name">{props.name || ""}</td>
+          <td className="item-name">{props.name || ""} {badges}</td>
           <td className="item-when">{props.when || ""}</td>
         </tr>
         <tr>
-          <td className="item-org">{props.description || ""}</td>
-          <td className="item-links">{badges}</td>
+          <td className="item-org" colSpan="2">{props.description || ""}</td>
         </tr>
       </tbody>
     </table>

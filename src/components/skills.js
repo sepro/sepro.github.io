@@ -4,7 +4,9 @@ import SkillData from "../../content/skills.yaml"
 
 
 const Skills = props => {
-    const skills = SkillData.map((item, index) => (
+    const skills = SkillData.sort(function (a, b) {
+      return b.level - a.level;
+    }).map((item, index) => (
     <Skill
       key={index}
       name={item.name}
