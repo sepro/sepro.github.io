@@ -1,18 +1,10 @@
-# gatsby-starter-clean-resume
+# Resume Sebastian Proost
 
-Build an online version of your resume in just a few minutes with this clean-resume boilerplate.
+This is build upon gatsby-starter-clean-resume. Check out their live demo [here](https://gatsby-starter-clean-resume.netlify.com/). This is designed to be an academic resume and included items like
+publications, training, confernces, media, ... These data is stored in different YAML files located in ./content/. 
 
-Check out the live demo [here](https://gatsby-starter-clean-resume.netlify.com/).
+Which in turn is based on [gatsby-starter-hello-world](https://github.com/gatsbyjs/gatsby-starter-hello-world). This project uses the [Milligram](https://github.com/milligram/milligram) framework for styling.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/49be9899-b238-49c1-8de3-3f0de450d5bf/deploy-status)](https://app.netlify.com/sites/gatsby-starter-clean-resume/deploys)
-
-Based on [gatsby-starter-hello-world](https://github.com/gatsbyjs/gatsby-starter-hello-world). This project uses the [Milligram](https://github.com/milligram/milligram) framework for styling.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/masoudkarimif/gatsby-starter-clean-resume)
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/masoudkarimif/gatsby-starter-clean-resume)
 
 ## 🚀 Quick start
 
@@ -79,46 +71,32 @@ All the information that appear on your resume is in this file. With solely chan
 
 3. **Education**
 
-   ```shell
-   education: [
-         {
-           degree: "B.Sc.",
-           major: "Computer Engineering",
-           when: "2008-2012",
-           school: "UCLA",
-           where: "Los Angeles, CA",
-           moreInfo: `<p>I finally found out how it feels like to live in LA; it was awesome!</p>`
-       },
-   ]
-   ```
+   The various places you studied can be added to ./content/education.yaml
 
-   Here you will add you educational background by appending similar items to the `education` array. You can also remove fields you don't like (like `major`, or the name of the `school`) and it won't appear on your website.
+   ```yaml
+   - degree: "Doctor"
+      major: "Science : Biotechnology"
+      school: Universiteit Gent (Doctoral Schools)
+      where: Gent, Belgium
+      when: 2007 - 2012
+      moreInfo: ""
+      highlight: 1
+   ```
 
 <br/>
 
 4. **Experience**
 
-   ```shell
-   experience: [
-           {
-             role: "Software Developer",
-             when: "2014-Present",
-             company: "Facebook",
-             where: "Menlo Park, CA",
-             moreInfo: `See my work <a href="#">here</a>.`
-         },
-         {
-             role: "Web Developer",
-             when: "2010-2014",
-             company: "Amazon",
-             where: "Vancouver, BC",
-             moreInfo: ``
-         },
-   ]
+Experience can be added to ./content/experience.yaml
+
+   ```yaml
+   - role: Senior PostDoc
+      company: KULeuven | VIB - Center for Microbiology
+      where: Leuven, Belgium
+      when: 2018 - now
+      moreInfo: ""
+      highlight: 1
    ```
-
-   This is where you will talk about your experience.
-
 <br/>
 
 5. **Skills**
@@ -171,6 +149,7 @@ All the information that appear on your resume is in this file. With solely chan
    - `wonder-woman`: light red
    - `darth-vader`: black
    - `luke-lightsaber`: light blue
+   - `sebastian-proost`: orange
 
 <br/>
 

@@ -4,6 +4,8 @@ import Menu from "./menu"
 import Profile from "./profile"
 import PageHeader from "./page-header"
 import Footer from "./footer"
+import Skills from  "./skills"
+import Languages from  "./languages"
 import { Helmet } from "react-helmet"
 
 const Layout = props => {
@@ -54,6 +56,17 @@ const Layout = props => {
                 socialMedia={data.site.siteMetadata.socialMedia}
                 email={data.site.siteMetadata.email}
               />
+              <div className="languages-profile xs-hidden">
+                <hr />
+                <h4>Languages</h4>
+                <Languages />
+              </div>
+              <div className="skills-profile xs-hidden">
+                <hr />
+                <h4>Skills</h4>
+                <Skills />
+              </div>
+              
             </div>
             <div className="column" id="content-wrapper">
               <PageHeader title={props.pageTitle} showTitle={props.showTitle}/>
