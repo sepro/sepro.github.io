@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{VfgA:function(e,a,n){"use strict";n.r(a);var l=n("q1tI"),t=n.n(l),r=n("Bl7J"),s=n("nOYz"),u=n("A9qp");a.default=function(e){return t.a.createElement(r.a,{pageTitle:"Skills and Languages",pageDescription:"Learn more about my skills",showTitle:!1},t.a.createElement("h3",null,"Languages"),t.a.createElement(u.a,null),t.a.createElement("h3",null,"Skills"),t.a.createElement(s.a,null))}}}]);
+//# sourceMappingURL=component---src-pages-skills-js-d34903fbe5cb06795f32.js.map
