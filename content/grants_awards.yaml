@@ -1,38 +1,46 @@
-- award: VIB Scientists on Stage
+- name: VIB Scientists on Stage
   rank: Best Presentation
   description:
   year: 2019
+  type: Award
 
-- grant: IWT Personal Fellowship
+- name: IWT Personal Fellowship
   description: Funding from Flemish government to support doctoral research
   start: 2009
   stop: 2011
+  type: Grant
 
-- award: WELEK Robotics Competition
+- name: WELEK Robotics Competition
   rank: Fourth Place
   description: Autonomous Sumo Robot
   year: 2009
+  type: Award
   
-- award: WELEK Robotics Competition
+- name: WELEK Robotics Competition
   rank: Fourth Place
   description: Light Finder
   year: 2008
+  type: Award
 
-- grant: IWT Personal Fellowship
+- name: IWT Personal Fellowship
   description: Funding from Flemish government to support doctoral research
   start: 2007
   stop: 2009
+  type: Grant
 
-- award: Speculaas van de Maand
+- name: Speculaas van de Maand
   rank:
   description: Award from the city council of Hasselt
   year: 2003
+  type: Award
 
-- award: International Biology Olympiad
+- name: International Biology Olympiad
   rank: Bronze Medal
   description: Minsk, Belarus
   year: 2003
+  type: Award
 
-- award: Flemish Biology Olympiad
+- name: Flemish Biology Olympiad
   rank: First Place
   year: 2003
+  type: Award

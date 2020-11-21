@@ -469,12 +469,19 @@ a:focus,
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
-  color: #fff;
+  color: #fff !important;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   background-color: #777;
   border-radius: 10px;
+  margin-right: 5px;
+}
+
+.publication-preprint {
+  color: #777;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 // React-toggle
@@ -485,11 +492,11 @@ a:focus,
 
 .header-toggle span.show-all-toggle {
   position: absolute;
-  right: 6px;   /* must be equal to parent's right padding */
+  right: 0px;   /* must be equal to parent's right padding */
 }
 
 .show-all-toggle {
-  padding-top: 9px;
+  padding-top: 7px;
   text-align: right;
   font-size: 75%;
 }

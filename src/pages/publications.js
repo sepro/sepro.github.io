@@ -12,7 +12,8 @@ export default props => {
       authors={item.Authors}
       journal={item.Journal}
       year={item.Year}
-      pubmed={item.PMID}
+      preprint={item.Preprint}
+      badges = {item.URLs || []}
     />
   ))
 
