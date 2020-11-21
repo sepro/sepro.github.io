@@ -43,38 +43,6 @@ module.exports = {
 
       <p>Less serious topics I work on, outside of work (for fun or to hone my programmings skills), can be found on my blog <a href="https://blog.4dcu.be/">4DCu.be</a>.</p>
       `,
-    skills: [
-      {
-        name: "JavaScript",
-        level: "85",
-        experience: "5 years",
-      },
-      {
-        name: "Python",
-        level: "75",
-        experience: "2 years",
-      },
-      {
-        name: "Java",
-        level: "65",
-        experience: "2 years",
-      },
-      {
-        name: "React",
-        level: "75",
-        experience: "1 years",
-      },
-      {
-        name: "Linux",
-        level: "75",
-        experience: "4 years",
-      },
-      {
-        name: "C++",
-        level: "40",
-        experience: "1 years",
-      },
-    ],
     //available_themes: ["great-gatsby", "master-yoda", "wonder-woman", "darth-vader", "luke-lightsaber", "sebastian-proost"],
     theme: "sebastian-proost",
     //fonts. Available: [default, programmer]
