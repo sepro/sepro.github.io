@@ -1,9 +1,9 @@
 module.exports = {
   /* Your site config here */
   // In case the website is hosted in a subdir, include that path here
-  pathPrefix: "/GatsbyResume",
+  pathPrefix: "",
   siteMetadata: {
-    siteUrl: `https://sebastian.proost.science/GatsbyResume`,
+    siteUrl: `https://sebastian.proost.science`,
     name: `Sebastian Proost, PhD`,
     role: `Bioinformatics | Data Science`,
     email: `sebastian.proost@gmail.com`,
