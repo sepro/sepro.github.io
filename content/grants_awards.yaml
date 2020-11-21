@@ -6,8 +6,7 @@
 
 - name: IWT Personal Fellowship
   description: Funding from Flemish government to support doctoral research
-  start: 2009
-  stop: 2011
+  year: 2009-2011
   type: Grant
 
 - name: WELEK Robotics Competition
@@ -24,8 +23,7 @@
 
 - name: IWT Personal Fellowship
   description: Funding from Flemish government to support doctoral research
-  start: 2007
-  stop: 2009
+  year: 2007-2009
   type: Grant
 
 - name: Speculaas van de Maand

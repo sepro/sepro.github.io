@@ -4,6 +4,7 @@ import Item from "../components/item"
 import Toggle from "react-toggle"
 import TrainingData from "../../content/training.yaml"
 import ConferenceData from "../../content/conferences.yaml"
+import AwardsData from "../../content/grants_awards.yaml"
 
 import "react-toggle/style.css"
 
@@ -18,6 +19,17 @@ export default props => {
   function toggleShowAllConferences() {
     setShowAllConferences(!showAllConferences)
   }
+
+  const awards = AwardsData.map((item, index) => (
+    <Item
+      key={index}
+      name={item.name}
+      when={item.year}
+      where=""
+      org={item.description}
+      moreInfo={item.rank || ""}
+    />
+  ))
 
   const training = TrainingData.filter(
     item => item.Selected === 1 || showAllTraining
@@ -51,6 +63,8 @@ export default props => {
       pageDescription="Training, conferences, ..."
       showTitle={false}
     >
+      <h3>Grants & Awards</h3>
+      {awards}
       <h3 className="header-toggle">Training
         <span className="show-all-toggle">
           <span className="show-all-label">show all:</span>
