@@ -16,8 +16,10 @@ jobs:
       - run: npm i -g gh-pages   
       - run: npm install
       - run: npm install --only=dev
+      - run: gatsby build --output-dir mywebsite
       - name: Commit new build
         run: |
           git config --global user.name autobuild
-          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com' 
-          gatsby build --prefix-paths && gh-pages -d public
+          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+          git commit -am "rebuild new release" --allow-empty
+          git push  # --force origin HEAD:$GITHUB_REF
