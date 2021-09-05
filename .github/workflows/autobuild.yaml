@@ -13,6 +13,7 @@ jobs:
         with:
             node-version: '12'
       - run: npm i -g gatsby-cli      
-      - run: npm install
+      - run: npm install -g
+      - run: npm install --only=dev -g
       - name: Commit new build
         run: gatsby build --prefix-paths && gh-pages -d public
