@@ -10,7 +10,7 @@ jobs:
         with:  # https://github.com/stefanzweifel/git-auto-commit-action#checkout-the-correct-branch
             ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v2
-          with:
+        with:
             node-version: '12'
       - run: npm install
       - name: Commit new build
