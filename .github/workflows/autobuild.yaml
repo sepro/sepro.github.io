@@ -17,4 +17,7 @@ jobs:
       - run: npm install
       - run: npm install --only=dev
       - name: Commit new build
-        run: gatsby build --prefix-paths && gh-pages -d public
+        run: |
+          git config --global user.name autobuild
+          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com' 
+          gatsby build --prefix-paths && gh-pages -d public
