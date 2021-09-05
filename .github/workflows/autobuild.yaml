@@ -15,6 +15,7 @@ jobs:
       - run: npm i -g gatsby-cli
       - run: npm install
       - run: npm install --only=dev
+      - run: rm -rf docs
       - run: |
           gatsby build
           mv public docs
