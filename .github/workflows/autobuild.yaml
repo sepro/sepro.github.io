@@ -13,10 +13,11 @@ jobs:
         with:
             node-version: '12'
       - run: npm i -g gatsby-cli
-      - run: npm i -g gh-pages   
       - run: npm install
       - run: npm install --only=dev
-      - run: gatsby build --output-dir mywebsite
+      - run: |
+          gatsby build
+          mv public docs
       - name: Commit new build
         run: |
           git config --global user.name autobuild
