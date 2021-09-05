@@ -12,8 +12,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
             node-version: '12'
-      - run: npm i -g gatsby-cli      
-      - run: npm install -g
-      - run: npm install --only=dev -g
+      - run: npm i -g gatsby-cli
+      - run: npm i -g gh-pages   
+      - run: npm install
+      - run: npm install --only=dev
       - name: Commit new build
         run: gatsby build --prefix-paths && gh-pages -d public
