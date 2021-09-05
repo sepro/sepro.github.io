@@ -15,4 +15,4 @@ jobs:
       - run: npm i -g gatsby-cli      
       - run: npm install
       - name: Commit new build
-        run: gatsby deploy
+        run: gatsby build --prefix-paths && gh-pages -d public
