@@ -1,3 +1,8 @@
+- name: VIB Strategic POC
+  description: Funding to develop an early proof of concept
+  year: 2021
+  type: Grant
+
 - name: VIB Scientists on Stage
   rank: Best Presentation
   description:
