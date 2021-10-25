@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
             node-version: '14'
-      - run: npm i -g gatsby-cli
+      - run: npm i -g gatsby-cli@4.0.0
       - run: npm install
       - run: npm install --only=dev
       - run: gatsby build
