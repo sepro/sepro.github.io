@@ -8,8 +8,8 @@ const Languages = props => {
            <Flag name={item.short}           
            format="png"
            pngSize={24}
-           width=24
-           height=24
+           width="24"
+           height="24"
            shiny={false}
            alt={item.language} 
            basePath="/img/flags"/>
