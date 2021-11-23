@@ -1,5 +1,5 @@
 import React from "react"
-import profile_photo from "../../static/profile.png"
+import profile_photo from "../../static/profile.jpg"
 import { SocialIcon } from "react-social-icons"
 import { useStaticQuery, graphql } from "gatsby"
 
