@@ -3,7 +3,7 @@
   title: "Bytes & Bacteria"
   icon: video-camera
   description: "Streamed presentation for Pint of Science"
-  data: <iframe width="100%" height="400" src="https://www.youtube.com/embed/iSgKLZ257SI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  data: <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/iSgKLZ257SI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - medium: "Talk Python To Me"
   title: "A gut feeling about Python"
@@ -17,7 +17,7 @@
   year: 2019
   icon: video-camera
   description: "Ten minute presentation suited for a broad audience (in Dutch)"
-  data: <iframe width="100%" height="400" src="https://www.youtube.com/embed/BVi8Vs8bsgk?list=PLCm0QI_1cS8-q_X5z29OFgbb3t4gM7SL7" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  data: <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/BVi8Vs8bsgk?list=PLCm0QI_1cS8-q_X5z29OFgbb3t4gM7SL7" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - medium: "Wetenschap uitgedokterd"
   title: "Bytes & Bacteriën"
