@@ -155,22 +155,7 @@ Experience can be added to ./content/experience.yaml
 
 8. **Google Analytics**
 
-   ```shell
-   plugins: [
-       // Make sure this plugin is first in the array of plugins
-       {
-         resolve: `gatsby-plugin-google-analytics`,
-         options: {
-           trackingId: "UA-111111111-1",
-           head: true,
-         },
-       },
-     ],
-   ```
-
-   Add your Google Analytics tracking id here.
-
-<br/>
+   Has been removed to avoid the need for including a GDPR complient privacy statement and cookie consent.
 
 9. **Fonts**
 
@@ -196,11 +181,7 @@ You can use the `buildspec.yml` file in the root directory for AWS CodeBuild. Yo
 
 ## Changing profile photo and favicon
 
-Simply replace the `profile.png` and `favicon.ico` files in the `/static` directory.
-
-## Contributions
-
-PRs are welcome!
+Simply replace the `profile.jpg` and `favicon.ico` files in the `/static` directory.
 
 ## License
 
