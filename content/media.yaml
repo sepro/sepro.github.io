@@ -25,7 +25,7 @@
   year: 2019
   icon: video-camera
   description: "Two minute pitch about my work (in Dutch, English subtitles)"
-  data: <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwu.sfo%2Fvideos%2F412309072764736%2F&show_text=0" width="100%" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+  data: <a href="https://www.wetenschapuitgedokterd.be/bytes-en-bacterien-software-om-de-darmflora-te-verkennen"><img src="https://sebastian.proost.science/img/science_figured_out.png" alt="Science Figured Out Banner" /></a>
 
 - medium: "Fokus jongeren"
   title: "Ad Biotechdag"
