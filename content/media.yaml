@@ -5,6 +5,7 @@
   description: "Streamed presentation for Pint of Science"
   data: <a href="https://www.youtube.com/watch?v=iSgKLZ257SI"><img src="./img/pint_of_science.png" alt="Pint of Science banner" /></a>
 
+
 - medium: "Talk Python To Me"
   title: "A gut feeling about Python"
   year: 2019
