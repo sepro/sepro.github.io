@@ -3,7 +3,7 @@
   title: "Bytes & Bacteria"
   icon: video-camera
   description: "Streamed presentation for Pint of Science"
-  data: <a href="https://www.youtube.com/watch?v=iSgKLZ257SI"><img src="./img/pint_of_science.png" alt="Pint of Science banner" /></a>
+  data: <a href="https://www.youtube.com/watch?v=iSgKLZ257SI"><img src="https://sebastian.proost.science/img/pint_of_science.png" alt="Pint of Science banner" /></a>
 
 
 - medium: "Talk Python To Me"
@@ -32,5 +32,5 @@
   year: 2019
   icon: camera
   description: "Advertisement for Biotechdag 2019"
-  data: <img src="./img/Fokus_jongeren.jpg" alt="Advertisement in Focus Jongeren for BiotechDag 2019" />
+  data: <img src="https://sebastian.proost.science/img/Fokus_jongeren.jpg" alt="Advertisement in Focus Jongeren for BiotechDag 2019" />
 
