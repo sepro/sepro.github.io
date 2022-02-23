@@ -3,7 +3,7 @@
   title: "Bytes & Bacteria"
   icon: video-camera
   description: "Streamed presentation for Pint of Science"
-  data: <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/iSgKLZ257SI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  data: <a href="https://www.youtube.com/watch?v=iSgKLZ257SI"><img src="./img/pint_of_science.png" alt="Pint of Science banner" /></a>
 
 - medium: "Talk Python To Me"
   title: "A gut feeling about Python"
