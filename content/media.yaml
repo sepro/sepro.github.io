@@ -11,14 +11,14 @@
   year: 2019
   icon: microphone
   description: "I was a guest on the podcast \"Talk Python To Me\""
-  data: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/708708646&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
+  data: <a href="https://talkpython.fm/episodes/show/237/a-gut-feeling-about-python"><img src="https://sebastian.proost.science/img/talk_python.png" alt="TalkPython player screencap" /></a>
 
 - medium: "Biotech Glashelder door EOS"
   title: "Bytes & Bacteriën"
   year: 2019
   icon: video-camera
   description: "Ten minute presentation suited for a broad audience (in Dutch)"
-  data: <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/BVi8Vs8bsgk?list=PLCm0QI_1cS8-q_X5z29OFgbb3t4gM7SL7" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  data: <a href="https://www.youtube.com/watch?v=BVi8Vs8bsgk"><img src="https://sebastian.proost.science/img/eos_biotechdag.jpg" alt="EOS Biotechdag screencap" /></a>
 
 - medium: "Wetenschap uitgedokterd"
   title: "Bytes & Bacteriën"
