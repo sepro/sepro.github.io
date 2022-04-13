@@ -24,6 +24,9 @@ export default props => {
       showTitle={true}
     >
       <Citations />
+      <div className="citations">
+      * These authors contributed equally to this work
+      </div>
       {publications}
     </Layout>
   )
