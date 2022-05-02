@@ -1,10 +1,10 @@
 - name: "Python"
   level: 90
-  experience: "8 years"
+  experience: "10 years"
 
 - name: "Data Science"
   level: 85
-  experience: "5 years"
+  experience: "7 years"
 
 - name: "Flask"
   level: 85
@@ -24,4 +24,4 @@
 
 - name: "R"
   level: 55
-  experience: "3 years"
+  experience: "4 years"
