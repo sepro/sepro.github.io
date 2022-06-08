@@ -3,7 +3,9 @@
     Journal: Plant Physiology
     Year: 2022
     Selected: 0
-    Preprint: 0
+    URLs:
+        - name: Plant Physiology
+          link: https://academic.oup.com/plphys/advance-article/doi/10.1093/plphys/kiac253/6594502
 
 -   Authors: "Z. Ebrahim*, S. Proost*, R. Y. Tito, J. Raes, G. Glorieux, M. R. Moosa and R. Blaauw"
     Title: "The Effect of ß-Glucan Prebiotic on Kidney Function, Uremic Toxins and Gut Microbiome in Stage 3 to 5 Chronic Kidney Disease (CKD) Predialysis Participants: A Randomized Controlled Trial"
