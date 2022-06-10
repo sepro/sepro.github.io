@@ -3,34 +3,38 @@
   title: "Bytes & Bacteria"
   icon: video-camera
   description: "Streamed presentation for Pint of Science"
-  data: <a href="https://www.youtube.com/watch?v=iSgKLZ257SI"><img src="https://sebastian.proost.science/img/pint_of_science.png" alt="Pint of Science banner" /></a>
-
+  image: https://sebastian.proost.science/img/pint_of_science.png
+  link: https://www.youtube.com/watch?v=iSgKLZ257SI
 
 - medium: "Talk Python To Me"
   title: "A gut feeling about Python"
   year: 2019
   icon: microphone
   description: "I was a guest on the podcast \"Talk Python To Me\""
-  data: <a href="https://talkpython.fm/episodes/show/237/a-gut-feeling-about-python"><img src="https://sebastian.proost.science/img/talk_python.png" alt="TalkPython player screencap" /></a>
+  image: https://sebastian.proost.science/img/talk_python.png
+  link: https://talkpython.fm/episodes/show/237/a-gut-feeling-about-python
 
 - medium: "Biotech Glashelder door EOS"
   title: "Bytes & Bacteriën"
   year: 2019
   icon: video-camera
   description: "Ten minute presentation suited for a broad audience (in Dutch)"
-  data: <a href="https://www.youtube.com/watch?v=BVi8Vs8bsgk"><img src="https://sebastian.proost.science/img/eos_biotechdag.jpg" alt="EOS Biotechdag screencap" /></a>
-
+  image: https://sebastian.proost.science/img/eos_biotechdag.jpg
+  link: https://www.youtube.com/watch?v=BVi8Vs8bsgk
+ 
 - medium: "Wetenschap uitgedokterd"
   title: "Bytes & Bacteriën"
   year: 2019
   icon: video-camera
   description: "Two minute pitch about my work (in Dutch, English subtitles)"
-  data: <a href="https://www.wetenschapuitgedokterd.be/bytes-en-bacterien-software-om-de-darmflora-te-verkennen"><img src="https://sebastian.proost.science/img/science_figured_out.png" alt="Science Figured Out Banner" /></a>
-
+  image: https://sebastian.proost.science/img/science_figured_out.png
+  link: "https://www.wetenschapuitgedokterd.be/bytes-en-bacterien-software-om-de-darmflora-te-verkennen"
+ 
 - medium: "Fokus jongeren"
   title: "Ad Biotechdag"
   year: 2019
   icon: camera
   description: "Advertisement for Biotechdag 2019"
-  data: <img src="https://sebastian.proost.science/img/Fokus_jongeren.jpg" alt="Advertisement in Focus Jongeren for BiotechDag 2019" />
+  image: https://sebastian.proost.science/img/Fokus_jongeren.jpg
+  link: "#"
 

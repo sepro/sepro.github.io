@@ -12,6 +12,8 @@ export default props => {
       icon={item.icon}
       year={item.year}
       data={item.data}
+      image={item.image}
+      link={item.link}
     />
   ))
 

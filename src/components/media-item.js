@@ -22,7 +22,9 @@ const MediaItem = props => {
         {mediaIcon(props.icon)} {props.medium}
       </h3>
       <p className="media-description">{props.description}</p>
-      <div dangerouslySetInnerHTML={{ __html: props.data }}></div>
+      <div className="media-image-container">
+        <a href={props.link}><img className="media-image" src={props.image} alt={props.description} /></a>
+      </div>
     </div>
   )
 }
