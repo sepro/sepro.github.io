@@ -17,6 +17,7 @@ jobs:
         with:
           python-version: '3.10'
       - run: |
+          pip install requests
           python ./python/update_citations.py ./content/citations.yaml
           git config --global user.name autoblack_push
           git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
