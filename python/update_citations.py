@@ -2,6 +2,7 @@ import requests
 import re
 import yaml
 import datetime
+import sys
 
 
 def parse_scholar(user):
@@ -19,12 +20,15 @@ def parse_scholar(user):
 if __name__ == "__main__":
     data = parse_scholar("4niBmJUAAAAJ&hl")
 
-    with open('../content/citations.yaml', "r") as fin:
+    file = sys.argv[1]
+    print("Updating citations in", file)
+
+    with open(file, "r") as fin:
         citation_data = yaml.safe_load(fin)
         citation_data['hindex'] = int(data['h_index'])
         citation_data['count'] = int(data['citations'])
         citation_data['i10index'] = int(data['i10_index'])
         citation_data['date'] = datetime.date.today().strftime("%d/%m/%Y")
 
-    with open('../content/citations.yaml', "w") as fout:
+    with open(file, "w") as fout:
         yaml.dump(citation_data, fout)
