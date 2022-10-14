@@ -1,11 +1,11 @@
 # GitHub Action that updates citations and rebuilds the website
 
 name: auto update citations
-on:
-  workflow_dispatch
-  schedule:
-    # execute once a day
-    - cron:  '0 1 * * *'
+on: workflow_dispatch
+
+#  schedule:
+#    # execute once a day
+#    - cron:  '0 1 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
