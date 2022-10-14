@@ -1,11 +1,10 @@
 # GitHub Action that updates citations and rebuilds the website
 
 name: auto update citations
-on: workflow_dispatch
-
-#  schedule:
-#    # execute once a day
-#    - cron:  '0 1 * * *'
+on:
+  schedule:
+    # execute once a day
+    - cron:  '0 1 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,9 +19,9 @@ jobs:
           pip install requests
           pip install pyyaml
           python ./python/update_citations.py ./content/citations.yaml
-          git config --global user.name autoblack_push
+          git config --global user.name autoupdate_citations
           git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
-          git commit -am "fixup! Format Python code with psf/black push"
+          git commit -am "Auto update: citations"
           git push
 
       - uses: actions/setup-node@v2
