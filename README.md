@@ -1,3 +1,6 @@
+[![autobuild](https://github.com/sepro/sepro.github.io/actions/workflows/autobuild.yaml/badge.svg)](https://github.com/sepro/sepro.github.io/actions/workflows/autobuild.yaml)
+[![auto update citations](https://github.com/sepro/sepro.github.io/actions/workflows/auto_update.yaml/badge.svg)](https://github.com/sepro/sepro.github.io/actions/workflows/auto_update.yaml)
+
 # Resume Sebastian Proost
 
 This is build upon gatsby-starter-clean-resume. Check out their live demo [here](https://gatsby-starter-clean-resume.netlify.com/). This is designed to be an academic resume and included items like
