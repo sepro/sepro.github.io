@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /DeckLock/
+Disallow: /React-Speedcube-Timer/
