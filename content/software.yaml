@@ -1,3 +1,24 @@
+- name: dyspyosis
+  description: Python package to detect dysbiosis in microbiome data
+  year: 2024
+  URLs:
+  - name: github
+    link: https://github.com/raeslab/dyspyosis
+
+- name: RLdbRDA
+  description: RaesLab distance-based redundancy analysis
+  year: 2024
+  URLs:
+  - name: github
+    link: https://github.com/raeslab/RLdbRDA
+
+- name: loreplotr
+  description:  Logistic Regression Plots for R
+  year: 2024
+  URLs:
+  - name: github
+    link: https://github.com/raeslab/loreplotr
+
 - name: lorepy
   description:  Logistic Regression Plots for Python
   year: 2023
