@@ -49,10 +49,9 @@ module.exports = {
     font: "default",
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-less`,
-    `gatsby-plugin-catch-links`,  // This pluging will replace links in the about section with gatsby links
+    `gatsby-plugin-catch-links`, // This pluging will replace links in the about section with gatsby links
     {
       resolve: `gatsby-plugin-build-date`,
       options: {

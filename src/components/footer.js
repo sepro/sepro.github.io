@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Footer = props => {
+const Footer = (props) => {
   const data = useStaticQuery(graphql`
     query {
       currentBuildDate {
