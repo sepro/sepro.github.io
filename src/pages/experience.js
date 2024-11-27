@@ -8,8 +8,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
-import WorkIcon from "../components/icon/WorkIcon"
-import SchoolIcon from "../components/icon/SchoolIcon"
+import { School, Work } from "@mui/icons-material"
 
 const Experience = () => {
   function contentStyle(highlighted) {
@@ -36,7 +35,7 @@ const Experience = () => {
       contentArrowStyle={arrowStyle(item.highlight)}
       date={item.when}
       iconStyle={contentStyle(item.highlight)}
-      icon={<WorkIcon />}
+      icon={<Work />}
     >
       <h3 className="vertical-timeline-element-title">{item.role}</h3>
       <h4 className="vertical-timeline-element-subtitle">
@@ -54,7 +53,7 @@ const Experience = () => {
       contentArrowStyle={arrowStyle(item.highlight)}
       date={item.when}
       iconStyle={contentStyle(item.highlight)}
-      icon={<SchoolIcon />}
+      icon={<School />}
     >
       <h3 className="vertical-timeline-element-title">
         {(item.degree || "") + " " + (item.major ? "in " + item.major : "")}

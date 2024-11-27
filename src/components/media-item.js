@@ -1,16 +1,14 @@
 import React from "react"
-import MicIcon from "./icon/MicIcon"
-import CamIcon from "./icon/CameraIcon"
-import VideoCamIcon from "./icon/VideoCamIcon"
+import { CameraAlt, Mic, Videocam } from "@mui/icons-material"
 
 const MediaItem = (props) => {
   function mediaIcon(icon_type) {
     if (icon_type === "microphone") {
-      return <MicIcon />
+      return <Mic className="media-icon" />
     } else if (icon_type === "camera") {
-      return <CamIcon />
+      return <CameraAlt className="media-icon" />
     } else if (icon_type === "video-camera") {
-      return <VideoCamIcon />
+      return <Videocam className="media-icon" />
     } else {
       return ""
     }
