@@ -8,7 +8,7 @@ import AwardsData from "../../content/grants_awards.yaml"
 
 import "react-toggle/style.css"
 
-export default props => {
+const Other = () => {
   const [showAllTraining, setShowAllTraining] = useState(false)
   const [showAllConferences, setShowAllConferences] = useState(false)
 
@@ -32,7 +32,7 @@ export default props => {
   ))
 
   const training = TrainingData.filter(
-    item => item.Selected === 1 || showAllTraining
+    (item) => item.Selected === 1 || showAllTraining
   ).map((item, index) => (
     <Item
       key={index}
@@ -45,7 +45,7 @@ export default props => {
   ))
 
   const conferences = ConferenceData.filter(
-    item => item.Selected === 1 || showAllConferences
+    (item) => item.Selected === 1 || showAllConferences
   ).map((item, index) => (
     <Item
       key={index}
@@ -65,18 +65,26 @@ export default props => {
     >
       <h3>Grants & Awards</h3>
       {awards}
-      <h3 className="header-toggle">Training
+      <h3 className="header-toggle">
+        Training
         <span className="show-all-toggle">
           <span className="show-all-label">show all:</span>
-            <Toggle defaultChecked={showAllTraining} onChange={toggleShowAllTraining} />
+          <Toggle
+            defaultChecked={showAllTraining}
+            onChange={toggleShowAllTraining}
+          />
         </span>
       </h3>
       {training}
 
-      <h3 className="header-toggle">Conferences
+      <h3 className="header-toggle">
+        Conferences
         <span className="show-all-toggle">
           <span className="show-all-label">show all:</span>
-            <Toggle defaultChecked={showAllConferences} onChange={toggleShowAllConferences} />
+          <Toggle
+            defaultChecked={showAllConferences}
+            onChange={toggleShowAllConferences}
+          />
         </span>
       </h3>
 
@@ -84,3 +92,5 @@ export default props => {
     </Layout>
   )
 }
+
+export default Other

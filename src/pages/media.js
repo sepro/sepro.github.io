@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import MediaItem from "../components/media-item"
 import MediaData from "../../content/media.yaml"
 
-export default props => {
+const Media = () => {
   const media_items = MediaData.map((item, index) => (
     <MediaItem
       key={index}
@@ -18,7 +18,8 @@ export default props => {
   ))
 
   return (
-    <Layout pageTitle="Media" 
+    <Layout
+      pageTitle="Media"
       pageDescription="my apprearances in the media"
       showTitle={true}
     >
@@ -26,3 +27,5 @@ export default props => {
     </Layout>
   )
 }
+
+export default Media

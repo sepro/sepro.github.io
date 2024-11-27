@@ -6,7 +6,7 @@ import PatentData from "../../content/patents.yaml"
 import Citations from "../components/citations"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-export default props => {
+const Home = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -18,7 +18,7 @@ export default props => {
   `)
 
   const selected_publications = PublicationData.filter(
-    publication => publication.Selected === 1
+    (publication) => publication.Selected === 1
   ).map((item, index) => (
     <Publication
       key={index}
@@ -31,7 +31,7 @@ export default props => {
   ))
 
   const selected_patents = PatentData.filter(
-    patent => patent.Selected === 1
+    (patent) => patent.Selected === 1
   ).map((item, index) => (
     <Publication
       key={index}
@@ -40,13 +40,16 @@ export default props => {
       journal={"Patent: " + item.Identifier}
       year={item.Year}
       preprint={0}
-      badges = {item.URLs || []}
+      badges={item.URLs || []}
     />
   ))
 
-
   return (
-    <Layout pageTitle="About" pageDescription="Learn more about me" showTitle={false}>
+    <Layout
+      pageTitle="About"
+      pageDescription="Learn more about me"
+      showTitle={false}
+    >
       <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.about }} />
       <h3>
         Highlights{" "}
@@ -60,3 +63,5 @@ export default props => {
     </Layout>
   )
 }
+
+export default Home

@@ -1,26 +1,21 @@
 import React from "react"
 
-const Item = props => {
+const Item = (props) => {
   return (
-    <table className="item-table">
-      <tbody>
-        <tr>
-          <td className="item-name">{props.name || ""}</td>
-          <td className="item-when">{props.when || ""}</td>
-        </tr>
-        <tr>
-          <td className="item-org">{props.org || ""}</td>
-          <td className="item-where">{props.where || ""}</td>
-        </tr>
-        <tr>
-          <td
-            className="item-more-info"
-            colSpan={2}
-            dangerouslySetInnerHTML={{ __html: props.moreInfo }}
-          />
-        </tr>
-      </tbody>
-    </table>
+    <div className="item">
+      <div className="item-row">
+        <span className="item-name">{props.name || ""}</span>
+        <span className="item-when">{props.when || ""}</span>
+      </div>
+      <div className="item-row">
+        <span className="item-org">{props.org || ""}</span>
+        <span className="item-where">{props.where || ""}</span>
+      </div>
+      <div
+        className="item-more-info"
+        dangerouslySetInnerHTML={{ __html: props.moreInfo }}
+      />
+    </div>
   )
 }
 

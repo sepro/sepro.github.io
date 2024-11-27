@@ -4,12 +4,12 @@ import Menu from "./menu"
 import Profile from "./profile"
 import PageHeader from "./page-header"
 import Footer from "./footer"
-import Skills from  "./skills"
-import Languages from  "./languages"
+import Skills from "./skills"
+import Languages from "./languages"
 import profile_photo from "../../static/profile.png"
 import { Helmet } from "react-helmet"
 
-const Layout = props => {
+const Layout = (props) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -39,18 +39,36 @@ const Layout = props => {
         </title>
         <meta name="description" content={props.pageDescription || ""} />
 
-        <meta property="og:title" content={props.pageTitle + "-" + data.site.siteMetadata.name || ""} />
+        <meta
+          property="og:title"
+          content={props.pageTitle + "-" + data.site.siteMetadata.name || ""}
+        />
         <meta property="og:description" content={props.pageDescription || ""} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={data.site.siteMetadata.siteUrl + profile_photo} />
+        <meta
+          property="og:image"
+          content={data.site.siteMetadata.siteUrl + profile_photo}
+        />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400" />
 
-        <meta property="twitter:title" content={props.pageTitle + "-" + data.site.siteMetadata.name || ""} />
-        <meta property="twitter:description" content={props.pageDescription || ""} />
-        <meta property="twitter:creator" content={data.site.siteMetadata.name } />
-        <meta property="twitter:image" content={data.site.siteMetadata.siteUrl + profile_photo} />
+        <meta
+          property="twitter:title"
+          content={props.pageTitle + "-" + data.site.siteMetadata.name || ""}
+        />
+        <meta
+          property="twitter:description"
+          content={props.pageDescription || ""}
+        />
+        <meta
+          property="twitter:creator"
+          content={data.site.siteMetadata.name}
+        />
+        <meta
+          property="twitter:image"
+          content={data.site.siteMetadata.siteUrl + profile_photo}
+        />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
@@ -87,7 +105,7 @@ const Layout = props => {
               </div>
             </div>
             <div className="column" id="content-wrapper">
-              <PageHeader title={props.pageTitle} showTitle={props.showTitle}/>
+              <PageHeader title={props.pageTitle} showTitle={props.showTitle} />
               {props.children}
             </div>
           </div>

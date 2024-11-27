@@ -15,8 +15,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
+    "@emotion/react": "^11.13.5",
     "gatsby": "^5.14.0",
     "gatsby-plugin-build-date": "^1.0.0",
     "gatsby-plugin-catch-links": "^5.14.0",

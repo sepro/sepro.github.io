@@ -2,7 +2,7 @@ import React from "react"
 import MenuItem from "./menu-item"
 import { Link } from "gatsby"
 
-const Menu = props => {
+const Menu = (props) => {
   const menuItems = [
     { name: "About", link: "/" },
     { name: "Publications", link: "/publications" },
@@ -34,6 +34,7 @@ const Menu = props => {
           <div className="column">
             <nav className="site-nav">
               <input type="checkbox" id="nav-trigger" className="nav-trigger" />
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
               <label htmlFor="nav-trigger">
                 <span className="menu-icon">
                   <svg viewBox="0 0 18 15" width="18px" height="15px">

@@ -3,15 +3,15 @@ import Layout from "../components/layout"
 import ExperienceData from "../../content/experience.yaml"
 import EductationData from "../../content/education.yaml"
 
-import SchoolIcon from "@material-ui/icons/School"
-import WorkIcon from "@material-ui/icons/Work"
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
+import WorkIcon from "../components/icon/WorkIcon"
+import SchoolIcon from "../components/icon/SchoolIcon"
 
-export default props => {
+const Experience = () => {
   function contentStyle(highlighted) {
     if (highlighted === 1) {
       return { background: "rgb(230, 138, 0)", color: "#fff" }
@@ -71,7 +71,7 @@ export default props => {
       pageTitle="Experience & Education"
       pageDescription="Learn more about my experience"
       showTitle={true}
-      >
+    >
       <VerticalTimeline layout="1-column-left">
         {experience}
         {education}
@@ -79,3 +79,5 @@ export default props => {
     </Layout>
   )
 }
+
+export default Experience
