@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_clean_resume=self.webpackChunkgatsby_starter_clean_resume||[]).push([[405],{6193:function(e,l,a){a.r(l);var t=a(6540),n=a(8669),s=a(1418),r=a(3904);l.default=()=>t.createElement(n.A,{pageTitle:"Skills and Languages",pageDescription:"Learn more about my skills",showTitle:!1},t.createElement("h3",null,"Languages"),t.createElement(r.A,null),t.createElement("h3",null,"Skills"),t.createElement(s.A,null))}}]);
+//# sourceMappingURL=component---src-pages-skills-js-580a680fdcf93f338634.js.map
