@@ -11,7 +11,7 @@ jobs:
             ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v3
         with:
-            node-version: '14'
+            node-version: '22'
       - run: npm i -g gatsby-cli@4.0.0
       - run: npm install
       - run: npm install --only=dev

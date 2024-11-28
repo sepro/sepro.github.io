@@ -27,7 +27,6 @@ const Profile = props => {
     <SocialIcon
       key={index}
       url={item.link}
-      bgColor={themeDict[theme]}
       style={{ height: 25, width: 25 }}
     />
   ))
