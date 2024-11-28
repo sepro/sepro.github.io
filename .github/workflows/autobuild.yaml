@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
             node-version: '22'
-      - run: npm i -g gatsby-cli@4.0.0
+      - run: npm i -g gatsby-cli@5.14.0
       - run: npm install --force
       - run: npm install --only=dev --force
       - run: gatsby build
