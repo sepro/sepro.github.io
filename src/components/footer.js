@@ -19,7 +19,12 @@ const Footer = (props) => {
           <p id="cp">
             &copy; {props.name} | Last Update:{" "}
             <span className="date-highlighted">
-              {new Date(data.site.siteMetadata.buildTime).toLocaleDateString("en-GB")}
+              {new Date(data.site.siteMetadata.buildTime).toLocaleDateString("en-GB")}{" "}
+              {new Date(data.site.siteMetadata.buildTime).toLocaleTimeString("en-GB", {
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: false,
+              })}
             </span>
           </p>
         </div>
