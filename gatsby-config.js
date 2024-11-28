@@ -7,6 +7,7 @@ module.exports = {
     name: `Sebastian Proost, PhD`,
     role: `Bioinformatics | Data Science`,
     email: `sebastian.proost@gmail.com`,
+    buildTime: new Date().toISOString(), // Add build time
     socialMedia: [
       {
         name: "github",
@@ -16,7 +17,9 @@ module.exports = {
         name: "linkedin",
         link: "https://www.linkedin.com/in/sebastian-proost-581a6a88/",
       },
-      { name: "twitter", link: "https://twitter.com/ProostSebastian" },
+      { name: "x", link: "https://x.com/ProostSebastian" },
+      { name: "bsky", link: "https://bsky.app/profile/sebastian.proost.science" },
+      { name: "instagram", link: "https://www.instagram.com/sebastian.proost/" },
     ],
     // Name to highlight in publications
     publication_highlight: `S. Proost`,
@@ -52,16 +55,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-less`,
     `gatsby-plugin-catch-links`, // This pluging will replace links in the about section with gatsby links
-    {
-      resolve: `gatsby-plugin-build-date`,
-      options: {
-        formatAsDateString: true, // boolean, defaults to true - if false API will return unformatted string from new Date()
-        formatting: {
-          format: "DD/MM/YYYY", // string, defaults to "MM/DD/YYYY" - pass in any acceptable date-and-time format
-          utc: false, // boolean, defaults to false - output time as UTC or not, following date-and-time API
-        },
-      },
-    },
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {

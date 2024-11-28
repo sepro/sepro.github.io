@@ -4,8 +4,10 @@ import { useStaticQuery, graphql } from "gatsby"
 const Footer = (props) => {
   const data = useStaticQuery(graphql`
     query {
-      currentBuildDate {
-        currentDate
+      site {
+        siteMetadata {
+          buildTime
+        }
       }
     }
   `)
@@ -17,7 +19,7 @@ const Footer = (props) => {
           <p id="cp">
             &copy; {props.name} | Last Update:{" "}
             <span className="date-highlighted">
-              {data.currentBuildDate.currentDate}
+              {new Date(data.site.siteMetadata.buildTime).toLocaleString()}
             </span>
           </p>
         </div>
