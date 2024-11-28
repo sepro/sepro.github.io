@@ -5,7 +5,7 @@ import Citations from "../components/citations"
 import PublicationData from "../../content/publications.yaml"
 import PatentData from "../../content/patents.yaml"
 
-export default props => {
+const Publications = () => {
   const publications = PublicationData.map((item, index) => (
     <Publication
       key={index}
@@ -14,10 +14,9 @@ export default props => {
       journal={item.Journal}
       year={item.Year}
       preprint={item.Preprint}
-      badges = {item.URLs || []}
+      badges={item.URLs || []}
     />
   ))
-
 
   const patents = PatentData.map((item, index) => (
     <Publication
@@ -27,7 +26,7 @@ export default props => {
       journal={"Patent: " + item.Identifier}
       year={item.Year}
       preprint={0}
-      badges = {item.URLs || []}
+      badges={item.URLs || []}
     />
   ))
 
@@ -39,10 +38,12 @@ export default props => {
     >
       <Citations />
       <div className="citations">
-      * These authors contributed equally to this work
+        * These authors contributed equally to this work
       </div>
       {patents}
       {publications}
     </Layout>
   )
 }
+
+export default Publications

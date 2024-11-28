@@ -11,10 +11,10 @@ jobs:
             ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v3
         with:
-            node-version: '14'
-      - run: npm i -g gatsby-cli@4.0.0
-      - run: npm install
-      - run: npm install --only=dev
+            node-version: '22'
+      - run: npm i -g gatsby-cli@5.14.0
+      - run: npm install --force
+      - run: npm install --only=dev --force
       - run: gatsby build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3

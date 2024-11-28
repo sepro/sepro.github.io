@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 
-export default props => {
+const Error = () => {
   return (
     <Layout pageTitle="Page Not Found!" pageDescription="">
       <p>Ooops! Wrong turn!</p>
@@ -11,3 +11,5 @@ export default props => {
     </Layout>
   )
 }
+
+export default Error

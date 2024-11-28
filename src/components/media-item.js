@@ -1,16 +1,14 @@
 import React from "react"
-import MicIcon from "@material-ui/icons/Mic"
-import CameraAltIcon from "@material-ui/icons/CameraAlt"
-import VideocamIcon from "@material-ui/icons/Videocam"
+import { CameraAlt, Mic, Videocam } from "@mui/icons-material"
 
-const MediaItem = props => {
+const MediaItem = (props) => {
   function mediaIcon(icon_type) {
     if (icon_type === "microphone") {
-      return <MicIcon className="media-icon" />
+      return <Mic className="media-icon" />
     } else if (icon_type === "camera") {
-      return <CameraAltIcon className="media-icon" />
+      return <CameraAlt className="media-icon" />
     } else if (icon_type === "video-camera") {
-      return <VideocamIcon className="media-icon" />
+      return <Videocam className="media-icon" />
     } else {
       return ""
     }
@@ -23,7 +21,13 @@ const MediaItem = props => {
       </h3>
       <p className="media-description">{props.description}</p>
       <div className="media-image-container">
-        <a href={props.link}><img className="media-image" src={props.image} alt={props.description} /></a>
+        <a href={props.link}>
+          <img
+            className="media-image"
+            src={props.image}
+            alt={props.description}
+          />
+        </a>
       </div>
     </div>
   )

@@ -212,7 +212,6 @@ ul {
   padding-bottom: 10px;
 }
 
-
 .skills-profile {
   margin-left: auto;
   margin-right: auto;
@@ -244,6 +243,11 @@ ul {
 .item-where,
 .item-links {
   text-align: right;
+}
+.skill-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .item-when {
   font-size: 0.9em;
@@ -331,8 +335,9 @@ a:focus,
 .site-header {
   border-top-color: #50a;
 }
-.author-highlighted, .date-highlighted {
-  color: #50a
+.author-highlighted,
+.date-highlighted {
+  color: #50a;
 }
 /* darth-vader */
 .theme-darth-vader a {
@@ -349,13 +354,16 @@ a:focus,
 .theme-darth-vader .site-header {
   border-top-color: #000;
 }
-.theme-darth-vader .author-highlighted, .date-highlighted {
+.theme-darth-vader .author-highlighted,
+.date-highlighted {
   color: #777;
 }
 .theme-darth-vader .react-toggle--checked .react-toggle-track {
   background-color: #000;
 }
-.theme-darth-vader .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+.theme-darth-vader
+  .react-toggle--checked:hover:not(.react-toggle--disabled)
+  .react-toggle-track {
   background-color: #000;
 }
 .theme-darth-vader .react-toggle--checked .react-toggle-thumb {
@@ -377,13 +385,16 @@ a:focus,
 .theme-luke-lightsaber .site-header {
   border-top-color: #416a88;
 }
-.theme-luke-lightsaber .author-highlighted, .date-highlighted {
+.theme-luke-lightsaber .author-highlighted,
+.date-highlighted {
   color: #5c94bd;
 }
 .theme-luke-lightsaber .react-toggle--checked .react-toggle-track {
   background-color: #416a88;
 }
-.theme-luke-lightsaber .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+.theme-luke-lightsaber
+  .react-toggle--checked:hover:not(.react-toggle--disabled)
+  .react-toggle-track {
   background-color: #416a88;
 }
 .theme-luke-lightsaber .react-toggle--checked .react-toggle-thumb {
@@ -405,13 +416,16 @@ a:focus,
 .theme-wonder-woman .site-header {
   border-top-color: #c81912;
 }
-.theme-wonder-woman .author-highlighted, .date-highlighted {
+.theme-wonder-woman .author-highlighted,
+.date-highlighted {
   color: #dc4e48;
 }
 .theme-wonder-woman .react-toggle--checked .react-toggle-track {
   background-color: #c81912;
 }
-.theme-wonder-woman .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+.theme-wonder-woman
+  .react-toggle--checked:hover:not(.react-toggle--disabled)
+  .react-toggle-track {
   background-color: #c81912;
 }
 .theme-wonder-woman .react-toggle--checked .react-toggle-thumb {
@@ -433,13 +447,16 @@ a:focus,
 .theme-master-yoda .site-header {
   border-top-color: #5f7f54;
 }
-.theme-master-yoda .author-highlighted, .date-highlighted {
+.theme-master-yoda .author-highlighted,
+.date-highlighted {
   color: #4baea0;
 }
 .theme-master-yoda .react-toggle--checked .react-toggle-track {
   background-color: #4baea0;
 }
-.theme-master-yoda .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+.theme-master-yoda
+  .react-toggle--checked:hover:not(.react-toggle--disabled)
+  .react-toggle-track {
   background-color: #4baea0;
 }
 .theme-master-yoda .react-toggle--checked .react-toggle-thumb {
@@ -461,14 +478,17 @@ a:focus,
 .theme-sebastian-proost .site-header {
   border-top-color: #e68a00;
 }
-.theme-sebastian-proost .author-highlighted, .date-highlighted {
+.theme-sebastian-proost .author-highlighted,
+.date-highlighted {
   color: #e68a00;
 }
 
 .theme-sebastian-proost .react-toggle--checked .react-toggle-track {
   background-color: #e68a00;
 }
-.theme-sebastian-proost .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+.theme-sebastian-proost
+  .react-toggle--checked:hover:not(.react-toggle--disabled)
+  .react-toggle-track {
   background-color: #e68a00;
 }
 .theme-sebastian-proost .react-toggle--checked .react-toggle-thumb {
@@ -476,8 +496,8 @@ a:focus,
   border-color: #b36b01;
 }
 
-.theme-sebastian-proost h3{
-  border-bottom: 3px solid #e68a00;;
+.theme-sebastian-proost h3 {
+  border-bottom: 3px solid #e68a00;
 }
 
 .font-programmer {
@@ -509,8 +529,6 @@ a:focus,
   font-style: italic;
 }
 
-
-
 // React-toggle
 
 .header-toggle {
@@ -519,7 +537,7 @@ a:focus,
 
 .header-toggle span.show-all-toggle {
   position: absolute;
-  right: 0px;   /* must be equal to parent's right padding */
+  right: 0px; /* must be equal to parent's right padding */
 }
 
 .show-all-toggle {
@@ -545,15 +563,15 @@ a:focus,
   left: 27px !important;
 }
 .react-toggle--focus .react-toggle-thumb {
-	-webkit-box-shadow: none !important;
-	-moz-box-shadow: none !important;
-	box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
-	-webkit-box-shadow: none !important;
-	-moz-box-shadow: none !important;
-	box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 // Transitions
@@ -593,7 +611,7 @@ a:focus,
 
 .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
   visibility: visible;
-  animation: cd-fade .6s !important;
+  animation: cd-fade 0.6s !important;
 }
 
 .vertical-timeline-element-content {

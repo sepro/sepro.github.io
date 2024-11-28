@@ -3,10 +3,10 @@ import Layout from "../components/layout"
 import Skills from "../components/skills"
 import Languages from "../components/languages"
 
-export default props => {
-
+const SkillsPage = () => {
   return (
-    <Layout pageTitle="Skills and Languages" 
+    <Layout
+      pageTitle="Skills and Languages"
       pageDescription="Learn more about my skills"
       showTitle={false}
     >
@@ -17,3 +17,5 @@ export default props => {
     </Layout>
   )
 }
+
+export default SkillsPage
