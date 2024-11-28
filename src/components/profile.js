@@ -1,28 +1,8 @@
 import React from "react"
 import profile_photo from "../../static/profile.jpg"
 import { SocialIcon } from "react-social-icons"
-import { useStaticQuery, graphql } from "gatsby"
 
 const Profile = props => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          theme
-        }
-      }
-    }
-  `)
-
-  const theme = data.site.siteMetadata.theme || "gatsby"
-  const themeDict = {
-    "great-gatsby": "#9a5abe",
-    "darth-vader": "#777",
-    "master-yoda": "#4baea0",
-    "wonder-woman": "#dc4e48",
-    "luke-lightsaber": "#5c94bd",
-    "sebastian-proost": "#e68a00",
-  }
   const socialIcons = props.socialMedia.map((item, index) => (
     <SocialIcon
       key={index}
