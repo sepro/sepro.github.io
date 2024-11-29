@@ -7,7 +7,7 @@ const Profile = props => {
     <SocialIcon
       key={index}
       url={item.link}
-      style={{ height: 25, width: 25 }}
+      style={{ height: 32, width: 32 }}
     />
   ))
   return (
