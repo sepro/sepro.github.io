@@ -5,6 +5,7 @@ import Toggle from "react-toggle"
 import TrainingData from "../../content/training.yaml"
 import ConferenceData from "../../content/conferences.yaml"
 import AwardsData from "../../content/grants_awards.yaml"
+import { LocationCity, School, EmojiEvents } from "@mui/icons-material"
 
 import "react-toggle/style.css"
 
@@ -63,10 +64,10 @@ const Other = () => {
       pageDescription="Training, conferences, ..."
       showTitle={false}
     >
-      <h3>Grants & Awards</h3>
+      <h3><EmojiEvents className="media-icon" /> Grants & Awards</h3>
       {awards}
       <h3 className="header-toggle">
-        Training
+      <School className="media-icon" /> Training
         <span className="show-all-toggle">
           <span className="show-all-label">show all:</span>
           <Toggle
@@ -78,7 +79,7 @@ const Other = () => {
       {training}
 
       <h3 className="header-toggle">
-        Conferences
+      <LocationCity className="media-icon" /> Conferences
         <span className="show-all-toggle">
           <span className="show-all-label">show all:</span>
           <Toggle

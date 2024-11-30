@@ -1,0 +1,8 @@
+- name: statannotations 
+  description: Python package to add annotations to seaborn plots
+  year: 2023
+  URLs:
+  - name: GitHub
+    link: https://github.com/trevismd/statannotations
+  - name: Zenodo
+    link: https://zenodo.org/record/8396665

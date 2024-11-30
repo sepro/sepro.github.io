@@ -1,7 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import Software from "../components/software"
+import { Code } from "@mui/icons-material"
 import SoftwareData from "../../content/software.yaml"
+import OpensourceData from "../../content/opensource.yaml"
 
 const Softwares = () => {
   const software = SoftwareData.map((item, index) => (
@@ -14,6 +16,17 @@ const Softwares = () => {
     />
   ))
 
+  const opensource= OpensourceData.map((item, index) => (
+    <Software
+      key={index}
+      name={item.name}
+      when={item.year}
+      description={item.description}
+      badges={item.URLs}
+    />
+  ))
+
+
   return (
     <Layout
       pageTitle="Software"
@@ -21,6 +34,9 @@ const Softwares = () => {
       showTitle={true}
     >
       {software}
+
+      <h3><Code className="media-icon" /> Open Source Contributions</h3>
+      {opensource}
     </Layout>
   )
 }

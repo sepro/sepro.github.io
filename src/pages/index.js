@@ -4,6 +4,7 @@ import Publication from "../components/publication"
 import PublicationData from "../../content/publications.yaml"
 import PatentData from "../../content/patents.yaml"
 import Citations from "../components/citations"
+import { StarBorder, Biotech, Fingerprint } from "@mui/icons-material"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       site {
         siteMetadata {
           about
+          research
         }
       }
     }
@@ -50,9 +52,12 @@ const Home = () => {
       pageDescription="Learn more about me"
       showTitle={false}
     >
+      <h3><Fingerprint className="media-icon" /> Bio</h3>
       <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.about }} />
+      <h3><Biotech className="media-icon" /> Research</h3>
+      <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.research }} />
       <h3>
-        Highlights{" "}
+      <StarBorder className="media-icon" /> Highlights{" "}
         <small>
           (<Link to="/publications">full list</Link>)
         </small>

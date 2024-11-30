@@ -24,7 +24,6 @@ module.exports = {
     // Name to highlight in publications
     publication_highlight: `S. Proost`,
     about: `
-      <h3>Bio</h3>
       <p>Currently working as a Senior PostDoc at the <a href="https://cfm.vib.be/">VIB-KULeuven Center for Microbiology</a> (Leuven, Belgium) studying the human 
       gut microbiome and how it connects with the host's health.</p>
 
@@ -35,8 +34,8 @@ module.exports = {
       leveraging data science and machine learning methods to pick them apart further.</p>
       
       <p>Full bio available under <a href="./experience">experience & education</a>.</p>
-
-      <h3>Research</h3>
+      `,
+    research:`
       <p>The common theme throughout my research is leveraging large datasets to tackle biological questions. This goes hand in hand with using modern
       (web) technology to create intuitive tools which allows domain experts to explore these data. Over the years I've been involved in the development 
       of various platforms to study genome evolution, gene function, and microbial ecosystems. These have been used in a number of projects <em>e.g.</em> the 
