@@ -64,9 +64,9 @@ const Other = () => {
       pageDescription="Training, conferences, ..."
       showTitle={false}
     >
-      <h3><EmojiEvents className="media-icon" /> Grants & Awards</h3>
+      <h3 className="banner cut-corner-tr-bl"><EmojiEvents className="media-icon" /> Grants & Awards</h3>
       {awards}
-      <h3 className="header-toggle">
+      <h3 className="banner header-toggle cut-corner-tr-bl">
       <School className="media-icon" /> Training
         <span className="show-all-toggle">
           <span className="show-all-label">show all:</span>
@@ -78,7 +78,7 @@ const Other = () => {
       </h3>
       {training}
 
-      <h3 className="header-toggle">
+      <h3 className="banner header-toggle cut-corner-tr-bl">
       <LocationCity className="media-icon" /> Conferences
         <span className="show-all-toggle">
           <span className="show-all-label">show all:</span>

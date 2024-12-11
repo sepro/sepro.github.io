@@ -4,19 +4,19 @@ import { Link } from "gatsby"
 
 const Menu = (props) => {
   const menuItems = [
-    { name: "About", link: "/" },
-    { name: "Publications", link: "/publications" },
-    { name: "Software", link: "/software" },
-    { name: "Media", link: "/media" },
-    { name: "Experience & Education", link: "/experience" },
-    { name: "Other", link: "/other" },
+    { name: "About", pageTitle: "About", link: "/" },
+    { name: "Publications", pageTitle: "Publications and Patents", link: "/publications" },
+    { name: "Software", pageTitle: "Software", link: "/software" },
+    { name: "Media", pageTitle: "Media", link: "/media" },
+    { name: "Experience & Education", pageTitle: "Experience & Education", link: "/experience" },
+    { name: "Other", pageTitle: "Other", link: "/other" },
   ].map((item, index) => (
     <MenuItem
       to={item.link}
       name={item.name}
       key={index}
       className={
-        props.currentPage.toLowerCase() === item.name.toLowerCase()
+        props.currentPage.toLowerCase() === item.pageTitle.toLowerCase()
           ? " active"
           : ""
       }

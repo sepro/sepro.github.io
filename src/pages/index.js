@@ -52,11 +52,11 @@ const Home = () => {
       pageDescription="Learn more about me"
       showTitle={false}
     >
-      <h3><Fingerprint className="media-icon" /> Bio</h3>
-      <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.about }} />
-      <h3><Biotech className="media-icon" /> Research</h3>
+      <h3 className="banner cut-corner-tr-bl"><Fingerprint className="media-icon" /> Bio</h3>
+      <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.about }} className="bio-section"/>
+      <h3 className="banner cut-corner-tr-bl"><Biotech className="media-icon" /> Research</h3>
       <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.research }} />
-      <h3>
+      <h3 className="banner cut-corner-tr-bl">
       <StarBorder className="media-icon" /> Highlights{" "}
         <small>
           (<Link to="/publications">full list</Link>)

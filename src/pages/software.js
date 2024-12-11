@@ -35,7 +35,7 @@ const Softwares = () => {
     >
       {software}
 
-      <h3><Code className="media-icon" /> Open Source Contributions</h3>
+      <h3 className="banner cut-corner-tr-bl"><Code className="media-icon" /> Open Source Contributions</h3>
       {opensource}
     </Layout>
   )

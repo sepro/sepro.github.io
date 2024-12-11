@@ -24,16 +24,18 @@ module.exports = {
     // Name to highlight in publications
     publication_highlight: `S. Proost`,
     about: `
-      <p>Currently working as a Senior PostDoc at the <a href="https://cfm.vib.be/">VIB-KULeuven Center for Microbiology</a> (Leuven, Belgium) studying the human 
-      gut microbiome and how it connects with the host's health.</p>
+      <p>Currently a <strong>Senior Postdoctoral Researcher</strong> at the <a href="https://cfm.vib.be/">VIB-KULeuven Center for Microbiology</a> (Leuven, Belgium), focussing on the <strong>human 
+      gut microbiome</strong> and its connections to host <strong>healths</strong>.</p>
 
-      <p>After getting a Masters degree in Biotechnology (UGent, Belgium) obtaining a PhD in Bioinformatics 
-      (<a href="https://vib.be/vib-ugent-center-plant-systems-biology">VIB-UGent Center for Plant Systems Biology</a>) made it possible to unify an 
-      interest in life sciences with computer engineering. Over the course of several PostDocs (<em>e.g.</em> at the <a href="https://www.mpimp-golm.mpg.de/2168/en">Max 
-      Planck Institute of Molecular Plant Physiology</a>) I have ventured more and more towards software development, setting up web platforms to explore large datasets while
-      leveraging data science and machine learning methods to pick them apart further.</p>
+      <p>After earning a <strong>Masters degree in Biotechnology</strong> (UGent, Belgium), I pursued a <strong>PhD in Bioinformatics</strong> 
+      (<a href="https://vib.be/vib-ugent-center-plant-systems-biology">VIB-UGent Center for Plant Systems Biology</a>) combining my passion 
+      for life sciences with expertise in computer engineering.</p>
+
+      <p>Throughout my <strong>postdoctoral career</strong>, including time at the <a href="https://www.mpimp-golm.mpg.de/2168/en">Max 
+      Planck Institute of Molecular Plant Physiology</a>, I have increasingly specialized in <strong>software development</strong> and <strong>statistical analysis</strong>. This includes building <strong>web 
+      platforms</strong> for exploring large datasets and applying <strong>data science</strong> and <strong>machine learning</strong> techniques to deepen insights.</p>
       
-      <p>Full bio available under <a href="./experience">experience & education</a>.</p>
+      <p><em>Full bio available under <a href="./experience">experience & education</a>.</em></p>
       `,
     research:`
       <p>The common theme throughout my research is leveraging large datasets to tackle biological questions. This goes hand in hand with using modern

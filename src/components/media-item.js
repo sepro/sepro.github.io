@@ -16,7 +16,7 @@ const MediaItem = (props) => {
 
   return (
     <div className="media-item" data-sal="fade">
-      <h3 className="media-title">
+      <h3 className="banner media-title cut-corner-tr-bl">
         {mediaIcon(props.icon)} {props.medium}
       </h3>
       <p className="media-description">{props.description}</p>
