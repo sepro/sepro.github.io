@@ -25,7 +25,7 @@ module.exports = {
     publication_highlight: `S. Proost`,
     about: `
       <p>Currently a <strong>Senior Postdoctoral Researcher</strong> at the <a href="https://cfm.vib.be/">VIB-KULeuven Center for Microbiology</a> (Leuven, Belgium), focussing on the <strong>human 
-      gut microbiome</strong> and its connections to host <strong>healths</strong>.</p>
+      gut microbiome</strong> and its connections to host <strong>health</strong>.</p>
 
       <p>After earning a <strong>Masters degree in Biotechnology</strong> (UGent, Belgium), I pursued a <strong>PhD in Bioinformatics</strong> 
       (<a href="https://vib.be/vib-ugent-center-plant-systems-biology">VIB-UGent Center for Plant Systems Biology</a>) combining my passion 
