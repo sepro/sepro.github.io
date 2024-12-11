@@ -1,6 +1,17 @@
+
+@cutsize: 15px;
+
 html {
   overflow-y: scroll;
 }
+
+// body {
+//   background-color: #424242;
+// }
+
+// #content-wrapper {
+//   background-color: white;
+// }
 
 .site-title {
   font-size: 22px;
@@ -30,10 +41,11 @@ html {
   color: #606c76;
   line-height: 1.5;
   font-size: 0.9em;
-  padding: 0 2px 4px 2px;
+  //padding: 0 2px 4px 2px;
+  padding:19px;
 }
 .site-nav .page-link:not(:last-child) {
-  margin-right: 60px;
+  margin-right: 40px;
 }
 @media screen and (max-width: 640px) {
   .site-nav {
@@ -475,11 +487,17 @@ a:focus,
 .theme-sebastian-proost .skill-meter {
   background-color: #e68a00;
 }
-.theme-sebastian-proost a:hover,
-.theme-sebastian-proost a:focus,
 .theme-sebastian-proost .site-nav .page-link.active {
   color: #000 !important;
+  background-color: #e68a00;
 }
+
+.theme-sebastian-proost a:hover,
+.theme-sebastian-proost a:focus {
+  color: #000 !important;
+  background-color: #eee;
+}
+
 .theme-sebastian-proost .site-header {
   border-top-color: #e68a00;
 }
@@ -501,16 +519,27 @@ a:focus,
   border-color: #b36b01;
 }
 
-.theme-sebastian-proost h3 {
-  border-bottom: 3px solid #e68a00;
+.theme-sebastian-proost h3.banner {
   padding-bottom: 5px;
+  color: white;
+  background-color: #e68a00;
+  padding-left: 1rem;
+  padding-top: 5px;
+}
+
+h3 .media-icon {
+  margin-bottom: -5px;
+}
+
+h3 small a {
+  color: white !important;
 }
 
 .font-programmer {
   font-family: "IBM Plex Mono";
   font-size: 0.9em;
 }
-
+.badge:hover,
 .badge {
   display: inline-block;
   min-width: 10px;
@@ -526,6 +555,7 @@ a:focus,
   border-radius: 10px;
   margin-right: 5px;
 }
+
 .badge:last-child {
   margin-right: 0px;
 }
@@ -550,6 +580,7 @@ a:focus,
   padding-top: 7px;
   text-align: right;
   font-size: 75%;
+  margin-right: @cutsize;
 }
 .show-all-label {
   padding-right: 1rem;
@@ -647,4 +678,18 @@ a:focus,
   font-size: 2.8rem !important;
   margin-top: 5px !important;
   margin-right: 1rem !important;
+}
+
+.cut-corner-tr {
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% @cutsize, calc(100% - @cutsize) 0);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% @cutsize, calc(100% - @cutsize) 0);
+}
+
+.cut-corner-tr-bl {
+  -webkit-clip-path: polygon(0 0, 0 calc(100% - @cutsize), @cutsize 100%, 100% 100%, 100% @cutsize, calc(100% - @cutsize) 0);
+  clip-path: polygon(0 0, 0 calc(100% - @cutsize), @cutsize 100%, 100% 100%, 100% @cutsize, calc(100% - @cutsize) 0);
+}
+
+.bio-section {
+  font-size: 105%;
 }
