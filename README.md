@@ -139,28 +139,7 @@ Experience can be added to ./content/experience.yaml
 
 <br/>
 
-7. **Themes**
-
-   ```shell
-   theme: "great-gatsby"
-   ```
-
-   This project comes with 5 themes:
-
-   - `great-gatsby` : purple _(default)_
-   - `master-yoda`: light green
-   - `wonder-woman`: light red
-   - `darth-vader`: black
-   - `luke-lightsaber`: light blue
-   - `sebastian-proost`: orange
-
-<br/>
-
-8. **Google Analytics**
-
-   Has been removed to avoid the need for including a GDPR complient privacy statement and cookie consent.
-
-9. **Fonts**
+7. **Fonts**
 
    ```shell
    font: "default"
@@ -170,7 +149,7 @@ Experience can be added to ./content/experience.yaml
 
 <br/>
 
-10. **Sitemap**
+8. **Sitemap**
 
     ```shell
     siteUrl: "YOUR_SITE_URL"
@@ -178,11 +157,7 @@ Experience can be added to ./content/experience.yaml
 
     Sitemap plugin from Gatsby needs you to put your site url here. Currently, it's the url of the demo site; so just replace it with yours.
 
-## AWS build file
-
-You can use the `buildspec.yml` file in the root directory for AWS CodeBuild. You just need to define an environment variable named `BUCKET` inside your CodeBuild project that points to the S3 bucket you want to deploy your website from.
-
-## Changing profile photo and favicon
+9. **Changing profile photo and favicon**
 
 Simply replace the `profile.jpg` and `favicon.ico` files in the `/static` directory.
 
