@@ -1,17 +1,26 @@
 
 @cutsize: 15px;
+@primaryColor: #e68a00;
+@primaryColorDark: #e68a00;
+@darkGray: #2c3437;
+@gray: #555;
 
 html {
   overflow-y: scroll;
 }
 
-// body {
-//   background-color: #424242;
-// }
+body {
+  //background-color: @darkGray;
+  background-color: white;
+}
 
-// #content-wrapper {
-//   background-color: white;
-// }
+#content-wrapper {
+  background-color: white;
+}
+
+.container {
+  max-width: 100rem;
+}
 
 .site-title {
   font-size: 22px;
@@ -22,10 +31,10 @@ html {
   float: left;
 }
 .site-title {
-  color: #444;
+  color: @darkGray;
 }
 .site-title:visited {
-  color: #444;
+  color: @darkGray;
 }
 .site-nav {
   line-height: 54px;
@@ -41,11 +50,10 @@ html {
   color: #606c76;
   line-height: 1.5;
   font-size: 0.9em;
-  //padding: 0 2px 4px 2px;
   padding:19px;
 }
 .site-nav .page-link:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 25px;
 }
 @media screen and (max-width: 640px) {
   .site-nav {
@@ -75,7 +83,7 @@ html {
     text-align: center;
   }
   .site-nav .menu-icon > svg {
-    fill: #424242;
+    fill: @darkGray;
   }
   .site-nav input ~ .trigger {
     clear: both;
@@ -113,7 +121,7 @@ html {
   }
 }
 #page-content {
-  padding-top: 95px;
+  padding-top: 55px;
 }
 #content-wrapper {
   border-left: 1px solid #f8f8f8;
@@ -125,6 +133,7 @@ footer {
   font-size: 0.7em;
   border-top: 1px solid #f8f8f8;
   color: #888;
+  background-color: #fcfcfc;
 }
 footer p {
   margin-bottom: 4px;
@@ -196,6 +205,7 @@ ul {
 .publication-item {
   margin-bottom: 1rem;
   padding-bottom: 10px;
+  text-align: justify;
 }
 
 .publication-item p {
@@ -225,9 +235,9 @@ ul {
 }
 
 .skills-profile {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 200px;
+  // margin-left: auto;
+  // margin-right: auto;
+  //max-width: 200px;
 }
 
 .skill-table {
@@ -242,6 +252,8 @@ ul {
 }
 .item {
   padding-bottom: 10px;
+  padding-right: @cutsize;
+  padding-left: @cutsize;
 }
 .item-table td {
   border: none;
@@ -252,7 +264,7 @@ ul {
 }
 .item-name,
 .item-when {
-  color: #444;
+  color: @darkGray;
 }
 .item-when,
 .item-where,
@@ -277,7 +289,7 @@ ul {
 }
 td.item-more-info {
   padding-top: 6px;
-  color: #444;
+  color: @gray;
 }
 .skill-wrapper {
   margin-bottom: 16px;
@@ -298,7 +310,7 @@ td.item-more-info {
 }
 #profile-name {
   margin-bottom: 2px;
-  color: #555;
+  color: @gray;
   font-size: 2.3rem;
 }
 #profile-role {
@@ -316,7 +328,7 @@ td.item-more-info {
 }
 p,
 li {
-  color: #444;
+  color: @darkGray;
 }
 .site-header {
   position: fixed;
@@ -329,7 +341,7 @@ li {
   border-top-style: solid;
   border-bottom: 1px solid #e8e8e8;
   min-height: 55.95px;
-  box-shadow: 0px 0px 10px lightgray;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 .skill-meter {
   height: 100%;
@@ -337,42 +349,22 @@ li {
 a {
   text-decoration: none;
 }
-/* themes */
-/* default = great-gatsby */
-a {
-  color: #9b4dca;
-}
-.skill-meter {
-  background-color: #9b4dca;
-}
 
-.site-header {
-  border-top-color: #50a;
-}
-.author-highlighted,
-.date-highlighted {
-  color: #50a;
-}
 /* sebastian-proost */
 .theme-sebastian-proost a {
-  color: #e68a00;
+  color: @primaryColor;
 }
 .theme-sebastian-proost .skill-meter {
-  background-color: #e68a00;
+  background-color: @primaryColor;
 }
 .theme-sebastian-proost .site-nav .page-link.active {
   color: #000 !important;
-  background-color: #e68a00;
+  background-color: @primaryColor;
 }
 
 .theme-sebastian-proost a:hover,
 .theme-sebastian-proost a:focus {
-  color: #b86e00;
-}
-
-.theme-sebastian-proost a.badge:hover,
-.theme-sebastian-proost a.badge:focus {
-  color: black;
+  color: @primaryColorDark;
 }
 
 .theme-sebastian-proost a.page-link:hover,
@@ -382,15 +374,15 @@ a {
 }
 
 .theme-sebastian-proost .site-header {
-  border-top-color: #e68a00;
+  border-top-color: @primaryColor;
 }
 .theme-sebastian-proost .author-highlighted,
 .date-highlighted {
-  color: #e68a00;
+  color: @primaryColor;
 }
 
 .theme-sebastian-proost .react-toggle--checked .react-toggle-track {
-  background-color: #4d4d4d;
+  background-color: @darkGray;
 }
 .theme-sebastian-proost
   .react-toggle--checked:hover:not(.react-toggle--disabled)
@@ -399,14 +391,14 @@ a {
 }
 .theme-sebastian-proost .react-toggle--checked .react-toggle-thumb {
   left: 27px;
-  border-color: #4d4d4d;
+  border-color: @darkGray;
 }
 
 .theme-sebastian-proost h3.banner {
   padding-bottom: 5px;
   color: white;
-  background-color: #e68a00;
-  padding-left: 1rem;
+  background-color: @primaryColor;
+  padding-left: @cutsize;
   padding-top: 5px;
 }
 
@@ -422,7 +414,7 @@ h3 small a {
   font-family: "IBM Plex Mono";
   font-size: 0.9em;
 }
-.badge:hover,
+
 .badge {
   display: inline-block;
   min-width: 10px;
@@ -434,9 +426,13 @@ h3 small a {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  background-color: #777;
+  background-color: @darkGray;
   border-radius: 10px;
   margin-right: 5px;
+}
+
+.badge:hover {
+  box-shadow: 0px 0px 6px lightgray;
 }
 
 .badge:last-child {
@@ -496,23 +492,23 @@ h3 small a {
 
 // Transitions
 
-.example-enter {
-  opacity: 0.01;
-}
+// .example-enter {
+//   opacity: 0.01;
+// }
 
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
+// .example-enter.example-enter-active {
+//   opacity: 1;
+//   transition: opacity 500ms ease-in;
+// }
 
-.example-leave {
-  opacity: 1;
-}
+// .example-leave {
+//   opacity: 1;
+// }
 
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}
+// .example-leave.example-leave-active {
+//   opacity: 0.01;
+//   transition: opacity 300ms ease-in;
+// }
 
 // Timeline
 
@@ -575,4 +571,20 @@ h3 small a {
 
 .bio-section {
   font-size: 105%;
+}
+
+.profile-panel {
+  background-color: white;
+  width:100%;
+  margin-bottom: 25px;
+  padding:25px;
+}
+
+#content-wrapper {
+  padding-top:25px;
+}
+
+.text-section {
+  text-align: justify;
+  padding-left: @cutsize;
 }
