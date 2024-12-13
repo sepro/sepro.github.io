@@ -83,24 +83,30 @@ const Layout = (props) => {
         <div className="container" id="page-content">
           <div className="row">
             <div className="column" id="profile-wrapper">
-              <Profile
-                name={data.site.siteMetadata.name}
-                role={data.site.siteMetadata.role}
-                socialMedia={data.site.siteMetadata.socialMedia}
-                email={data.site.siteMetadata.email}
-              />
+              <div id="profile-panel-1" className="profile-panel ">
+                <Profile
+                  name={data.site.siteMetadata.name}
+                  role={data.site.siteMetadata.role}
+                  socialMedia={data.site.siteMetadata.socialMedia}
+                  email={data.site.siteMetadata.email}
+                />
+              </div>
               <div className="languages-profile xs-hidden">
-                <hr />
-                <h4>Languages</h4>
-                <Languages />
+                <div id="profile-panel-2" className="profile-panel cut-corner-tr-bl">
+                  <h4>Languages</h4>
+                  <Languages />
+                </div>
               </div>
               <div className="skills-profile xs-hidden">
-                <hr />
+              <div id="profile-panel-3" className="profile-panel cut-corner-tr-bl">
                 <h4>Skills</h4>
                 <Skills />
+                </div>
               </div>
               <div className="xs-visible">
+                <div id="profile-panel-4" className="profile-panel cut-corner-tr-bl">
                 <a href="/skills">View skills and languages</a>
+                </div>
               </div>
             </div>
             <div className="column" id="content-wrapper">

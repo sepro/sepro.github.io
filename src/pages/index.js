@@ -53,18 +53,20 @@ const Home = () => {
       showTitle={false}
     >
       <h3 className="banner cut-corner-tr-bl"><Fingerprint className="media-icon" /> Bio</h3>
-      <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.about }} className="bio-section"/>
+      <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.about }} className="bio-section text-section"/>
       <h3 className="banner cut-corner-tr-bl"><Biotech className="media-icon" /> Research</h3>
-      <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.research }} />
+      <div dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.research }} className="research-section text-section" />
       <h3 className="banner cut-corner-tr-bl">
       <StarBorder className="media-icon" /> Highlights{" "}
         <small>
           (<Link to="/publications">full list</Link>)
         </small>
       </h3>
-      <Citations />
-      {selected_patents}
-      {selected_publications}
+      <div className="text-section">
+        <Citations />
+        {selected_patents}
+        {selected_publications}
+      </div>
     </Layout>
   )
 }

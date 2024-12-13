@@ -47,7 +47,6 @@ module.exports = {
 
       <p>Less serious topics I work on, outside of work (for fun or to hone my programmings skills), can be found on my blog <a href="https://blog.4dcu.be/">4DCu.be</a>.</p>
       `,
-    //available_themes: ["great-gatsby", "master-yoda", "wonder-woman", "darth-vader", "luke-lightsaber", "sebastian-proost"],
     theme: "sebastian-proost",
     //fonts. Available: [default, programmer]
     font: "default",
