@@ -11,7 +11,7 @@ html {
 
 body {
   //background-color: @darkGray;
-  background-color: white;
+   background-color: white;
 }
 
 #content-wrapper {
@@ -145,6 +145,9 @@ footer p {
 #profile-wrapper {
   text-align: center;
   flex: 2 2 auto;
+  background-image: url("../background.png");
+  border-left: 1px solid #f8f8f8;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 #profile-wrapper p {
   margin-bottom: 1em;
@@ -292,6 +295,7 @@ td.item-more-info {
 }
 .skill-meter-wrapper {
   width: 100%;
+  background-color: white;
   border: 1px solid #efefef;
   border-radius: 4px;
   height: 25px;
@@ -570,7 +574,6 @@ h3 small a {
 }
 
 .profile-panel {
-  background-color: white;
   width:100%;
   margin-bottom: 25px;
   padding:25px;
@@ -578,6 +581,7 @@ h3 small a {
 
 #content-wrapper {
   padding-top:55px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2)
 }
 
 #profile-wrapper {
@@ -586,9 +590,13 @@ h3 small a {
 @media screen and (max-width: 640px) {
   #content-wrapper {
     padding-top:15px;
+    box-shadow: none;
   }
   #profile-wrapper {
     padding-top:0px;
+    background-image: none;
+    border-left: none;
+    box-shadow: none;
   }
 }
 
