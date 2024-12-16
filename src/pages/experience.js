@@ -13,7 +13,7 @@ import { School, Work } from "@mui/icons-material"
 const Experience = () => {
   function contentStyle(highlighted) {
     if (highlighted === 1) {
-      return { background: "rgb(230, 138, 0)", color: "#fff" }
+      return { background: "rgb(88, 99, 191)", color: "#fff" }
     } else {
       return { background: "rgb(221,221,221)", color: "#000" }
     }
@@ -21,7 +21,7 @@ const Experience = () => {
 
   function arrowStyle(highlighted) {
     if (highlighted === 1) {
-      return { borderRight: "7px solid  rgb(230, 138, 0)" }
+      return { borderRight: "7px solid  rgb(88, 99, 191)" }
     } else {
       return { borderRight: "7px solid  rgb(221,221,221)" }
     }
