@@ -25,23 +25,23 @@ module.exports = {
     publication_highlight: `S. Proost`,
     about: `
       <p>Currently a <strong>Senior Postdoctoral Researcher</strong> at the <a href="https://cfm.vib.be/">VIB-KULeuven Center for Microbiology</a> (Leuven, Belgium), focussing on the <strong>human 
-      gut microbiome</strong> and its connections to host <strong>health</strong>.</p>
+gut microbiome</strong> and its connections to host <strong>health</strong>.</p>
 
       <p>After earning a <strong>Masters degree in Biotechnology</strong> (UGent, Belgium), I pursued a <strong>PhD in Bioinformatics</strong> 
-      (<a href="https://vib.be/vib-ugent-center-plant-systems-biology">VIB-UGent Center for Plant Systems Biology</a>) combining my passion 
-      for life sciences with expertise in computer engineering.</p>
+(<a href="https://vib.be/vib-ugent-center-plant-systems-biology">VIB-UGent Center for Plant Systems Biology</a>) combining my passion 
+for life sciences with expertise in computer engineering.</p>
 
       <p>Throughout my <strong>postdoctoral career</strong>, including time at the <a href="https://www.mpimp-golm.mpg.de/2168/en">Max 
-      Planck Institute of Molecular Plant Physiology</a>, I have increasingly specialized in <strong>software development</strong> and <strong>statistical analysis</strong>. This includes building <strong>web 
-      platforms</strong> for exploring large datasets and applying <strong>data science</strong> and <strong>machine learning</strong> techniques to deepen insights.</p>
+Planck Institute of Molecular Plant Physiology</a>, I have increasingly specialized in <strong>software development</strong> and <strong>statistical analysis</strong>. This includes building <strong>web 
+platforms</strong> for exploring large datasets and applying <strong>data science</strong> and <strong>machine learning</strong> techniques to deepen insights.</p>
       
       <p><em>Full bio available under <a href="./experience">experience & education</a>.</em></p>
       `,
     research:`
       <p>The common theme throughout my research is leveraging large datasets to tackle biological questions. This goes hand in hand with using modern
-      (web) technology to create intuitive tools which allows domain experts to explore these data. Over the years I've been involved in the development 
-      of various platforms to study genome evolution, gene function, and microbial ecosystems. These have been used in a number of projects <em>e.g.</em> the 
-      Apple genome project, the Flemish Gut Flora Project, ... A full list of tools is avialable under <a href="./software">software</a>.</p>
+(web) technology to create intuitive tools which allows domain experts to explore these data. Over the years I've been involved in the development 
+of various platforms to study genome evolution, gene function, and microbial ecosystems. These have been used in a number of projects <em>e.g.</em> the 
+Apple genome project, the Flemish Gut Flora Project, ... A full list of tools is avialable under <a href="./software">software</a>.</p>
 
       <p>More details what I've been working on recently? Check out the <a href="./media">media</a> and <a href="./publications">publications</a> pages!</p>
 
