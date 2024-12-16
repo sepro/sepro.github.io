@@ -92,20 +92,15 @@ const Layout = (props) => {
                 />
               </div>
               <div className="languages-profile xs-hidden">
-                <div id="profile-panel-2" className="profile-panel cut-corner-tr-bl">
+                <div id="profile-panel-2" className="profile-panel">
                   <h4>Languages</h4>
                   <Languages />
                 </div>
               </div>
               <div className="skills-profile xs-hidden">
-              <div id="profile-panel-3" className="profile-panel cut-corner-tr-bl">
+              <div id="profile-panel-3" className="profile-panel">
                 <h4>Skills</h4>
                 <Skills />
-                </div>
-              </div>
-              <div className="xs-visible">
-                <div id="profile-panel-4" className="profile-panel cut-corner-tr-bl">
-                <a href="/skills">View skills and languages</a>
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ const Menu = (props) => {
     { name: "Publications", pageTitle: "Publications and Patents", link: "/publications" },
     { name: "Software", pageTitle: "Software", link: "/software" },
     { name: "Media", pageTitle: "Media", link: "/media" },
-    { name: "Experience & Education", pageTitle: "Experience & Education", link: "/experience" },
+    { name: "Experience", pageTitle: "Experience & Education", link: "/experience" },
     { name: "Other", pageTitle: "Other", link: "/other" },
   ].map((item, index) => (
     <MenuItem

@@ -176,10 +176,6 @@ ul {
   #profile-img {
     width: 200px;
   }
-  #profile-wrapper {
-    border-bottom: 1px solid #f8f8f8;
-    padding-bottom: 16px;
-  }
   #content-wrapper {
     border-left: none;
     padding-top: 16px;
@@ -581,7 +577,19 @@ h3 small a {
 }
 
 #content-wrapper {
-  padding-top:25px;
+  padding-top:55px;
+}
+
+#profile-wrapper {
+  padding-top:30px;
+}
+@media screen and (max-width: 640px) {
+  #content-wrapper {
+    padding-top:15px;
+  }
+  #profile-wrapper {
+    padding-top:0px;
+  }
 }
 
 .text-section {
