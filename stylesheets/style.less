@@ -21,6 +21,10 @@ body {
   max-width: 100rem;
 }
 
+#site-wrapper {
+  background-image: url("../background.png");
+}
+
 .site-title {
   font-size: 22px;
   font-weight: 300;
@@ -144,8 +148,8 @@ footer p {
 #profile-wrapper {
   text-align: center;
   flex: 2 2 auto;
-  background-image: url("../background.png");
-  border-left: 1px solid #f8f8f8;
+  background-color: #f1f1f1;
+  border-left: 1px solid #eee;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 #profile-wrapper p {
@@ -295,7 +299,7 @@ td.item-more-info {
 .skill-meter-wrapper {
   width: 100%;
   background-color: white;
-  border: 1px solid #efefef;
+  border: 1px solid #ddd;
   border-radius: 4px;
   height: 25px;
   overflow: hidden;
@@ -594,11 +598,15 @@ h3 small a {
   #profile-wrapper {
     padding-top:0px;
     background-image: none;
+    background-color: white;
     border-left: none;
     box-shadow: none;
   }
   body {
     background-color: #fff;
+  }
+  #site-wrapper {
+    background-image: none;
   }
 }
 
