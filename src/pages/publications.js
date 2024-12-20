@@ -1,12 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
-import Publication from "../components/publication"
-import Citations from "../components/citations"
 import PublicationData from "../../content/publications.yaml"
 import PatentData from "../../content/patents.yaml"
+import Citations from "../components/citations"
+import Publication from "../components/publication"
 
 const Publications = () => {
-  const publications = PublicationData.map((item, index) => (
+  const [selectedYear, setSelectedYear] = useState("All")
+
+  const handleYearChange = event => {
+    setSelectedYear(event.target.value)
+  }
+
+  const filteredPublications = PublicationData.filter(item => {
+    return selectedYear === "All" ? true : item.Year.toString() === selectedYear;
+  });
+
+  const filteredPatents = PatentData.filter(item => {
+    return selectedYear === "All" ? true : item.Year.toString() === selectedYear;
+  });
+
+  const years = [
+    ...new Set([
+      ...PublicationData.map(item => item.Year),
+      ...PatentData.map(item => item.Year)
+    ])
+  ].sort((a, b) => b - a)
+
+  const publications = filteredPublications.map((item, index) => (
     <Publication
       key={index}
       title={item.Title}
@@ -18,7 +39,7 @@ const Publications = () => {
     />
   ))
 
-  const patents = PatentData.map((item, index) => (
+  const patents = filteredPatents.map((item, index) => (
     <Publication
       key={index}
       title={item.Title}
@@ -40,8 +61,21 @@ const Publications = () => {
       <div className="citations">
         * These authors contributed equally to this work
       </div>
-      {patents}
-      {publications}
+      <div>
+        <label htmlFor="year-filter">Filter by year: </label>
+        <select id="year-filter" value={selectedYear} onChange={handleYearChange}>
+          <option value="All">All</option>
+          {years.map(year => (
+            <option key={year} value={year}>
+              {year}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div>
+        {patents}
+        {publications}
+      </div>
     </Layout>
   )
 }

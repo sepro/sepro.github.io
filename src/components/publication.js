@@ -27,7 +27,7 @@ const Publication = props => {
   ))
 
   return (
-    <div className="publication-item" data-sal="fade">
+    <div className="publication-item">
       <p className="publication-title">
         { props.preprint === 1 ? <span className="publication-preprint">[preprint] </span> : "" }{props.title}.
         <span className="publication-journal-year">
