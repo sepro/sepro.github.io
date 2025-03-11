@@ -1,3 +1,10 @@
+- name: Prodiphy
+  description: Python package which implements PyMC models commonly used by myself
+  year: 2024
+  URLs:
+  - name: GitHub
+    link: https://github.com/raeslab/prodiphy
+
 - name: dyspyosis
   description: Python package to detect dysbiosis in microbiome data
   year: 2024
