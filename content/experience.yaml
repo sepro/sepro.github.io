@@ -1,9 +1,16 @@
+- role: Project Manager - Bio-informatics, AI and Data Science
+  company: KULeuven | VIB - Center for Microbiology
+  where: Leuven, Belgium
+  when: 2025 - now
+  moreInfo: ""
+  highlight: 1
+
 - role: Senior PostDoc
   company: KULeuven | VIB - Center for Microbiology
   where: Leuven, Belgium
-  when: 2018 - now
+  when: 2018 - 2025
   moreInfo: ""
-  highlight: 1
+  highlight: 0
 
 - role: PostDoc
   company: Max Planck Institute of Molecular Plant Physiology
