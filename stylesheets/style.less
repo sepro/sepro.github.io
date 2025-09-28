@@ -50,7 +50,9 @@ body {
   color: #606c76;
   line-height: 1.5;
   font-size: 0.9em;
-  padding:19px;
+  padding: 19px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
 }
 .site-nav .page-link:not(:last-child) {
   margin-right: 25px;
@@ -129,7 +131,7 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top:55px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 footer {
   margin-top: 80px;
@@ -151,19 +153,22 @@ footer p {
   flex: 2 2 auto;
   background-color: #f1f1f1;
   border-left: 1px solid #eee;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 #profile-wrapper p {
   margin-bottom: 1em;
 }
 #profile-img {
   max-width: 200px;
+  border: 3px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .social-icon:not(:last-child) {
-  margin-right: 4px;
+  margin-right: 8px;
 }
 #social-icons-wrapper {
-  padding-top: 8px;
+  padding-top: 12px;
+  padding-bottom: 8px;
 }
 blockquote,
 dl,
@@ -175,6 +180,7 @@ pre,
 table,
 ul {
   margin-bottom: 1.3rem;
+  line-height: 1.7;
 }
 @media screen and (max-width: 640px) {
   #page-content {
@@ -202,26 +208,102 @@ ul {
   margin-bottom: 2rem;
 }
 
+.citation-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.citation-stat {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid @primaryColor;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.citation-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.citation-icon {
+  color: @primaryColor;
+  margin-right: 12px;
+  font-size: 24px !important;
+}
+
+.citation-value {
+  display: flex;
+  flex-direction: column;
+}
+
+.citation-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: @darkGray;
+  line-height: 1;
+}
+
+.citation-label {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 640px) {
+  .citation-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .citation-stat {
+    padding: 12px;
+  }
+
+  .citation-number {
+    font-size: 1.5rem;
+  }
+}
+
 .citations-source {
   font-style: italic;
 }
 
 .publication-item {
-  margin-bottom: 1rem;
-  padding-bottom: 10px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
   text-align: justify;
+  border-bottom: 1px solid #e8e8e8;
+  transition: border-color 0.2s ease;
+}
+
+.publication-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.publication-item:hover {
+  border-color: @primaryColor;
 }
 
 .publication-item p {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .publication-title {
   font-weight: bold;
+  font-size: 1.05em;
+  color: @darkGray;
 }
 
 .publication-authors {
-  font-size: 80%;
+  font-size: 85%;
 }
 
 .publication-journal-year {
@@ -255,9 +337,10 @@ ul {
   color: #888;
 }
 .item {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   padding-right: @cutsize;
   padding-left: @cutsize;
+  margin-bottom: 10px;
 }
 .item-table td {
   border: none;
@@ -325,8 +408,18 @@ td.item-more-info {
 #profile-email {
   font-size: 0.93em;
 }
+.social-icon {
+  transition: all 0.2s ease;
+}
+
 .social-icon:hover {
-  opacity: 0.9;
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.social-icon:focus {
+  outline: 2px solid @primaryColor;
+  outline-offset: 2px;
 }
 #menu-name {
   font-size: 1.2em;
@@ -353,6 +446,13 @@ li {
 }
 a {
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:focus {
+  outline: 2px solid @primaryColor;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* sebastian-proost */
@@ -365,6 +465,8 @@ a {
 .theme-sebastian-proost .site-nav .page-link.active {
   color: white;
   background-color: @primaryColor;
+  font-weight: 500;
+  border-radius: 0px;
 }
 
 .theme-sebastian-proost a:hover,
@@ -376,6 +478,7 @@ a {
 .theme-sebastian-proost a.page-link:focus {
   color: #000 !important;
   background-color: #eee;
+  border-radius: 0px;
 }
 
 .theme-sebastian-proost .site-header {
@@ -400,11 +503,14 @@ a {
 }
 
 .theme-sebastian-proost h3.banner {
-  padding-bottom: 5px;
+  padding-bottom: 8px;
+  padding-top: 8px;
   color: white;
   background-color: @primaryColor;
   padding-left: @cutsize;
-  padding-top: 5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h3 .media-icon {
@@ -423,21 +529,33 @@ h3 small a {
 .badge {
   display: inline-block;
   min-width: 10px;
-  padding: 3px 7px;
+  padding: 6px 12px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: #fff !important;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  background-color: @darkGray;
-  border-radius: 10px;
-  margin-right: 5px;
+  background-color: #999;
+  border-radius: 15px;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
 }
 
 .badge:hover {
-  box-shadow: 0px 0px 6px lightgray;
+  background-color: @primaryColor;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.badge:focus {
+  outline: none;
+  border-color: @primaryColor;
+  box-shadow: 0 0 0 3px rgba(88, 99, 192, 0.3);
 }
 
 .badge:last-child {
@@ -576,12 +694,16 @@ h3 small a {
 
 .bio-section {
   font-size: 105%;
+  line-height: 1.8;
 }
 
 .profile-panel {
-  width:100%;
+  width: 100%;
   margin-bottom: 25px;
-  padding:25px;
+  padding: 25px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 #profile-wrapper {
@@ -611,4 +733,5 @@ h3 small a {
 .text-section {
   text-align: justify;
   padding-left: @cutsize;
+  line-height: 1.7;
 }
