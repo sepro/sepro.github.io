@@ -7,7 +7,9 @@ const Profile = props => {
     <SocialIcon
       key={index}
       url={item.link}
-      style={{ height: 32, width: 32 }}
+      style={{ height: 40, width: 40 }}
+      target="_blank"
+      rel="noopener noreferrer"
     />
   ))
   return (
