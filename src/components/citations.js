@@ -12,28 +12,28 @@ const Citations = props => {
   return (
     <div className="citations">
       <div className="citation-stats">
-        <div className="citation-stat">
+        <div className="citation-stat cut-corner-tr-bl">
           <Assignment className="citation-icon" />
           <div className="citation-value">
             <span className="citation-number">{PatentData.length}</span>
             <span className="citation-label">{patentText}</span>
           </div>
         </div>
-        <div className="citation-stat">
+        <div className="citation-stat cut-corner-tr-bl">
           <Article className="citation-icon" />
           <div className="citation-value">
             <span className="citation-number">{PublicationData.length}</span>
             <span className="citation-label">{publicationText}</span>
           </div>
         </div>
-        <div className="citation-stat">
+        <div className="citation-stat cut-corner-tr-bl">
           <FormatQuote className="citation-icon" />
           <div className="citation-value">
             <span className="citation-number">{CitationData.count}</span>
             <span className="citation-label">{citationText}</span>
           </div>
         </div>
-        <div className="citation-stat">
+        <div className="citation-stat cut-corner-tr-bl">
           <TrendingUp className="citation-icon" />
           <div className="citation-value">
             <span className="citation-number">{CitationData.hindex}</span>
