@@ -26,8 +26,8 @@ Which in turn is based on [gatsby-starter-hello-world](https://github.com/gatsby
 
     ```shell
     cd my-resume-starter/
-    npm install
-    gatsby develop
+    npm install --force
+    npm start
     ```
 
 1.  **Open the source code and start editing!**
