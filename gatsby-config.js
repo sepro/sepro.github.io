@@ -24,7 +24,7 @@ module.exports = {
     // Name to highlight in publications
     publication_highlight: `S. Proost`,
     about: `
-      <p>Currently a <strong>Senior Postdoctoral Researcher</strong> at the <a href="https://cfm.vib.be/">VIB-KULeuven Center for Microbiology</a> (Leuven, Belgium), focussing on the <strong>human 
+      <p>Currently a <strong>Project Manager (Bioinformatics, AI & Data Science)</strong> at the <a href="https://cfm.vib.be/">VIB-KULeuven Center for Microbiology</a> (Leuven, Belgium), focussing on the <strong>human 
 gut microbiome</strong> and its connections to host <strong>health</strong>.</p>
 
       <p>After earning a <strong>Masters degree in Biotechnology</strong> (UGent, Belgium), I pursued a <strong>PhD in Bioinformatics</strong> 
