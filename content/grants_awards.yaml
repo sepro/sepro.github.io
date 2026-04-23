@@ -1,0 +1,49 @@
+- name: VIB Strategic POC
+  description: Funding to develop an early proof of concept
+  year: 2021
+  type: Grant
+
+- name: VIB Scientists on Stage
+  rank: Best Presentation
+  description:
+  year: 2019
+  type: Award
+
+- name: IWT Personal Fellowship
+  description: Funding from Flemish government to support doctoral research
+  year: 2009-2011
+  type: Grant
+
+- name: WELEK Robotics Competition
+  rank: Fourth Place
+  description: Autonomous Sumo Robot
+  year: 2009
+  type: Award
+  
+- name: WELEK Robotics Competition
+  rank: Fourth Place
+  description: Light Finder
+  year: 2008
+  type: Award
+
+- name: IWT Personal Fellowship
+  description: Funding from Flemish government to support doctoral research
+  year: 2007-2009
+  type: Grant
+
+- name: Speculaas van de Maand
+  rank:
+  description: Award from the city council of Hasselt
+  year: 2003
+  type: Award
+
+- name: International Biology Olympiad
+  rank: Bronze Medal
+  description: Minsk, Belarus
+  year: 2003
+  type: Award
+
+- name: Flemish Biology Olympiad
+  rank: First Place
+  year: 2003
+  type: Award

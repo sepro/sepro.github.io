@@ -1,0 +1,27 @@
+---
+layout: base.njk
+permalink: /
+pageTitle: "Sebastian Proost, PhD — About"
+eleventyNavigation:
+  key: About
+---
+{% from "partials/icons.njk" import sectionHeader, icon %}
+
+<section class="section">
+  {{ sectionHeader("Bio", "bio") }}
+  <div class="prose">
+    {{ site.aboutHtml | safe }}
+  </div>
+</section>
+
+<section class="section">
+  {{ sectionHeader("Research Focus", "research") }}
+  <div class="prose">
+    {{ site.researchHtml | safe }}
+  </div>
+  <div class="tag-row" style="margin-top: 18px;">
+    {% for kw in site.researchKeywords %}
+      <span class="tag">{{ kw }}</span>
+    {% endfor %}
+  </div>
+</section>

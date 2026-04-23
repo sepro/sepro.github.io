@@ -1,0 +1,23 @@
+<nav class="tab-nav" id="tab-nav" role="navigation" aria-label="Sections">
+  <div class="tab-nav__inner">
+    <button type="button"
+            class="tab-nav__burger"
+            aria-expanded="false"
+            aria-controls="tab-nav-list"
+            aria-label="Toggle navigation">
+      <span class="tab-nav__burger-bar"></span>
+      <span class="tab-nav__burger-bar"></span>
+      <span class="tab-nav__burger-bar"></span>
+    </button>
+    <div class="tab-nav__list" id="tab-nav-list" role="tablist">
+      {% for tab in nav %}
+        {% set isActive = (page.url == tab.url) %}
+        <a href="{{ tab.url }}"
+           class="tab-nav__tab{% if isActive %} is-active{% endif %}"
+           {% if isActive %}aria-current="page"{% endif %}>
+          {{ tab.label }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>

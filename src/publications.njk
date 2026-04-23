@@ -1,0 +1,64 @@
+---
+layout: base.njk
+permalink: /publications/
+pageTitle: "Sebastian Proost, PhD — Publications"
+---
+{% from "partials/icons.njk" import icon %}
+
+{% set patentsAsPubs = patents | patentsAsPublications %}
+{% set allPubs = (publications | merge(patentsAsPubs)) | byYearDesc %}
+{% set yearList = allPubs | years %}
+
+<div class="stat-row">
+  <div class="stat-card"><span class="stat-card__num">{{ site.stats.patentsLabel }}</span><span class="stat-card__label">Patents</span></div>
+  <div class="stat-card"><span class="stat-card__num">{{ site.stats.publicationsLabel }}</span><span class="stat-card__label">Publications</span></div>
+  <div class="stat-card"><span class="stat-card__num">{{ site.stats.citationsLabel }}</span><span class="stat-card__label">Citations</span></div>
+  <div class="stat-card"><span class="stat-card__num">{{ site.stats.hIndexLabel }}</span><span class="stat-card__label">H-Index</span></div>
+</div>
+
+<div class="filter-row">
+  <label class="filter-label">Filter by year</label>
+  <div class="dropdown" data-dropdown data-target="[data-pub-list]">
+    <button type="button" class="dropdown__trigger" aria-haspopup="listbox">
+      <span class="dropdown__trigger-label">All</span>
+      <span class="dropdown__chevron">{{ icon("chevron-down-sm") }}</span>
+    </button>
+    <div class="dropdown__panel" role="listbox">
+      <button type="button" class="dropdown__option is-selected" data-value="All">All</button>
+      {% for y in yearList %}
+        <button type="button" class="dropdown__option" data-value="{{ y }}">{{ y }}</button>
+      {% endfor %}
+    </div>
+  </div>
+  <span class="filter-count" data-pub-count></span>
+</div>
+
+<div class="pub-list" data-pub-list>
+  {% for p in allPubs %}
+    <article class="pub-card{% if p.isPatent %} is-patent{% endif %}" data-pub-year="{{ p.Year }}">
+      <div class="pub-card__head">
+        <p class="pub-card__title">{{ p.Title }}</p>
+        <span class="pub-card__year">{{ p.Year }}</span>
+      </div>
+      <p class="pub-card__journal">{{ p.Journal }}{% if p.isPatent and p.Identifier %} · {{ p.Identifier }}{% endif %}</p>
+      <p class="pub-card__authors">{{ p.Authors | highlightAuthor(site.publicationHighlight) | safe }}</p>
+      {% if p.URLs and (p.URLs | length) %}
+        <div class="link-row">
+          {% for l in p.URLs %}
+            {% set isGitHub = (l.name == "GitHub") %}
+            <a class="link-pill{% if isGitHub %} is-github{% endif %}" href="{{ l.link }}" target="_blank" rel="noreferrer noopener">
+              {% if isGitHub %}{{ icon("github") }}{% else %}{{ icon("arrow-sm") }}{% endif %}
+              {{ l.name }}
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>
+
+<p class="pub-footnote">* These authors contributed equally.</p>
+
+{% block scripts %}
+<script src="/assets/js/dropdown.js" defer></script>
+{% endblock %}

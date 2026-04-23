@@ -1,0 +1,55 @@
+- medium: "Missen is Wenselijk"
+  year: 2025
+  title: ""
+  icon: microphone
+  type: podcast
+  description: "Podcast about how things can go wrong in science, and how we can learn from it. (in Dutch)"
+  image: https://sebastian.proost.science/img/missen_is_wenselijk.jpg
+  link: https://scimingo.eu/nl/missen-wenselijk
+
+
+- medium: "Pint of Science"
+  year: 2020
+  title: "Bytes & Bacteria"
+  icon: video-camera
+  type: presentation
+  description: "Streamed presentation for Pint of Science"
+  image: https://sebastian.proost.science/img/pint_of_science.png
+  link: https://www.youtube.com/watch?v=iSgKLZ257SI
+
+- medium: "Talk Python To Me"
+  title: "A gut feeling about Python"
+  year: 2019
+  icon: microphone
+  type: podcast
+  description: "I was a guest on the podcast \"Talk Python To Me\""
+  image: https://sebastian.proost.science/img/talk_python.png
+  link: https://talkpython.fm/episodes/show/237/a-gut-feeling-about-python
+
+- medium: "Biotech Glashelder door EOS"
+  title: "Bytes & Bacteriën"
+  year: 2019
+  icon: video-camera
+  type: presentation
+  description: "Ten minute presentation suited for a broad audience (in Dutch)"
+  image: https://sebastian.proost.science/img/eos_biotechdag.jpg
+  link: https://www.youtube.com/watch?v=BVi8Vs8bsgk
+ 
+- medium: "Wetenschap uitgedokterd"
+  title: "Bytes & Bacteriën"
+  year: 2019
+  icon: video-camera
+  type: presentation
+  description: "Two minute pitch about my work (in Dutch, English subtitles)"
+  image: https://sebastian.proost.science/img/science_figured_out.png
+  link: "https://www.wetenschapuitgedokterd.be/bytes-en-bacterien-software-om-de-darmflora-te-verkennen"
+ 
+- medium: "Fokus jongeren"
+  title: "Ad Biotechdag"
+  year: 2019
+  icon: camera
+  type: advertisement
+  description: "Advertisement for Biotechdag 2019"
+  image: https://sebastian.proost.science/img/Fokus_jongeren.jpg
+  link: "#"
+

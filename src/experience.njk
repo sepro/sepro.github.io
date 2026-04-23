@@ -1,0 +1,54 @@
+---
+layout: base.njk
+permalink: /experience/
+pageTitle: "Sebastian Proost, PhD — Experience"
+---
+{% from "partials/icons.njk" import sectionHeader %}
+
+<section class="section">
+  {{ sectionHeader("Work Experience", "work") }}
+  <div class="timeline">
+    {% for e in experience %}
+      <div class="timeline__item{% if e.highlight == 1 %} is-current{% endif %}">
+        <div class="timeline__dot" aria-hidden="true"></div>
+        <div class="timeline__card">
+          <div class="timeline__row">
+            <div class="timeline__main">
+              <div class="timeline__title">{{ e.role }}</div>
+              <div class="timeline__org">{{ e.company }}</div>
+              <div class="timeline__meta">
+                {{ e.where }}{% if e.moreInfo %} · <span class="timeline__note">{{ e.moreInfo }}</span>{% endif %}
+              </div>
+            </div>
+            <span class="timeline__period">{{ e.when }}</span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  {{ sectionHeader("Education", "edu") }}
+  <div class="timeline">
+    {% for e in education %}
+      <div class="timeline__item{% if e.highlight == 1 %} is-current{% endif %}">
+        <div class="timeline__dot" aria-hidden="true"></div>
+        <div class="timeline__card">
+          <div class="timeline__row">
+            <div class="timeline__main">
+              <div class="timeline__title">
+                {{ e.degree }}{% if e.major %}<span class="timeline__sub"> · {{ e.major }}</span>{% endif %}
+              </div>
+              <div class="timeline__org">{{ e.school }}</div>
+              <div class="timeline__meta">
+                {{ e.where }}{% if e.moreInfo %} · <span class="timeline__note">{{ e.moreInfo }}</span>{% endif %}
+              </div>
+            </div>
+            <span class="timeline__period">{{ e.when }}</span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

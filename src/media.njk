@@ -1,0 +1,37 @@
+---
+layout: base.njk
+permalink: /media/
+pageTitle: "Sebastian Proost, PhD — Media"
+---
+{% from "partials/icons.njk" import icon %}
+
+<div class="media-list">
+  {% for m in media %}
+    {% set href = m.link if m.link and m.link != "#" else "" %}
+    {% set tag = "a" if href else "div" %}
+    <{{ tag }}
+      class="media-card"
+      {% if href %}href="{{ href }}" target="_blank" rel="noreferrer noopener"{% endif %}>
+      <div class="media-card__thumb">
+        {% if m.image %}
+          <img src="{{ m.image | mediaImage }}" alt="{{ m.medium }}" loading="lazy">
+        {% else %}
+          <div class="media-card__placeholder">
+            {{ icon("play") }}
+            <span class="media-card__placeholder-label">{{ m.icon or "Media" }}</span>
+          </div>
+        {% endif %}
+      </div>
+      <div class="media-card__body">
+        <div class="media-card__head">
+          <div>
+            <h3 class="media-card__title">{{ m.medium }}{% if m.title %} — {{ m.title }}{% endif %}</h3>
+            <span class="media-card__type">{{ m.type or "Media" }}</span>
+          </div>
+          <span class="media-card__year">{{ m.year }}</span>
+        </div>
+        <p class="media-card__desc">{{ m.description }}</p>
+      </div>
+    </{{ tag }}>
+  {% endfor %}
+</div>

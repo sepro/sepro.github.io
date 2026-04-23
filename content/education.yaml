@@ -1,0 +1,28 @@
+- degree: "Doctor"
+  major: "Science : Biotechnology"
+  school: Universiteit Gent (Doctoral Schools)
+  where: Gent, Belgium
+  when: 2007 - 2012
+  moreInfo: ""
+  highlight: 0
+  
+- degree: Master
+  major: "Biotechnology"
+  school: Universiteit Gent
+  where: Gent, Belgium
+  when: 2005 - 2007
+  moreInfo: "Graduated Cum Laude"
+  # - "Option: Bioinformatics, Genetic Manipulation of Model Organisms and Genome Biology"
+  # - "Master thesis: Genomewide prediction of protein-protein interactions in Arabidopsis thaliana"
+  # - "Promoter: Prof. Dr. Yves Van de Peer, Supervisor: Dr. Stefanie De Bodt"
+  highlight: 0
+  
+- degree: Bachelor
+  major: Biology
+  school: Universiteit Hasselt
+  where: Hasselt, Belgium
+  when: 2003 - 2005
+  moreInfo: "Graduated Cum Laude"
+  # - Graduated Cum Laude
+  # - "Option: Philosophy of Biology"
+  highlight: 0

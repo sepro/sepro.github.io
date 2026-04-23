@@ -1,0 +1,97 @@
+---
+layout: base.njk
+permalink: /other/
+pageTitle: "Sebastian Proost, PhD — Grants, Training & Conferences"
+---
+{% from "partials/icons.njk" import sectionHeader %}
+
+{% set grantCount = grants_awards | countWhere("type", "Grant") %}
+{% set extraAwardsCount = (grants_awards | length) - grantCount %}
+
+<section class="section">
+  {{ sectionHeader("Grants & Awards", "grant") }}
+  <div class="award-list" id="awards-list">
+    {% for a in grants_awards %}
+      <div class="award-card"{% if a.type != "Grant" %} data-extra hidden{% endif %}>
+        <div class="award-card__bar" aria-hidden="true"></div>
+        <div class="award-card__body">
+          <div class="award-card__head">
+            <h3 class="award-card__title">{{ a.name }}{% if a.rank %} · {{ a.rank }}{% endif %}</h3>
+            <span class="award-card__year">{{ a.year }}</span>
+          </div>
+          {% if a.description %}<p class="award-card__desc">{{ a.description }}</p>{% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  {% if extraAwardsCount > 0 %}
+    <button type="button" class="show-more-btn" data-show-more="#awards-list" data-show-text="Show {{ extraAwardsCount }} more" data-hide-text="Show less">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-show-more-label>Show {{ extraAwardsCount }} more</span>
+    </button>
+  {% endif %}
+</section>
+
+{% set trainingFeatured = training | countWhere("Selected", 1) %}
+{% set trainingExtra = (training | length) - trainingFeatured %}
+
+<section class="section">
+  {{ sectionHeader("Training", "training") }}
+  <div class="award-list" id="training-list">
+    {% for t in training %}
+      <div class="award-card"{% if t.Selected != 1 %} data-extra hidden{% endif %}>
+        <div class="award-card__bar" aria-hidden="true"></div>
+        <div class="award-card__body">
+          <div class="award-card__head">
+            <h3 class="award-card__title">{{ t.Name }}</h3>
+            <span class="award-card__year">{{ t.Year }}</span>
+          </div>
+          <p class="award-card__desc">
+            {%- if t.Teacher %}{{ t.Teacher }}{% endif -%}
+            {%- if t.City or t.Country %} · {{ t.City }}{% if t.City and t.Country %}, {% endif %}{{ t.Country }}{% endif -%}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  {% if trainingExtra > 0 %}
+    <button type="button" class="show-more-btn" data-show-more="#training-list" data-show-text="Show {{ trainingExtra }} more" data-hide-text="Show less">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-show-more-label>Show {{ trainingExtra }} more</span>
+    </button>
+  {% endif %}
+</section>
+
+{% set confFeatured = conferences | countWhere("Selected", 1) %}
+{% set confExtra = (conferences | length) - confFeatured %}
+
+<section class="section">
+  {{ sectionHeader("Conferences", "conf") }}
+  <div class="award-list" id="conferences-list">
+    {% for c in conferences %}
+      <div class="award-card"{% if c.Selected != 1 %} data-extra hidden{% endif %}>
+        <div class="award-card__bar" aria-hidden="true"></div>
+        <div class="award-card__body">
+          <div class="award-card__head">
+            <h3 class="award-card__title">{{ c.Name }}{% if c.Role %} · {{ c.Role }}{% endif %}</h3>
+            <span class="award-card__year">{{ c.Year }}</span>
+          </div>
+          <p class="award-card__desc">
+            {%- if c.Location %}{{ c.Location }}{% endif -%}
+            {%- if c.Country %}{% if c.Location %}, {% endif %}{{ c.Country }}{% endif -%}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  {% if confExtra > 0 %}
+    <button type="button" class="show-more-btn" data-show-more="#conferences-list" data-show-text="Show {{ confExtra }} more" data-hide-text="Show less">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-show-more-label>Show {{ confExtra }} more</span>
+    </button>
+  {% endif %}
+</section>
+
+{% block scripts %}
+<script src="/assets/js/show-more.js" defer></script>
+{% endblock %}

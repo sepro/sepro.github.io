@@ -1,0 +1,45 @@
+<header class="hero">
+  <canvas class="hero__canvas" id="hero-network" aria-hidden="true"></canvas>
+  <div class="hero__fade" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <div class="hero__photo">
+      <img src="/img/profile.jpg" alt="{{ site.name }}" />
+    </div>
+
+    <div class="hero__id">
+      <div class="hero__name-row">
+        <h1 class="hero__name">{{ site.name }}</h1>
+        <span class="hero__badge">{{ site.credential }}</span>
+      </div>
+      <p class="hero__role">
+        {{ site.title }} · <span class="hero__role-accent">{{ site.subtitle }}</span>
+      </p>
+      <p class="hero__org">{{ site.org }} · {{ site.location }}</p>
+
+      <div class="hero__skills">
+        {% for s in skills %}
+          <span class="hero__chip">{{ s.name }}</span>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <span class="hero__stat-num">{{ site.stats.publicationsLabel }}</span>
+        <span class="hero__stat-label">Publications</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-num">{{ site.stats.citationsLabel }}</span>
+        <span class="hero__stat-label">Citations</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-num">{{ site.stats.hIndexLabel }}</span>
+        <span class="hero__stat-label">H-Index</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-num">{{ site.stats.patentsLabel }}</span>
+        <span class="hero__stat-label">Patents</span>
+      </div>
+    </div>
+  </div>
+</header>

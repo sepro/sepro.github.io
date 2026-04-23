@@ -1,0 +1,15 @@
+{
+  "name": "sebastian-proost-cv",
+  "version": "1.0.0",
+  "description": "Personal CV / portfolio site for Sebastian Proost, built with Eleventy.",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "js-yaml": "^4.1.0"
+  }
+}

@@ -1,0 +1,16 @@
+- language: Dutch
+  level: Mothertongue
+  short: NL
+  
+- language: English
+  level: Fluent
+  short: US
+
+- language: German
+  level: Intermediate
+  comment: "CEFR level: B2/1"
+  short: DE
+  
+- language: French
+  level: Intermediate
+  short: FR

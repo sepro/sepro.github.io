@@ -1,0 +1,35 @@
+---
+layout: base.njk
+permalink: /software/
+pageTitle: "Sebastian Proost, PhD — Software"
+---
+{% from "partials/icons.njk" import icon, sectionHeader %}
+
+{% macro softwareCard(s) %}
+  {% set primaryUrl = s.URLs[0].link if s.URLs and (s.URLs | length) else "" %}
+  <article class="software-card">
+    <div class="software-card__head">
+      <h3 class="software-card__name">{{ s.name }}</h3>
+      {% if primaryUrl %}
+        <a href="{{ primaryUrl }}" class="software-card__arrow" target="_blank" rel="noreferrer noopener" aria-label="Open {{ s.name }}">
+          {{ icon("arrow") }}
+        </a>
+      {% endif %}
+    </div>
+    <p class="software-card__desc">{{ s.description }}</p>
+    <div class="software-card__tags">
+      {% if s.year %}<span class="tag">{{ s.year }}</span>{% endif %}
+      {% if s.URLs %}{% for l in s.URLs %}<span class="tag">{{ l.name }}</span>{% endfor %}{% endif %}
+    </div>
+  </article>
+{% endmacro %}
+
+<div class="software-grid">
+  {% for s in software %}{{ softwareCard(s) }}{% endfor %}
+</div>
+
+{{ sectionHeader("Open Source Contributions", "opensource") }}
+
+<div class="software-grid">
+  {% for s in opensource %}{{ softwareCard(s) }}{% endfor %}
+</div>
