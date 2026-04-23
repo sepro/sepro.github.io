@@ -12,7 +12,7 @@ pageTitle: "Sebastian Proost, PhD — Grants, Training & Conferences"
   {{ sectionHeader("Grants & Awards", "grant") }}
   <div class="award-list" id="awards-list">
     {% for a in grants_awards %}
-      <div class="award-card"{% if a.type != "Grant" %} data-extra hidden{% endif %}>
+      <div class="award-card{% if a.type != "Grant" %} is-collapsed{% endif %}"{% if a.type != "Grant" %} data-extra{% endif %}>
         <div class="award-card__bar" aria-hidden="true"></div>
         <div class="award-card__body">
           <div class="award-card__head">
@@ -39,7 +39,7 @@ pageTitle: "Sebastian Proost, PhD — Grants, Training & Conferences"
   {{ sectionHeader("Training", "training") }}
   <div class="award-list" id="training-list">
     {% for t in training %}
-      <div class="award-card"{% if t.Selected != 1 %} data-extra hidden{% endif %}>
+      <div class="award-card{% if t.Selected != 1 %} is-collapsed{% endif %}"{% if t.Selected != 1 %} data-extra{% endif %}>
         <div class="award-card__bar" aria-hidden="true"></div>
         <div class="award-card__body">
           <div class="award-card__head">
@@ -69,7 +69,7 @@ pageTitle: "Sebastian Proost, PhD — Grants, Training & Conferences"
   {{ sectionHeader("Conferences", "conf") }}
   <div class="award-list" id="conferences-list">
     {% for c in conferences %}
-      <div class="award-card"{% if c.Selected != 1 %} data-extra hidden{% endif %}>
+      <div class="award-card{% if c.Selected != 1 %} is-collapsed{% endif %}"{% if c.Selected != 1 %} data-extra{% endif %}>
         <div class="award-card__bar" aria-hidden="true"></div>
         <div class="award-card__body">
           <div class="award-card__head">

@@ -9,14 +9,14 @@
       const target = document.querySelector(targetSelector);
       if (!target) return;
 
-      const hidden = target.querySelectorAll('[data-extra]');
-      const showText = btn.getAttribute('data-show-text') || `Show ${hidden.length} more`;
+      const extras = target.querySelectorAll('[data-extra]');
+      const showText = btn.getAttribute('data-show-text') || `Show ${extras.length} more`;
       const hideText = btn.getAttribute('data-hide-text') || 'Show less';
 
       let expanded = false;
 
       function render() {
-        hidden.forEach((el) => { el.hidden = !expanded; });
+        extras.forEach((el) => { el.classList.toggle('is-collapsed', !expanded); });
         btn.classList.toggle('is-expanded', expanded);
         if (labelEl) labelEl.textContent = expanded ? hideText : showText;
       }

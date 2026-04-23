@@ -767,8 +767,7 @@ button { font: inherit; color: inherit; }
 /* =========================================================================
    Awards / Other tab
    ========================================================================= */
-.award-list { display: flex; flex-direction: column; gap: 9px; }
-.award-card[hidden] { display: none; }
+.award-list { display: flex; flex-direction: column; }
 .award-card {
   background: #fff;
   border: 1px solid var(--card-border);
@@ -778,6 +777,33 @@ button { font: inherit; color: inherit; }
   display: flex;
   gap: 14px;
   align-items: stretch;
+  margin-bottom: 9px;
+  max-height: 600px;
+  overflow: hidden;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    max-height 0.3s ease,
+    margin-bottom 0.25s ease,
+    padding-top 0.25s ease,
+    padding-bottom 0.25s ease,
+    border-top-width 0.25s ease,
+    border-bottom-width 0.25s ease;
+}
+.award-card:last-child { margin-bottom: 0; }
+.award-card.is-collapsed {
+  opacity: 0;
+  transform: translateY(-4px);
+  max-height: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .award-card { transition: none; }
 }
 .award-card__bar {
   width: 3.5px;
