@@ -14,7 +14,7 @@ pageTitle: "Sebastian Proost, PhD — Media"
       {% if href %}href="{{ href }}" target="_blank" rel="noreferrer noopener"{% endif %}>
       <div class="media-card__thumb">
         {% if m.image %}
-          <img src="{{ m.image | mediaImage }}" alt="{{ m.medium }}" loading="lazy">
+          <img src="{{ m.image | mediaImage }}" alt="{{ m.medium }}">
         {% else %}
           <div class="media-card__placeholder">
             {{ icon("play") }}
