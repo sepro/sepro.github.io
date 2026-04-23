@@ -26,12 +26,18 @@
       window.location.href = url;
       return;
     }
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion) {
+      current.classList.add('is-leaving');
+      await new Promise((r) => setTimeout(r, 160));
+    }
     current.replaceChildren(...next.childNodes);
     document.title = doc.title;
     if (push) history.pushState({}, '', url);
     syncActiveTab();
     closeBurger();
     window.scrollTo(0, 0);
+    requestAnimationFrame(() => current.classList.remove('is-leaving'));
     document.dispatchEvent(new CustomEvent('spa:navigated', { detail: { url } }));
   }
 

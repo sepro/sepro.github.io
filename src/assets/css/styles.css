@@ -873,3 +873,15 @@ button { font: inherit; color: inherit; }
   .media-card { flex-direction: column; }
   .media-card__thumb { width: 100%; height: 160px; }
 }
+
+.content-inner {
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+.content-inner.is-leaving {
+  opacity: 0;
+  transform: translateY(4px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .content-inner { transition: none; }
+  .content-inner.is-leaving { opacity: 1; transform: none; }
+}
