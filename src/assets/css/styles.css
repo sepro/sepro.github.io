@@ -870,16 +870,30 @@ button { font: inherit; color: inherit; }
   .hero__inner { flex-direction: column; align-items: flex-start; gap: 18px; }
   .hero__stats { flex-direction: row; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
   .hero__stat { text-align: left; }
+  .page { padding-top: 44px; }
+  .tab-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
   .tab-nav__inner { display: flex; flex-wrap: wrap; justify-content: flex-end; }
   .tab-nav__burger { display: flex; order: 1; }
   .tab-nav__list {
     display: none;
     order: 2;
-    flex-basis: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     flex-direction: column;
     gap: 0;
     border-top: 1px solid oklch(90% 0.02 200);
-    margin: 0 calc(-1 * var(--content-pad));
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.1);
     text-align: right;
   }
   .tab-nav.is-open .tab-nav__list { display: flex; }
