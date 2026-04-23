@@ -26,6 +26,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "img": "img" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
 
   eleventyConfig.addFilter("byYearDesc", (items) => {
     if (!Array.isArray(items)) return [];
