@@ -42,13 +42,6 @@
   - name: GitHub
     link: https://github.com/sepro/CoNekT
   
-- name: PhytoNet 
-  description: Comparative co-expression network analyses across phytoplankton and land plants
-  year: 2018
-  URLs:
-    - name: Link
-      link: http://www.gene2function.de
-  
 - name: LSTrAP 
   description: Large-Scale Transcriptomics Analysis Pipeline
   year: 2017

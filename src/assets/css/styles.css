@@ -710,7 +710,12 @@ button { font: inherit; color: inherit; }
   line-height: 1.72;
   flex: 1;
 }
+.software-card__year { font-size: 0.82em; font-weight: 500; color: var(--text-faint); margin-left: 4px; }
+.software-card__name a { color: inherit; text-decoration: none; }
+.software-card__name a:hover { color: var(--accent); }
 .software-card__tags { display: flex; gap: 5px; flex-wrap: wrap; }
+a.tag { text-decoration: none; transition: background 0.15s ease, color 0.15s ease; }
+a.tag:hover { background: var(--accent); color: #fff; }
 .software-card__arrow { color: var(--accent); display: inline-flex; }
 
 .game-card {
