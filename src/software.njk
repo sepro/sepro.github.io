@@ -24,8 +24,40 @@ pageTitle: "Sebastian Proost, PhD — Software"
   </article>
 {% endmacro %}
 
+{% macro gameCard(g) %}
+  {% set primaryUrl = g.URLs[0].link if g.URLs and (g.URLs | length) else "" %}
+  <article class="software-card game-card">
+    {% if g.boxart %}
+      <div class="game-card__art">
+        <img src="{{ g.boxart }}" alt="{{ g.name }} box art" loading="lazy">
+      </div>
+    {% endif %}
+    <div class="game-card__body">
+      <div class="software-card__head">
+        <h3 class="software-card__name">{{ g.name }}</h3>
+        {% if primaryUrl %}
+          <a href="{{ primaryUrl }}" class="software-card__arrow" target="_blank" rel="noreferrer noopener" aria-label="Open {{ g.name }}">
+            {{ icon("arrow") }}
+          </a>
+        {% endif %}
+      </div>
+      <p class="software-card__desc">{{ g.description }}</p>
+      <div class="software-card__tags">
+        {% if g.year %}<span class="tag">{{ g.year }}</span>{% endif %}
+        {% if g.URLs %}{% for l in g.URLs %}<span class="tag">{{ l.name }}</span>{% endfor %}{% endif %}
+      </div>
+    </div>
+  </article>
+{% endmacro %}
+
 <div class="software-grid">
   {% for s in software %}{{ softwareCard(s) }}{% endfor %}
+</div>
+
+{{ sectionHeader("Games", "play") }}
+
+<div class="software-grid">
+  {% for g in games %}{{ gameCard(g) }}{% endfor %}
 </div>
 
 {{ sectionHeader("Open Source Contributions", "opensource") }}

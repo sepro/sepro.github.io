@@ -713,6 +713,34 @@ button { font: inherit; color: inherit; }
 .software-card__tags { display: flex; gap: 5px; flex-wrap: wrap; }
 .software-card__arrow { color: var(--accent); display: inline-flex; }
 
+.game-card {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 175px;
+}
+.game-card__art {
+  flex: 0 0 auto;
+  display: flex;
+  height: 100%;
+}
+.game-card__art img {
+  display: block;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+.game-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  padding: 20px;
+}
+
 /* =========================================================================
    Media cards
    ========================================================================= */

@@ -45,6 +45,7 @@ All CV data lives in YAML files under `content/` — one file per section. Edit 
 | Media appearances | `content/media.yaml` |
 | Open-source projects | `content/opensource.yaml` |
 | Software | `content/software.yaml` |
+| Games | `content/games.yaml` |
 | Skills | `content/skills.yaml` |
 | Languages | `content/languages.yaml` |
 | Grants & awards | `content/grants_awards.yaml` |
