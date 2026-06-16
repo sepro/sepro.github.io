@@ -1,0 +1,17 @@
+- name: The Royal Game of Ur
+  description: Game Boy adaptation of the world's oldest board game
+  year: 2026
+  boxart: /img/games/royal_game_of_ur_boxart.jpg
+  URLs:
+    - name: itch.io
+      link: https://sebastianproost.itch.io/the-royal-game-of-ur
+    - name: GitHub
+      link: https://github.com/sepro/dmg-royal-game-of-ur
+
+- name: DSCube
+  description: Twisty puzzles on the NDS
+  year: 2026
+  boxart: /img/games/ds_cube_box_art.jpg
+  URLs:
+    - name: itch.io
+      link: https://sebastianproost.itch.io/dscube
