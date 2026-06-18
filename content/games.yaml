@@ -1,3 +1,11 @@
+- name: Hnefatafl
+  description: The thousand-year-old Viking board game, on a 35-year-old handheld.
+  year: 2026
+  boxart: /img/games/hnefatafl_boxart.jpg
+  URLs:
+    - name: itch.io
+      link: https://sebastianproost.itch.io/hnefatafl-viking-chess
+
 - name: The Royal Game of Ur
   description: Game Boy adaptation of the world's oldest board game
   year: 2026
@@ -15,3 +23,5 @@
   URLs:
     - name: itch.io
       link: https://sebastianproost.itch.io/dscube
+
+

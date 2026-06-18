@@ -680,6 +680,9 @@ button { font: inherit; color: inherit; }
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
+.software-grid--full {
+  grid-template-columns: 1fr;
+}
 .software-grid + .section-header {
   margin-top: 32px;
 }
