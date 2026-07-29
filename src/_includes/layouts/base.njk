@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ pageTitle or (site.name + ', ' + site.credential) }}</title>
-  <meta name="description" content="{{ pageDescription or (site.title + ' — ' + site.subtitle + '. ' + site.org + ', ' + site.location + '.') }}">
+  <meta name="description" content="{{ pageDescription or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
   <link rel="shortcut icon" href="/img/favicon.ico">
@@ -17,6 +18,23 @@
   {% for m in media %}
     {% if m.image %}<link rel="preload" as="image" href="{{ m.image | mediaImage }}">{% endif %}
   {% endfor %}
+
+  {# schema.org structured data: the node for this page, followed by the shared Person and WebSite nodes. #}
+  {% set pageNode = {
+    "@type": schemaType or "WebPage",
+    "@id": site.url + page.url + "#webpage",
+    "url": site.url + page.url,
+    "name": pageTitle or (site.name + ", " + site.credential),
+    "description": pageDescription or site.description,
+    "inLanguage": "en",
+    "isPartOf": { "@id": schema.websiteId },
+    "about": { "@id": schema.personId },
+    "mainEntity": { "@id": schema.personId } if schemaType == "ProfilePage" else none,
+    "primaryImageOfPage": { "@id": schema.imageId } if schemaType == "ProfilePage" else none
+  } %}
+  <script type="application/ld+json">
+{{ { "@context": "https://schema.org", "@graph": [pageNode] | merge(schema.nodes) } | jsonld | safe }}
+  </script>
 </head>
 <body>
   <div class="page">

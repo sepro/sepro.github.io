@@ -51,8 +51,34 @@ All CV data lives in YAML files under `content/` — one file per section. Edit 
 | Grants & awards | `content/grants_awards.yaml` |
 | Training | `content/training.yaml` |
 | Supervision / support | `content/support.yaml` |
+| Identity / structured data | `content/profile.yaml` |
 
 Each YAML file is exposed as a global data variable named after the file (e.g. `publications.yaml` → `publications`).
+
+## Structured data (schema.org)
+
+Every page carries a `<script type="application/ld+json">` block in its `<head>` describing a
+`Person` (plus a `WebSite`, an `ImageObject` and a node for the page itself). The homepage is
+typed as a `ProfilePage` with the `Person` as its `mainEntity`; other pages are `WebPage`s that
+point at the same `Person` via `@id`.
+
+The graph is assembled in `src/_data/schema.js` from `src/_data/site.js` and the YAML files —
+nothing is hard-coded in the template, so the markup follows the content:
+
+| Schema property | Source |
+| --- | --- |
+| `name`, `honorificSuffix`, `jobTitle`, `email`, `description` | `src/_data/site.js` |
+| `givenName`, `familyName`, `image`, `homeLocation` | `content/profile.yaml` |
+| `worksFor` | `content/profile.yaml` → `employers` |
+| `affiliation` | `content/profile.yaml` → `affiliations` |
+| `alumniOf`, `hasCredential` | `content/education.yaml` |
+| `knowsAbout` | `site.researchKeywords` + `content/skills.yaml` |
+| `knowsLanguage` | `content/languages.yaml` (`code` field) |
+| `sameAs` | `content/profile.yaml` → `academicProfiles` + `site.socialMedia` |
+
+Every link in `sameAs` is also rendered as an icon in the hero, so the structured data never
+claims anything the page does not show. To set a page's schema type, add `schemaType:` to its
+front matter (defaults to `WebPage`).
 
 Page templates live in `src/` (`index.njk`, `experience.njk`, `publications.njk`, `software.njk`, `media.njk`, `other.njk`). Shared layouts and partials are in `src/_includes/`. Images go in `img/`, other static assets in `src/assets/`.
 

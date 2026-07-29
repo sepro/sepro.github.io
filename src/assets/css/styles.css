@@ -217,6 +217,33 @@ button { font: inherit; color: inherit; }
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 16px;
+  list-style: none;
+  padding: 0;
+}
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+.hero__link:hover,
+.hero__link:focus-visible {
+  color: var(--accent);
+  background: rgb(var(--accent-rgb) / 0.14);
+  border-color: rgb(var(--accent-rgb) / 0.45);
+}
+
 .hero__stats {
   flex-shrink: 0;
   display: flex;
