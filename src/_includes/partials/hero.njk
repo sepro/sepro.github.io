@@ -19,10 +19,16 @@
       </p>
       <p class="hero__org">{{ site.org }} · {{ site.location }}</p>
 
+      {% set hiddenSkills = skills | selectattr("secondary") %}
       <div class="hero__skills">
         {% for s in skills %}
-          <span class="hero__chip">{{ s.name }}</span>
+          {% if not s.secondary %}<span class="hero__chip">{{ s.name }}</span>{% endif %}
         {% endfor %}
+        {% if hiddenSkills.length %}
+          <button type="button" class="hero__chip hero__chip--more" data-skills-open
+                  aria-haspopup="dialog" aria-label="Show all {{ skills.length }} skills"
+                  title="Show all {{ skills.length }} skills">…</button>
+        {% endif %}
       </div>
 
       <ul class="hero__links">
