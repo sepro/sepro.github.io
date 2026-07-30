@@ -86,6 +86,39 @@ To add a new section:
 1. Add a YAML file in `content/`.
 2. Create a new `.njk` template in `src/`, or reference the data from an existing template using the filename-based key.
 
+## robots.txt and sitemap.xml
+
+Both are generated on every build, so they never go stale:
+
+- `src/robots.njk` → `/robots.txt`. Allows all crawlers and points them at the sitemap.
+- `src/sitemap.njk` → `/sitemap.xml`. Lists every rendered page, taking the site URL from
+  `src/_data/site.js`.
+
+A page is included automatically as soon as it produces HTML; set `sitemap: false` in its front
+matter to leave it out.
+
+`<lastmod>` is the date of the last commit that touched the page — that is, its own template, the
+shared layout/data files (`src/_includes/`, `src/_data/`, `eleventy.config.js`), or any content
+file the page declares in its front matter:
+
+```yaml
+---
+permalink: /publications/
+sitemapSources:
+  - content/publications.yaml
+  - content/patents.yaml
+  - content/citations.yaml
+---
+```
+
+Add a page's YAML files there whenever you create or repoint a template, otherwise edits to that
+content will not move its `<lastmod>`. Dates come from `git log`, so the deploy workflow checks out
+the full history (`fetch-depth: 0`). Where no history is available the `<lastmod>` is omitted
+rather than filled in with the build time, which crawlers would see as a date that always changes.
+
+After a content update, submitting `https://sebastian.proost.science/sitemap.xml` in Google Search
+Console requests a re-crawl of all URLs at once and gives a per-URL coverage report.
+
 ## Deploy to GitHub Pages
 
 The repo builds to a plain static site in `_site/`, which GitHub Pages can serve directly.
@@ -121,6 +154,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history: the sitemap derives each <lastmod> from the last commit
+          # touching that page's sources.
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 20
