@@ -1,0 +1,47 @@
+{% from "partials/icons.njk" import icon %}
+{#
+  Site footer. Mirrors the hero (same gradient, same type scale) so the page is
+  book-ended, and repeats every profile link as visible text — icon-only links
+  in the hero are ambiguous for crawlers and screen-reader users alike.
+#}
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__col site-footer__col--id">
+      <p class="site-footer__name">{{ site.name }}, {{ site.credential }}</p>
+      <p class="site-footer__meta">{{ site.jobTitle }}</p>
+      <p class="site-footer__meta">
+        <a class="site-footer__inline-link" href="{{ site.affiliations[0].url }}">{{ site.org }}</a> · {{ site.location }}
+      </p>
+      {% if site.orcid %}
+        <p class="site-footer__orcid">
+          <span class="site-footer__orcid-label">ORCID</span>
+          <a class="site-footer__orcid-id" href="{{ site.orcid.link }}" rel="me noopener" target="_blank">{{ site.orcid.id }}</a>
+        </p>
+      {% endif %}
+    </div>
+
+    <nav class="site-footer__col site-footer__col--links" aria-labelledby="footer-profiles">
+      <h2 class="site-footer__heading" id="footer-profiles">Profiles</h2>
+      <ul class="site-footer__links">
+        {% for p in site.profileLinks %}
+          <li>
+            <a class="site-footer__link" href="{{ p.link }}" rel="me noopener" target="_blank">
+              <span class="site-footer__link-icon" aria-hidden="true">{{ icon(p.icon) }}</span>{{ p.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+
+  <div class="site-footer__bar">
+    <div class="site-footer__bar-inner">
+      <p class="site-footer__note">
+        {{ site.stats.citationsLabel }} citations · h-index {{ site.stats.hIndexLabel }} · i10-index {{ site.stats.i10IndexLabel }} —
+        <a class="site-footer__inline-link" href="{{ site.scholarLink }}" rel="me noopener" target="_blank">{{ site.stats.citationsPlatform }}</a>,
+        updated {{ site.stats.citationsDateLabel }}.
+      </p>
+      <p class="site-footer__note">© {{ site.name }}</p>
+    </div>
+  </div>
+</footer>

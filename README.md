@@ -75,12 +75,20 @@ nothing is hard-coded in the template, so the markup follows the content:
 | `knowsAbout` | `site.researchKeywords` + `content/skills.yaml` |
 | `knowsLanguage` | `content/languages.yaml` (`code` field) |
 | `sameAs` | `content/profile.yaml` → `academicProfiles` + `site.socialMedia` |
+| `identifier` (ORCID) | `content/profile.yaml` → `academicProfiles` entry with `icon: orcid` |
 
-Every link in `sameAs` is also rendered as an icon in the hero, so the structured data never
-claims anything the page does not show. To set a page's schema type, add `schemaType:` to its
+Every link in `sameAs` is also rendered as an icon in the hero *and* as a text link in the site
+footer, so the structured data never claims anything the page does not show. To set a page's schema type, add `schemaType:` to its
 front matter (defaults to `WebPage`).
 
 Page templates live in `src/` (`index.njk`, `experience.njk`, `publications.njk`, `software.njk`, `media.njk`, `other.njk`). Shared layouts and partials are in `src/_includes/`. Images go in `img/`, other static assets in `src/assets/`.
+
+### Citation metrics
+
+`content/citations.yaml` holds the Google Scholar numbers and the `date` (`dd/mm/yyyy`) they were
+read. Because these drift constantly, every place they are shown — the hero stats, the
+`/publications/` stat cards and the footer — is labelled with the month and year and links back to
+the Scholar profile. Update the counts and the date together.
 
 To add a new section:
 1. Add a YAML file in `content/`.

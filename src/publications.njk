@@ -20,6 +20,12 @@ sitemapSources:
   <div class="stat-card"><span class="stat-card__num">{{ site.stats.hIndexLabel }}</span><span class="stat-card__label">H-Index</span></div>
 </div>
 
+<p class="metrics-note">
+  <a href="{{ site.scholarLink }}" rel="me noopener" target="_blank">{{ site.stats.citationsPlatform }}</a>
+  metrics (i10-index {{ site.stats.i10IndexLabel }}), updated {{ site.stats.citationsDateLabel }}
+  {%- if site.orcid %} · ORCID <a href="{{ site.orcid.link }}" rel="me noopener" target="_blank">{{ site.orcid.id }}</a>{% endif %}
+</p>
+
 <div class="filter-row">
   <label class="filter-label">Filter by year</label>
   <div class="dropdown" data-dropdown data-target="[data-pub-list]">

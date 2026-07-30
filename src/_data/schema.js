@@ -107,6 +107,10 @@ const person = {
       addressCountry: site.address.countryCode,
     },
   },
+  // Persistent scholarly identifier, alongside the plain sameAs link.
+  identifier: site.orcid
+    ? { "@type": "PropertyValue", propertyID: "ORCID", value: site.orcid.link }
+    : undefined,
   knowsAbout: knowsAbout(),
   knowsLanguage: knowsLanguage(),
   sameAs: site.profileLinks.map((p) => p.link),
