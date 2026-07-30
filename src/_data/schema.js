@@ -113,7 +113,7 @@ const person = {
     : undefined,
   knowsAbout: knowsAbout(),
   knowsLanguage: knowsLanguage(),
-  sameAs: site.profileLinks.map((p) => p.link),
+  sameAs: site.sameAsLinks,
 };
 
 const website = {

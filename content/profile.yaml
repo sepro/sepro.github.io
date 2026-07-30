@@ -36,3 +36,10 @@ academicProfiles:
   - name: Google Scholar
     icon: scholar
     link: https://scholar.google.com/citations?user=4niBmJUAAAAJ
+
+# Profiles that belong in schema.org sameAs but are deliberately not rendered.
+# These are thin or externally maintained pages that are not worth sending a
+# visitor to, but that still tie this site to the same entity for crawlers.
+unlistedProfiles:
+  - name: KU Leuven — Who is who
+    link: https://www.kuleuven.be/wieiswie/en/person/00123248

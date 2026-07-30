@@ -45,6 +45,7 @@ const socialMedia = [
 ];
 
 const academicProfiles = profile.academicProfiles || [];
+const unlistedProfiles = profile.unlistedProfiles || [];
 
 const byIcon = (icon) => academicProfiles.find((p) => p.icon === icon) || null;
 const orcidProfile = byIcon("orcid");
@@ -72,6 +73,7 @@ module.exports = {
 
   socialMedia,
   academicProfiles,
+  unlistedProfiles,
   // Persistent scholarly identifier, shown as text (not only as an icon).
   orcid: orcidProfile
     ? { id: orcidProfile.link.replace(/^https?:\/\/orcid\.org\//, ""), link: orcidProfile.link }
@@ -79,6 +81,8 @@ module.exports = {
   scholarLink: scholarProfile ? scholarProfile.link : null,
   // Every profile link, in the order they are rendered in the hero.
   profileLinks: [...academicProfiles, ...socialMedia],
+  // Everything that identifies the same person, rendered or not — schema.org sameAs.
+  sameAsLinks: [...academicProfiles, ...socialMedia, ...unlistedProfiles].map((p) => p.link),
 
   aboutHtml: `
     <p>Currently <strong>Project Manager (Bioinformatics, AI &amp; Data Science)</strong> at the <a href="https://cfm.vib.be/">VIB-KU Leuven Center for Microbiology</a> (Leuven, Belgium), focussing on the <strong>human gut microbiome</strong> and its connections to host <strong>health</strong>.</p>
