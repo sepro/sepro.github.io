@@ -1,0 +1,17 @@
+{% from "partials/icons.njk" import icon %}
+<div class="modal" id="skills-modal" data-skills-modal hidden>
+  <div class="modal__backdrop" data-skills-close></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="skills-modal-title">
+    <div class="modal__header">
+      <h2 class="modal__title" id="skills-modal-title">Skills</h2>
+      <button type="button" class="modal__close" data-skills-close aria-label="Close">{{ icon("close") }}</button>
+    </div>
+    <div class="modal__body">
+      <div class="tag-row">
+        {% for s in skills %}
+          <span class="tag">{{ s.name }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

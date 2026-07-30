@@ -1,9 +1,19 @@
+# Skills shown as chips in the hero. Entries flagged `secondary: true` are
+# hidden behind the "…" chip and only shown in the all-skills modal.
 - name: "Python"
 - name: "AI"
 - name: "Machine Learning"
 - name: "Data Science"
+- name: "Bayesian Statistics"
+- name: "PyMC"
+- name: "Agentic AI"
 - name: "Flask"
+  secondary: true
 - name: "HTML & CSS"
+  secondary: true
 - name: "Linux"
+  secondary: true
 - name: "R"
+  secondary: true
 - name: "JavaScript"
+  secondary: true

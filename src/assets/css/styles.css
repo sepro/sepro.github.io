@@ -216,6 +216,21 @@ button { font: inherit; color: inherit; }
   font-weight: 500;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
+.hero__chip--more {
+  cursor: pointer;
+  line-height: 1;
+  padding: 3px 9px;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border-color: rgb(var(--accent-rgb) / 0.4);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.hero__chip--more:hover,
+.hero__chip--more:focus-visible {
+  background: rgb(var(--accent-rgb) / 0.22);
+  border-color: rgb(var(--accent-rgb) / 0.65);
+  color: #fff;
+}
 
 .hero__links {
   display: flex;
@@ -972,6 +987,84 @@ a.tag:hover { background: var(--accent); color: #fff; }
 }
 .show-more-btn svg { transition: transform 0.2s; }
 .show-more-btn.is-expanded svg { transform: rotate(180deg); }
+
+/* =========================================================================
+   Modal
+   ========================================================================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal[hidden] { display: none; }
+body.has-modal { overflow: hidden; }
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 34, 41, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+.modal__panel {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 18px 44px -12px rgba(0, 0, 0, 0.3), 0 0 0 1px var(--card-border);
+  animation: modal-in 160ms ease;
+}
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px 12px;
+  border-bottom: 1px solid var(--card-border-soft);
+}
+.modal__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+.modal__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  background: #fff;
+  color: var(--text-subtle);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.modal__close:hover,
+.modal__close:focus-visible {
+  background: var(--accent-light);
+  color: var(--accent-dark);
+}
+.modal__body { padding: 16px 18px 18px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .modal__panel { animation: none; }
+}
 
 /* =========================================================================
    Mobile
