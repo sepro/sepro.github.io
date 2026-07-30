@@ -74,11 +74,16 @@ nothing is hard-coded in the template, so the markup follows the content:
 | `alumniOf`, `hasCredential` | `content/education.yaml` |
 | `knowsAbout` | `site.researchKeywords` + `content/skills.yaml` |
 | `knowsLanguage` | `content/languages.yaml` (`code` field) |
-| `sameAs` | `content/profile.yaml` → `academicProfiles` + `site.socialMedia` |
+| `sameAs` | `content/profile.yaml` → `academicProfiles` + `unlistedProfiles` + `site.socialMedia` |
 | `identifier` (ORCID) | `content/profile.yaml` → `academicProfiles` entry with `icon: orcid` |
 
-Every link in `sameAs` is also rendered as an icon in the hero *and* as a text link in the site
-footer, so the structured data never claims anything the page does not show. To set a page's schema type, add `schemaType:` to its
+`academicProfiles` and `socialMedia` are rendered as an icon in the hero *and* as a text link in
+the site footer, so the structured data does not claim a profile the page hides.
+
+`unlistedProfiles` is the deliberate exception: profiles that go into `sameAs` but are *not*
+rendered anywhere — thin or externally maintained pages that identify the same person but are not
+worth sending a visitor to. Entries need only a `name` (for humans reading the YAML) and a `link`;
+no `icon`, since nothing is drawn. To set a page's schema type, add `schemaType:` to its
 front matter (defaults to `WebPage`).
 
 Page templates live in `src/` (`index.njk`, `experience.njk`, `publications.njk`, `software.njk`, `media.njk`, `other.njk`). Shared layouts and partials are in `src/_includes/`. Images go in `img/`, other static assets in `src/assets/`.
