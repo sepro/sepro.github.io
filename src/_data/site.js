@@ -19,9 +19,21 @@ function fmt(n) {
   return Number(n).toLocaleString("en-US");
 }
 
+const MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+/** "27/05/2026" (dd/mm/yyyy) -> "May 2026"; anything else is passed through. */
+function monthYear(date) {
+  const m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(String(date || "").trim());
+  if (!m) return String(date || "");
+  return `${MONTHS[Number(m[2]) - 1]} ${m[3]}`;
+}
+
 const title = "Project Manager";
 const subtitle = "Bioinformatics, AI & Data Science";
-const org = "VIB-KULeuven Center for Microbiology";
+const org = "VIB-KU Leuven Center for Microbiology";
 const location = "Leuven, Belgium";
 
 const socialMedia = [
@@ -33,6 +45,10 @@ const socialMedia = [
 ];
 
 const academicProfiles = profile.academicProfiles || [];
+
+const byIcon = (icon) => academicProfiles.find((p) => p.icon === icon) || null;
+const orcidProfile = byIcon("orcid");
+const scholarProfile = byIcon("scholar");
 
 module.exports = {
   url: "https://sebastian.proost.science",
@@ -56,11 +72,16 @@ module.exports = {
 
   socialMedia,
   academicProfiles,
+  // Persistent scholarly identifier, shown as text (not only as an icon).
+  orcid: orcidProfile
+    ? { id: orcidProfile.link.replace(/^https?:\/\/orcid\.org\//, ""), link: orcidProfile.link }
+    : null,
+  scholarLink: scholarProfile ? scholarProfile.link : null,
   // Every profile link, in the order they are rendered in the hero.
   profileLinks: [...academicProfiles, ...socialMedia],
 
   aboutHtml: `
-    <p>Currently <strong>Project Manager (Bioinformatics, AI &amp; Data Science)</strong> at the <a href="https://cfm.vib.be/">VIB-KULeuven Center for Microbiology</a> (Leuven, Belgium), focussing on the <strong>human gut microbiome</strong> and its connections to host <strong>health</strong>.</p>
+    <p>Currently <strong>Project Manager (Bioinformatics, AI &amp; Data Science)</strong> at the <a href="https://cfm.vib.be/">VIB-KU Leuven Center for Microbiology</a> (Leuven, Belgium), focussing on the <strong>human gut microbiome</strong> and its connections to host <strong>health</strong>.</p>
     <p>After earning a <strong>Masters degree in Biotechnology</strong> (UGent, Belgium), I pursued a <strong>PhD in Bioinformatics</strong> (<a href="https://vib.be/vib-ugent-center-plant-systems-biology">VIB-UGent Center for Plant Systems Biology</a>) combining my passion for life sciences with expertise in computer engineering.</p>
     <p>Throughout my <strong>postdoctoral career</strong>, including time at the <a href="https://www.mpimp-golm.mpg.de/2168/en">Max Planck Institute of Molecular Plant Physiology</a>, I have increasingly specialized in <strong>software development</strong> and <strong>statistical analysis</strong>. This includes building <strong>web platforms</strong> for exploring large datasets and applying <strong>data science</strong> and <strong>machine learning</strong> techniques to deepen insights.</p>
     <p><em>Full bio available under <a href="/experience/">experience &amp; education</a>.</em></p>
@@ -92,7 +113,11 @@ module.exports = {
     citationsLabel: fmt(citations.count || 0),
     hIndex: citations.hindex || 0,
     hIndexLabel: fmt(citations.hindex || 0),
+    i10Index: citations.i10index || 0,
+    i10IndexLabel: fmt(citations.i10index || 0),
     citationsDate: citations.date || "",
+    // Month + year is the honest resolution for metrics that drift constantly.
+    citationsDateLabel: monthYear(citations.date),
     citationsPlatform: citations.platform || "",
   },
 };
