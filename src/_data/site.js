@@ -12,30 +12,52 @@ function loadYaml(file) {
 const publications = loadYaml("publications.yaml") || [];
 const patents = loadYaml("patents.yaml") || [];
 const citations = loadYaml("citations.yaml") || {};
+const profile = loadYaml("profile.yaml") || {};
 
 function fmt(n) {
   if (n == null) return "";
   return Number(n).toLocaleString("en-US");
 }
 
+const title = "Project Manager";
+const subtitle = "Bioinformatics, AI & Data Science";
+const org = "VIB-KULeuven Center for Microbiology";
+const location = "Leuven, Belgium";
+
+const socialMedia = [
+  { name: "GitHub", icon: "github", link: "https://github.com/sepro" },
+  { name: "LinkedIn", icon: "linkedin", link: "https://www.linkedin.com/in/sebastian-proost-581a6a88/" },
+  { name: "X", icon: "x", link: "https://x.com/ProostSebastian" },
+  { name: "Bluesky", icon: "bsky", link: "https://bsky.app/profile/sebastian.proost.science" },
+  { name: "Instagram", icon: "instagram", link: "https://www.instagram.com/sebastian.proost/" },
+];
+
+const academicProfiles = profile.academicProfiles || [];
+
 module.exports = {
   url: "https://sebastian.proost.science",
   name: "Sebastian Proost",
+  givenName: profile.givenName,
+  familyName: profile.familyName,
   credential: "PhD",
-  title: "Project Manager",
-  subtitle: "Bioinformatics, AI & Data Science",
-  org: "VIB-KULeuven Center for Microbiology",
-  location: "Leuven, Belgium",
+  title,
+  subtitle,
+  jobTitle: `${title}, ${subtitle}`,
+  org,
+  location,
+  address: profile.address || {},
+  image: profile.image,
   email: "sebastian.proost@gmail.com",
   publicationHighlight: "S. Proost",
+  description: `${title} — ${subtitle}. ${org}, ${location}.`,
 
-  socialMedia: [
-    { name: "github", link: "https://github.com/sepro" },
-    { name: "linkedin", link: "https://www.linkedin.com/in/sebastian-proost-581a6a88/" },
-    { name: "x", link: "https://x.com/ProostSebastian" },
-    { name: "bsky", link: "https://bsky.app/profile/sebastian.proost.science" },
-    { name: "instagram", link: "https://www.instagram.com/sebastian.proost/" },
-  ],
+  employers: profile.employers || [],
+  affiliations: profile.affiliations || [],
+
+  socialMedia,
+  academicProfiles,
+  // Every profile link, in the order they are rendered in the hero.
+  profileLinks: [...academicProfiles, ...socialMedia],
 
   aboutHtml: `
     <p>Currently <strong>Project Manager (Bioinformatics, AI &amp; Data Science)</strong> at the <a href="https://cfm.vib.be/">VIB-KULeuven Center for Microbiology</a> (Leuven, Belgium), focussing on the <strong>human gut microbiome</strong> and its connections to host <strong>health</strong>.</p>
@@ -51,11 +73,12 @@ module.exports = {
   `,
 
   researchKeywords: [
-    "Gut Microbiome",
+    "Human Gut Microbiome",
     "Bioinformatics",
     "Data Science",
     "Machine Learning",
     "Web Platforms",
+    "Comparative Genomics",
     "Genome Evolution",
     "Statistical Analysis",
   ],

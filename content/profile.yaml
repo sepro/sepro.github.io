@@ -1,0 +1,38 @@
+# Identity facts used for the schema.org (JSON-LD) markup in the page head and
+# for the profile links shown in the hero. Everything listed here is also
+# rendered somewhere on the site — structured data and visible content should
+# stay in sync.
+
+givenName: Sebastian
+familyName: Proost
+image: /img/profile.jpg
+
+address:
+  locality: Leuven
+  country: Belgium
+  countryCode: BE
+
+# schema.org worksFor — the institutions employing me
+employers:
+  - name: VIB
+    type: Organization
+    url: https://vib.be/
+  - name: KU Leuven
+    type: CollegeOrUniversity
+    url: https://www.kuleuven.be/
+
+# schema.org affiliation — the center I am part of
+affiliations:
+  - name: VIB-KU Leuven Center for Microbiology
+    type: Organization
+    url: https://cfm.vib.be/
+
+# Academic profiles, rendered in the hero next to the social media links and
+# used for schema.org sameAs
+academicProfiles:
+  - name: ORCID
+    icon: orcid
+    link: https://orcid.org/0000-0002-6792-9442
+  - name: Google Scholar
+    icon: scholar
+    link: https://scholar.google.com/citations?user=4niBmJUAAAAJ

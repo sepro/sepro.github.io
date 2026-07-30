@@ -1,16 +1,22 @@
+# `short` is the flag shown on the site, `code` the BCP-47 tag used for
+# schema.org knowsLanguage.
 - language: Dutch
   level: Mothertongue
   short: NL
-  
+  code: nl
+
 - language: English
   level: Fluent
   short: US
+  code: en
 
 - language: German
   level: Intermediate
   comment: "CEFR level: B2/1"
   short: DE
-  
+  code: de
+
 - language: French
   level: Intermediate
   short: FR
+  code: fr

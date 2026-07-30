@@ -73,6 +73,32 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
 
+  // Serialise a schema.org graph for a <script type="application/ld+json"> block:
+  // drop empty values so optional fields can be left out, and escape the
+  // characters that would otherwise let the payload break out of the script tag.
+  eleventyConfig.addFilter("jsonld", (value) => {
+    const prune = (v) => {
+      if (Array.isArray(v)) {
+        const arr = v.map(prune).filter((x) => x !== undefined);
+        return arr.length ? arr : undefined;
+      }
+      if (v && typeof v === "object") {
+        const obj = {};
+        for (const [k, val] of Object.entries(v)) {
+          const pruned = prune(val);
+          if (pruned !== undefined) obj[k] = pruned;
+        }
+        return Object.keys(obj).length ? obj : undefined;
+      }
+      if (v === null || v === undefined || v === "") return undefined;
+      return v;
+    };
+    return JSON.stringify(prune(value) ?? {}, null, 2)
+      .replace(/</g, "\\u003c")
+      .replace(/>/g, "\\u003e")
+      .replace(/&/g, "\\u0026");
+  });
+
   eleventyConfig.addFilter("limit", (arr, n) => (Array.isArray(arr) ? arr.slice(0, n) : []));
 
   eleventyConfig.addFilter("merge", (a, b) => {

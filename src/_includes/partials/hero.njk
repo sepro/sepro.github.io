@@ -1,3 +1,4 @@
+{% from "partials/icons.njk" import icon %}
 <header class="hero">
   <canvas class="hero__canvas" id="hero-network" aria-hidden="true"></canvas>
   <div class="hero__fade" aria-hidden="true"></div>
@@ -23,6 +24,16 @@
           <span class="hero__chip">{{ s.name }}</span>
         {% endfor %}
       </div>
+
+      <ul class="hero__links">
+        {% for p in site.profileLinks %}
+          <li>
+            <a class="hero__link" href="{{ p.link }}" title="{{ p.name }}" aria-label="{{ p.name }}" rel="me noopener" target="_blank">
+              {{ icon(p.icon) }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
 
     <div class="hero__stats">
