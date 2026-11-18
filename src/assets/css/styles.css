@@ -698,6 +698,38 @@ button { font: inherit; color: inherit; }
 }
 .pub-card__authors:not(:last-child) { margin-bottom: 10px; }
 
+/* Journal cover for papers that made the front of an issue */
+.pub-card.has-cover {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.pub-card__body { flex: 1; min-width: 0; }
+.pub-card__cover {
+  flex: 0 0 auto;
+  display: block;
+  width: 64px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 10px -4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease;
+}
+.pub-card__cover:hover { transform: translateY(-2px); }
+.pub-card__cover img { display: block; width: 100%; height: auto; }
+.pub-card__cover-note {
+  margin-top: 8px;
+  font-size: 11px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .pub-card__cover { transition: none; }
+  .pub-card__cover:hover { transform: none; }
+}
+
 .link-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
 .link-pill {
   display: inline-flex;
