@@ -708,6 +708,8 @@ button { font: inherit; color: inherit; }
   background: oklch(98% 0.015 200);
   border-color: oklch(85% 0.05 200);
 }
+/* The year filter hides cards with the hidden attribute; the flex layout above would otherwise override it */
+.pub-card[hidden] { display: none; }
 .pub-card__body { flex: 1; min-width: 0; }
 .pub-card__cover {
   flex: 0 0 auto;
