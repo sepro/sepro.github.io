@@ -45,7 +45,13 @@ sitemapSources:
 
 <div class="pub-list" data-pub-list>
   {% for p in allPubs %}
-    <article class="pub-card{% if p.isPatent %} is-patent{% endif %}" data-pub-year="{{ p.Year }}">
+    <article class="pub-card{% if p.isPatent %} is-patent{% endif %}{% if p.Cover %} has-cover{% endif %}" data-pub-year="{{ p.Year }}">
+      {% if p.Cover %}
+        <a class="pub-card__cover" href="{{ p.Cover.image }}" target="_blank" rel="noopener" title="Featured on the cover of {{ p.Journal }}{% if p.Cover.caption %}, {{ p.Cover.caption }}{% endif %}">
+          <img src="{{ p.Cover.image }}" alt="Cover of {{ p.Journal }}{% if p.Cover.caption %}, {{ p.Cover.caption }}{% endif %}" width="400" height="524" loading="lazy">
+        </a>
+      {% endif %}
+      <div class="pub-card__body">
       <div class="pub-card__head">
         <p class="pub-card__title">{{ p.Title }}</p>
         <span class="pub-card__year">{{ p.Year }}</span>
@@ -63,6 +69,8 @@ sitemapSources:
           {% endfor %}
         </div>
       {% endif %}
+      {% if p.Cover %}<p class="pub-card__cover-note">On the cover{% if p.Cover.caption %} · {{ p.Cover.caption }}{% endif %}</p>{% endif %}
+      </div>
     </article>
   {% endfor %}
 </div>

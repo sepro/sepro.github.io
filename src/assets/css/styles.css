@@ -698,6 +698,52 @@ button { font: inherit; color: inherit; }
 }
 .pub-card__authors:not(:last-child) { margin-bottom: 10px; }
 
+/* Journal cover for papers that made the front of an issue.
+   The tint, tilt and badge make these few papers stand out while scrolling the long list. */
+.pub-card.has-cover {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  align-items: flex-start;
+  background: oklch(98% 0.015 200);
+  border-color: oklch(85% 0.05 200);
+}
+.pub-card__body { flex: 1; min-width: 0; }
+.pub-card__cover {
+  flex: 0 0 auto;
+  display: block;
+  width: 96px;
+  margin: 2px 2px 2px 0;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 4px 10px -4px rgba(0, 0, 0, 0.25);
+  transform: rotate(2deg);
+  transition: transform 0.15s ease;
+}
+.pub-card__cover:hover { transform: rotate(0deg) translateY(-2px); }
+.pub-card__cover img { display: block; width: 100%; height: auto; }
+.pub-card__cover-note {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+@media (max-width: 720px) {
+  .pub-card.has-cover { gap: 14px; }
+  .pub-card__cover { width: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pub-card__cover { transition: none; }
+  .pub-card__cover:hover { transform: rotate(2deg); }
+}
+
 .link-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
 .link-pill {
   display: inline-flex;
