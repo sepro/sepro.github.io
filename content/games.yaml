@@ -1,3 +1,13 @@
+- name: ArchBoy
+  description: My Game Boy archive, play the Game Boy games I made right in your browser.
+  year: 2026
+  boxart: /img/games/archboy_screenshot.jpg
+  URLs:
+    - name: Play
+      link: https://sebastian.proost.science/archboy/
+    - name: GitHub
+      link: https://github.com/sepro/archboy
+
 - name: Hnefatafl
   description: The thousand-year-old Viking board game, on a 35-year-old handheld.
   year: 2026
